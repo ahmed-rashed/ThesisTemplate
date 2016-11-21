@@ -1,0 +1,387 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\begin_preamble
+\mode<article>{\pdfminorversion=4}%
+
+\usepackage{calc}
+\usepackage{datetime}
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{chngcntr}
+\usepackage{needspace}% http://ctan.org/pkg/needspace
+\usepackage{appendix}
+\usepackage{thmtools}
+\usepackage{tocloft}
+\usepackage{afterpage}
+
+%\usetheme[hideothersubsections,right]{PaloAlto}
+%\usetheme[hideothersubsections]{Goettingen}
+\usetheme[hideothersubsections]{Goettingen}
+%\usetheme{Madrid}
+%\usetheme{default}
+%\useoutertheme[footline=empty]{miniframes}
+%\useoutertheme[hideothersubsections,right]{sidebar}
+%\usecolortheme{seahorse}
+
+
+\usecolortheme{sidebartab}
+\usecolortheme{rose}
+%\setbeamertemplate{footline}[page number]
+%\useinnertheme{rounded}
+\setbeamertemplate{blocks}[rounded]
+%\setbeamercolor{frametitle}{bg=red!20!white}
+
+\newcommand*{\blankpage}{%
+  \begin{otherlanguage}{english}
+    \vspace*{\fill}
+%    \hfill
+    \begin{center}
+      \emph{This page intentionally left blank!}
+    \end{center}
+    \vspace{\fill}
+%    \thispagestyle{empty}
+  \end{otherlanguage}
+  \clearpage
+}
+
+\makeatletter
+\renewcommand*\cleardoublepage{\clearpage%
+    \if@twoside
+        \ifodd\c@page\else
+        \blankpage
+        \fi
+    \fi
+}
+\makeatother
+
+\mode<presentation>{
+\usepackage{makeidx}
+\makeindex
+\newenvironment{theindex}
+ {\let\item\par
+  %definitions for subitem etc
+  }{}
+\newcommand\indexspace{}
+}
+
+\renewcommand{\thepart}{\arabic{part}}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+\allowdisplaybreaks
+
+%Correct indentation of unnumbered sections
+\makeatletter
+%\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
+%\let\sectionignore\@gobbletwo
+\let\latex@numberline\numberline
+\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
+\makeatother
+
+\makeatletter
+\let\latex@partnumberline\partnumberline
+\def\partnumberline#1{\if\relax#1\relax\else\latex@partnumberline{#1}\fi}
+\makeatother
+\end_preamble
+\options intoc,notheorems
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding default
+\font_roman "tgtermes" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue,anchorcolor=blue,filecolor=blue,menucolor=blue,runcolor=blue,urlcolor=blue,citecolor=blue,pdfpagelayout=TwoPageRight,pdfstartview=Fit"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\branch ProblemsAnswers
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Problems
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Expose
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Arabic
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 4
+\tocdepth 4
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size large
+Proudly created by
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Except for the figures created by Matlab
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For your information, NumPy + SciPi + Matplotlib + Spyder offer very competitive
+ alternative to Matlab.
+ For Windows, all these packages and more are distributed by 
+\emph on
+Python(x,y)
+\emph default
+.
+\end_layout
+
+\end_inset
+
+, this thesis has been created by 
+\emph on
+open source software
+\emph default
+ (OSS) packages.
+ Special thanks go to the numerous generous developers behind the following
+ projects:
+\end_layout
+
+\begin_layout Description
+GNU
+\begin_inset space ~
+\end_inset
+
+project free software, mass collaboration project aiming to give users freedom
+\end_layout
+
+\begin_layout Description
+\SpecialChar LaTeX
+ document markup language
+\end_layout
+
+\begin_layout Description
+\SpecialChar TeX
+
+\begin_inset space ~
+\end_inset
+
+Live cross-platform \SpecialChar LaTeX
+ distribution
+\end_layout
+
+\begin_layout Description
+MiK\SpecialChar TeX
+ \SpecialChar LaTeX
+ distribution for Windows
+\end_layout
+
+\begin_layout Description
+\SpecialChar LyX
+ cross-platform \SpecialChar LaTeX
+-based document preparation system
+\end_layout
+
+\begin_layout Description
+Beamer \SpecialChar LaTeX
+ class for creating presentation slides and handouts
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Arabic
+status open
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item [{
+\backslash
+Arabi}]
+\end_layout
+
+\end_inset
+
+ Arabic typesetting package for \SpecialChar LaTeX
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Inkscape cross-platform vector graphics editor
+\end_layout
+
+\begin_layout Description
+\SpecialChar TeX
+
+\begin_inset space ~
+\end_inset
+
+Text Inkscape plugin for creating and editing \SpecialChar LaTeX
+ formulae
+\end_layout
+
+\begin_layout Description
+Other great projects I failed to mention \SpecialChar ldots
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size large
+Other software packages
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Other software packages that greatly helped me during this research include:
+\end_layout
+
+\begin_layout Description
+Areca cross-platform incremental backup package
+\end_layout
+
+\begin_layout Description
+pdfcrop a tool for removing white margins of a pdf file; indispensable for
+ exported Matlab figures
+\end_layout
+
+\begin_layout Description
+GoldenDict cross-platform feature-rich dictionary lookup program
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

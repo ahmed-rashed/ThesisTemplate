@@ -1,0 +1,10177 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\begin_preamble
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{appendix}
+\usepackage{notoccite}	%This is to ignore citations in toc, lof and lot when ordering the references
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage{dpfloat}
+\usepackage[labelformat=simple]{subcaption}
+\usepackage{thmtools}
+
+%Improve the appearance of references to subcaption
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+\TOCLanguage{english}
+
+%%Redefine the plain page style to avoid violating it at every \chapter{} command
+%\fancypagestyle{plain}{%
+%\fancyhf{} % clear all header and footer fields
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}}
+
+%Redefine the plain page style which was destroyed by the arabi package to obtain roman page numbers for the front matter
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+%For arabic page numbers
+\fancypagestyle{ArabicPlain}{%
+\fancyhf{} % clear all header and footer fields
+\cfoot{\I{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\allowdisplaybreaks
+
+% for correct jump positions whe clicking on a link to a float
+\usepackage[figure]{hypcap}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
+% workaround for a makeindex bug,
+% see sec. "Index Entry Order"
+% only uncomment this when you are using makindex
+%\let\OrgIndex\index 
+%\renewcommand*{\index}[1]{\OrgIndex{#1}}
+
+\newcommand*{\blankpage}{%
+  \begin{otherlanguage}{english}
+    \vspace*{\fill}
+%    \hfill
+    \begin{center}
+      \emph{This page intentionally left blank!}
+    \end{center}
+    \vspace{\fill}
+%    \thispagestyle{empty}
+  \end{otherlanguage}
+  \clearpage
+}
+
+\newcommand*{\blankArabicPage}{%
+  \begin{otherlanguage}{arabic}
+    \vspace*{\fill}
+%    \hfill
+    \begin{center}
+      \emph{هذه الصفحة قد تركت فارغة عن عمد!}
+    \end{center}
+    \vspace{\fill}
+  \end{otherlanguage}
+  \clearpage
+}
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}
+    \blankArabicPage
+  \fi
+}
+
+\newcommand*\plainClearToLeftPage{%
+  \clearpage
+  \ifodd\value{page}
+
+    \vspace*{\fill}
+%    \hfill
+    \vspace{\fill}
+
+  \fi
+}
+
+%A more complex version that supports two-column
+%\makeatletter
+%\newcommand*{\cleartoleftpage}{%
+%  \clearpage
+%    \if@twoside
+%    \ifodd\c@page
+%      \hbox{}\newpage
+%      \if@twocolumn
+%        \hbox{}\newpage
+%      \fi
+%    \fi
+%  \fi
+%}
+%\makeatother
+
+\makeatletter
+\renewcommand*\cleardoublepage{\clearpage%
+    \if@twoside
+        \ifodd\c@page\else
+        \blankpage
+        \fi
+    \fi
+}
+\makeatother
+
+%Solve a bug of not displaying \times symbol when writing arabic
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
+
+%Solve a bug of not displaying \omega symbol when writing arabic
+\DeclareRobustCommand{\omegar}{\fontfamily{aromega}\selectfont}
+\let\omega\relax
+\DeclareMathSymbol{\omega}{\mathord}{letters}{"21}
+
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
+\end_preamble
+\options openright,refpage,intoc,bibliography=totoc
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-chap-bytype
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding default
+\font_roman "tgtermes" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement t
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue,anchorcolor=blue,filecolor=blue,menucolor=blue,runcolor=blue,urlcolor=blue,citecolor=blue,pdfpagelayout=TwoPageRight,pdfstartview=Fit"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style unsrt
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\branch Arabic
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename FE-Logo.png
+	height 3cm
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename CU-Pharonic Logo2.png
+	height 3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{centering}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size larger
+SAMPLE THESIS CREATED BY USING \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+By
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+Name Name Name Name
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+A Thesis Submitted to the
+\begin_inset Newline newline
+\end_inset
+
+Faculty of Engineering at Cairo University
+\begin_inset Newline newline
+\end_inset
+
+in Partial Fulfillment of the
+\begin_inset Newline newline
+\end_inset
+
+Requirements for the Degree of
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+MASTER OF SCIENCE
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+in
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Aerospace Engineering
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+FACULTY OF ENGINEERING, CAIRO UNIVERSITY
+\begin_inset Newline newline
+\end_inset
+
+GIZA, EGYPT
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+July, 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par
+\backslash
+end{centering}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "CreatedBy.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{centering}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size larger
+SAMPLE THESIS CREATED BY USING \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+By
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+Name Name Name Name
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+A Thesis Submitted to the
+\begin_inset Newline newline
+\end_inset
+
+Faculty of Engineering at Cairo University
+\begin_inset Newline newline
+\end_inset
+
+in Partial Fulfillment of the
+\begin_inset Newline newline
+\end_inset
+
+Requirements for the Degree of
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+MASTER OF SCIENCE
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+in
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Aerospace Engineering
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Under the Supervision of
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+Prof.
+ Name1 Name1 Name1
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Professor
+\end_layout
+
+\begin_layout Plain Layout
+Aerospace Engineering Department
+\end_layout
+
+\begin_layout Plain Layout
+Faculty of Engineering, Cairo University
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+Prof.
+ Name2 Name2 Name2
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Associate Professor
+\end_layout
+
+\begin_layout Plain Layout
+Aerospace Engineering Department
+\end_layout
+
+\begin_layout Plain Layout
+Faculty of Engineering, Cairo University
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size large
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+Prof.
+ Name3 Name3 Name3
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assistant Professor
+\end_layout
+
+\begin_layout Plain Layout
+Aerospace Engineering Department
+\end_layout
+
+\begin_layout Plain Layout
+Faculty of Engineering, Cairo University
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+FACULTY OF ENGINEERING, CAIRO UNIVERSITY
+\begin_inset Newline newline
+\end_inset
+
+GIZA, EGYPT
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+July, 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size larger
+SAMPLE THESIS CREATED BY USING \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+By
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+Name Name Name Name
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+A Thesis Submitted to the
+\begin_inset Newline newline
+\end_inset
+
+Faculty of Engineering at Cairo University
+\begin_inset Newline newline
+\end_inset
+
+in Partial Fulfillment of the
+\begin_inset Newline newline
+\end_inset
+
+Requirements for the Degree of
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+MASTER OF SCIENCE
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+in
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Aerospace Engineering
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Approved by the Examining Committee
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+Prof.
+ Name1 Name1 Name1, thesis main advisor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+Associate Prof.
+ Name3 Name3 Name3, internal examiner
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+Prof.
+ Name4 Name4 Name4, external examiner,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+National Research Center
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+FACULTY OF ENGINEERING, CAIRO UNIVERSITY
+\begin_inset Newline newline
+\end_inset
+
+GIZA, EGYPT
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+July, 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par
+\backslash
+end{centering}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="42line%">
+<column alignment="left" valignment="bottom" width="25line%">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Engineer's Name:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Name Name Name Name
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename YaoMingmeme.jpg
+	width 3.4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Date of Birth
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1 / 1 / 1980
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nationality:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Egyptian
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+E-mail:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+email@yahoo.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Phone:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+01223456789
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Address:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+address address address
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Registration Date:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1 / 1 / 2015
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Awarding Date:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset space \hspace*{}
+\length 5mm
+\end_inset
+
+/
+\begin_inset space \hspace*{}
+\length 5mm
+\end_inset
+
+/ 2018
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Degree:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Master of Science
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Department:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Aerospace Engineering
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Supervisors:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prof.
+ Name1 Name1 Name1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dr.
+ Name2 Name2 Name2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Examiners:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prof.
+ Name1 Name1 Name1, thesis main advisor
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associate Prof.
+ Name3 Name3 Name3, internal examiner
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prof.
+ Name4 Name4 Name4, external examiner
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Title of Thesis:
+\end_layout
+
+\begin_layout Standard
+\align center
+SAMPLE THESIS CREATED BY USING \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Key Words:
+\end_layout
+
+\begin_layout Standard
+\align center
+Keyword1; Keyword2; Keyword3; Keyword4; Keyword5; Keyword6; Keyword7; Keyword8;
+ Keyword9; Keyword9; Keyword10.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Summary:
+\end_layout
+
+\begin_layout Standard
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Abstract
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abstract}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I'm Ahmed Mohamed Rashed Desoki, an assistant professor at Aerospace Engineering
+ Department, Cairo University.
+ I created this thesis template to show you how you can create professional
+ thesis using Open Source Software (OSS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "OSS"
+description "Open Source Software"
+
+\end_inset
+
+).
+ I tried to my best to cite all the sources that helped me create this thesis
+ sample.
+\end_layout
+
+\begin_layout Standard
+If you face a problem, please try hard to read, learn and dig for a solution
+ by yourself.
+ In case you have suggestions, corrections, bugs or improvement, please
+ contribute to the Git page at ???.
+\end_layout
+
+\begin_layout Standard
+This template should be available with you from the very beginning of your
+ research.
+ Whenever you find a new useful information, you should immediately write
+ it in this document with clear citation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Chapter*
+Table of Contents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+contentsname}{Table of Contents}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+contentsname}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pdfbookmark[0]{
+\backslash
+contentsname}{toc}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Acknowledgments}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word.
+\end_layout
+
+\begin_layout Standard
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word.
+\end_layout
+
+\begin_layout Standard
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word.
+\end_layout
+
+\begin_layout Standard
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word.
+\end_layout
+
+\begin_layout Standard
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Chapter*
+List of Tables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listtablename}{List of Tables}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listtablename}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pdfbookmark[0]{
+\backslash
+listtablename}{lot}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Chapter*
+List of Figures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listfigurename}{List of Figures}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listfigurename}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pdfbookmark[0]{
+\backslash
+listfigurename}{lof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Chapter*
+Nomenclature
+\end_layout
+
+\begin_layout Plain Layout
+Nomenclature (and may be index too) does not show in arabic documents.
+\end_layout
+
+\begin_layout Plain Layout
+As a workaround (assuming your thesis file name is 
+\begin_inset Quotes eld
+\end_inset
+
+Thesis
+\begin_inset Quotes erd
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Enumerate
+pdflatex the Thesis.tex file twice (or as needed)
+\end_layout
+
+\begin_layout Enumerate
+manually edit the *.nlo file and modify as follows
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+modify this
+\end_layout
+
+\begin_layout LyX-Code
+
+\backslash
+nomenclatureentry{aVI@[{VI}]
+\backslash
+begingroup Visual Inspection
+\backslash
+nomeqref {1.0}|nompageref}{
+\backslash
+if@rlmain 
+\backslash
+I {1}
+\backslash
+else 
+\backslash
+textLR {1}
+\backslash
+fi }
+\end_layout
+
+\begin_layout Plain Layout
+to this
+\end_layout
+
+\begin_layout LyX-Code
+
+\backslash
+nomenclatureentry{aVI@[{VI}]
+\backslash
+begingroup Visual Inspection
+\backslash
+nomeqref {1.0}|nompageref}{1}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Run the command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+makeindex 'Thesis.nlo' -s nomencl.ist -o 'Thesis.nls'
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+pdflatex the Thesis.tex file once more (or as needed)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+pagenumbering{arabic}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Technical-Writing,-Presentation"
+
+\end_inset
+
+Technical Writing Using \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Section*
+Word Processors; \SpecialChar LaTeX
+ vs Microsoft Word
+\end_layout
+
+\begin_layout Standard
+Usually there are two categories of word processing software packages:
+\end_layout
+
+\begin_layout Itemize
+What You See Is What You Get (WYSIWYG)
+\end_layout
+
+\begin_layout Itemize
+What You See Is What You Mean (WYSIWYM)
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="45line%">
+<column alignment="center" valignment="middle" width="45line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WYSIWYG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WYSIWYM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Microsoft
+\size default
+ Word
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+LibreOffice
+\size default
+ Writer
+\end_layout
+
+\begin_layout Plain Layout
+AbiWord
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Calligra
+\size default
+ Words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\SpecialChar LaTeX
+
+\end_layout
+
+\begin_layout Plain Layout
+\SpecialChar LyX
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Roughly, you can compare 
+\bar under
+\SpecialChar LaTeX
+  to Word
+\bar default
+ as you compare 
+\bar under
+Matlab to Excel
+\bar default
+.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Effort-and-time"
+
+\end_inset
+
+ visualizes the effort and time consumption needed.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Latex_vs_Word1.png
+	width 60line%
+	height 80theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Effort-and-time"
+
+\end_inset
+
+Effort and time consumption of MS Word as compared to \SpecialChar LaTeX
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\SpecialChar LaTeX
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+\SpecialChar LaTeX
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\SpecialChar LaTeX
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LaTeX
+  is a document markup language.
+\end_layout
+
+\begin_layout Itemize
+Simply you can think of it as similar to HTML
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+(HyperText Markup Language)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In order to create a document in \SpecialChar LaTeX
+, a 
+\series bold
+.tex
+\series default
+ file must be created using some 
+\series bold
+\bar under
+text editor
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+.tex
+\series default
+ file is then 
+\series bold
+\bar under
+compiled
+\series default
+\bar default
+ to produce the document
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar LaTeX
+  can generate several document formats including 
+\begin_inset Quotes eld
+\end_inset
+
+pdf
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\SpecialChar LaTeX
+ is Free
+\end_layout
+
+\begin_layout Description
+Although being free is an advantage, but it is a drawback at the same time!
+ Free implies:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Slow download server
+\end_layout
+
+\begin_layout Itemize
+No clean official documentation
+\end_layout
+
+\begin_layout Itemize
+Several alternatives to do the same thing
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+There are always package incompatibilities (and there always will be) between
+ packages, all authors do their best, but as this is done as a hobby of
+ all authors in their spare time ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+However; \SpecialChar LaTeX
+ is very mature and widely used by professional/enterprise publishers
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Also it has a big user community
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+when you encounter a problem, google it.
+ Most likely you will find others had encountered it and found a solution
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To create float landscape
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+clearpage %Flush earlier floats (otherwise order might not be correct)
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{landscape}% Landscape page
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Avoid using the subfloat feature suggested by LyX.
+ It has problems and is superseded by the subcaption package used below
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LatexCheatSheet.pdf
+	width 100line%
+	height 99theight%
+	keepAspectRatio
+	special page=1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Page 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:-cheat-sheet"
+
+\end_inset
+
+\SpecialChar LaTeX
+ cheat sheet 
+\emph on
+(continued in the next page)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To create a continued float
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ContinuedFloat
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename LatexCheatSheet.pdf
+	width 100line%
+	height 100theight%
+	keepAspectRatio
+	special page=2
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Page 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\emph on
+(continued)
+\emph default
+ \SpecialChar LaTeX
+ cheat sheet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{landscape}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+clearpage% Flush page
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\SpecialChar LaTeX
+ Editors
+\end_layout
+
+\begin_layout Itemize
+To write C/C++ code, any text editor can be used
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+But using a good IDE can greatly ease your job
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\SpecialChar LaTeX
+ is similar
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Any text editor is OK, but a dedicated \SpecialChar LaTeX
+ editor is strongly recommended
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A dedicated \SpecialChar LaTeX
+ editor
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+can highlight and auto complete \SpecialChar LaTeX
+ keywords
+\end_layout
+
+\begin_layout Itemize
+has several \SpecialChar LaTeX
+ templates for several types of documents
+\end_layout
+
+\begin_layout Itemize
+facilitates compiling and debugging
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar ldots
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sample \SpecialChar LaTeX
+ editors are:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Texstudio; cross-platform
+\end_layout
+
+\begin_layout Description
+Kile; for Linux
+\end_layout
+
+\begin_layout Description
+and many others
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Porting a \SpecialChar LaTeX
+ Document
+\end_layout
+
+\begin_layout Standard
+Usually \SpecialChar LaTeX
+ source files reference images and other external files.
+ Hence, if you want to move/copy your \SpecialChar LaTeX
+ document to another computer, you
+ have to move/copy all the referenced files as well.
+\end_layout
+
+\begin_layout Subsection
+Arabic Support
+\end_layout
+
+\begin_layout Standard
+Thanks to
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Thanks to GOD at first of course.
+\end_layout
+
+\end_inset
+
+ the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Arabi
+\end_layout
+
+\end_inset
+
+ package, Arabic and Farsi languages are supported with the 
+\begin_inset Quotes eld
+\end_inset
+
+Babel
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Standard
+However, since arabic users are few, 
+\begin_inset Quotes eld
+\end_inset
+
+Arabi
+\begin_inset Quotes erd
+\end_inset
+
+ package is not mature enough and some minor bugs do exist.
+ Googling about these bugs, usually you find the same of similar bugs do
+ exist in other languages, and hence you san infer solutions/workarounds.
+\end_layout
+
+\begin_layout Subsection
+Installing \SpecialChar LaTeX
+
+\end_layout
+
+\begin_layout Standard
+To install and use \SpecialChar LaTeX
+, basically you need two things; (1) \SpecialChar LaTeX
+ implementation
+ and (2) Integrated Development Environment (IDE
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDE"
+description "Integrated Development Environment"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IDE
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+For MS Windows users, proText
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.tug.org/protext/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+proText
+\end_layout
+
+\end_inset
+
+ is a \SpecialChar TeX
+/\SpecialChar LaTeX
+ distribution that includes:
+\end_layout
+
+\begin_layout Itemize
+MiK\SpecialChar TeX
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+MiKTex
+\end_layout
+
+\end_inset
+
+: \SpecialChar LaTeX
+ Implementation for MS Windows
+\end_layout
+
+\begin_layout Itemize
+TexStudio: cross-platform \SpecialChar TeX
+/\SpecialChar LaTeX
+ IDE
+\end_layout
+
+\begin_layout Standard
+For Linux and MAC OS, \SpecialChar TeX
+
+\begin_inset space ~
+\end_inset
+
+Live
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tex
+\begin_inset space ~
+\end_inset
+
+Live
+\end_layout
+
+\end_inset
+
+ is a cross platform \SpecialChar LaTeX
+ implementation
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+That is, it is a cross-platform alternative to MiK\SpecialChar TeX
+.
+\end_layout
+
+\end_inset
+
+, and there is a wide range of IDE's including TexStudio.
+\end_layout
+
+\begin_layout Subsection*
+Keep Concentrating
+\end_layout
+
+\begin_layout Standard
+Due to its WYSIWYM nature, I feel 
+\bar under
+more
+\bar default
+ concentrating while using 
+\series bold
+\SpecialChar LaTeX
+
+\series default
+ as compared to 
+\series bold
+Ms-Word
+\end_layout
+
+\begin_layout Section
+\SpecialChar LyX
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+\SpecialChar LyX
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\SpecialChar LyX
+ is a graphical front-end to \SpecialChar LaTeX
+ 
+\end_layout
+
+\begin_layout Itemize
+You can think of the 
+\bar under
+\SpecialChar LyX
+-\SpecialChar LaTeX
+
+\bar default
+ relationship as similar to the 
+\bar under
+Visual
+\begin_inset space ~
+\end_inset
+
+Studio-C++
+\begin_inset space ~
+\end_inset
+
+compiler
+\bar default
+ relationship
+\end_layout
+
+\begin_layout Itemize
+Unlike \SpecialChar LaTeX
+, \SpecialChar LyX
+ comes with 
+\bar under
+tidy and very good
+\bar default
+ documentation
+\end_layout
+
+\begin_layout Itemize
+Also it has a big community, i.e.,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+it is mature enough
+\end_layout
+
+\begin_layout Itemize
+when you encounter a problem, google it.
+ Most likely you will find others had encountered it and found a solution
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Keep your concentration
+\end_layout
+
+\begin_layout Standard
+Due to its WYSIWYM nature, I feel 
+\bar under
+very
+\bar default
+ concentrating while using 
+\series bold
+\SpecialChar LyX
+
+\series default
+ as compared to 
+\series bold
+Ms-Word
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Installing \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Description
+Windows installer is available at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.lyx.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+There are two installer variants:
+\end_layout
+
+\begin_layout Enumerate
+Installer (recommended)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This needs a pre-installed \SpecialChar LaTeX
+ distribution
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bundle
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+It includes a minimal \SpecialChar LaTeX
+ distribution
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+I recommend installing as follows:
+\end_layout
+
+\begin_layout Enumerate
+Install Inkscape
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Confirm path to inkscape.exe is added to the 
+\begin_inset Quotes eld
+\end_inset
+
+PATH
+\begin_inset Quotes erd
+\end_inset
+
+ environment variable
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Install MiK\SpecialChar TeX
+ (or \SpecialChar TeX
+ Live)
+\end_layout
+
+\begin_layout Enumerate
+Install \SpecialChar LyX
+ (Installer option)
+\end_layout
+
+\begin_layout Enumerate
+Modify \SpecialChar LyX
+ configurations to use Inkscape as graphics translator, as explained
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Correcting-svg-converters"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Enable continuous spell checking
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tools\SpecialChar menuseparator
+Preferences\SpecialChar menuseparator
+Language
+\begin_inset space ~
+\end_inset
+
+Settings\SpecialChar menuseparator
+Spellchecker\SpecialChar menuseparator
+Spellcheck
+\begin_inset space ~
+\end_inset
+
+continuously
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement tp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Avoid using the subfloat feature suggested by LyX.
+ It has problems and is superseded by the subcaption package used below
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename LyxInkscape0.png
+	width 80line%
+	height 25theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+To convert svg to eps
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip{}
+\backslash
+begin{subfigure}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LyxInkscape.png
+	width 80line%
+	height 25theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+To convert svg to pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip{}
+\backslash
+begin{subfigure}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LyxInkscape1.png
+	width 80line%
+	height 25theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+To convert svg to png
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Correcting-svg-converters"
+
+\end_inset
+
+Correcting svg converters in Inkscape
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Linux packages are usually available in most Linux distributions' repositories
+\end_layout
+
+\begin_layout Subsection
+Learning \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Description
+Explore style-list, menus and toolbars
+\end_layout
+
+\begin_layout Description
+Help
+\begin_inset space ~
+\end_inset
+
+menu includes very good manuals
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Manuals themselves are \SpecialChar LyX
+ documents
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+So they are essentially very good \SpecialChar LyX
+ examples
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+You may begin with:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_layout Enumerate
+Tutorial
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Then if needed, read necessary sections of:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+User's Guide
+\end_layout
+
+\begin_layout Enumerate
+rest of manuals \SpecialChar ldots
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+lyx
+\backslash
+examples folder contains wide variety of very good examples
+\end_layout
+
+\begin_layout Subsection
+Porting a \SpecialChar LyX
+ Document
+\end_layout
+
+\begin_layout Standard
+Similar to \SpecialChar LaTeX
+ files, \SpecialChar LyX
+ files usually reference images and other external files.
+ Hence, if you want to move/copy your \SpecialChar LyX
+ document to another computer, you
+ have to move/copy all the referenced files as well.
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ greatly simplifies collecting the referenced files by the command \SpecialChar LyX
+\SpecialChar menuseparator
+File\SpecialChar menuseparator
+Export\SpecialChar menuseparator
+\SpecialChar LyX
+
+ Archive
+\end_layout
+
+\begin_layout Subsection
+Arabic Support
+\end_layout
+
+\begin_layout Standard
+Arabic is supported in \SpecialChar LyX
+, as shown in the following lines.
+\end_layout
+
+\begin_layout Standard
+This is a line with some Arabic words
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang arabic_arabi
+هذه هى بعض الكلمات العربية فى سطر انجليزى.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+و هذا سطر عربى به بعض الكلمات الانجليزية.
+\lang english
+Thus is some English words in an Arabic line.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ 
+\begin_inset space ~
+\end_inset
+
+و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+ و بناءً عليه فقد تم اثبات المطلوب.
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Reference-Management-Software"
+
+\end_inset
+
+Reference Management Software
+\end_layout
+
+\begin_layout Standard
+Reference management software 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiki:RefManaSW"
+
+\end_inset
+
+ is citation management software or personal bibliographic management software
+ is software for scholars and authors to use for recording and utilising
+ bibliographic citations (references) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "UseRefMan"
+
+\end_inset
+
+.
+ Once a citation has been recorded, it can be used time and again in generating
+ bibliographies, such as lists of references in scholarly books, articles
+ and essays.
+ The development of reference management packages has been driven by the
+ rapid expansion of scientific literature.
+ Among poular refence management software are:
+\end_layout
+
+\begin_layout Description
+JabRef, a BibTeX management cross-platform software for use with \SpecialChar LaTeX
+/\SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Description
+Endnote, a management software suitable for use with MS Word
+\end_layout
+
+\begin_layout Description
+Zotero, a cross-platform web-based management software suitable for \SpecialChar LaTeX
+/\SpecialChar LyX
+, MS
+ Word, LibreOffice and others.
+\end_layout
+
+\begin_layout Standard
+Comparisons of these software are available in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiki:RefManComp"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Beamer; a Presentation Class for \SpecialChar LaTeX
+
+\end_layout
+
+\begin_layout Section
+Beamer
+\end_layout
+
+\begin_layout Description
+Beamer is a \SpecialChar LaTeX
+ class for creating 
+\series bold
+professional
+\series default
+ presentation slides.
+ Beamer can also be easily used within \SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Description
+Beamer
+\begin_inset space ~
+\end_inset
+
+template is a built in template \SpecialChar LyX
+ provides to enable easily building presentation
+s in \SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Section
+Presentation Handouts
+\end_layout
+
+\begin_layout Description
+Beamer-Article class is also available.
+ It renders the slides on standard sized paper (like A4 or letter), with
+ frame titles used as paragraph titles, no special slide layout/colors and
+ keeps the sectioning.
+ It is suitable for creating 
+\series bold
+\emph on
+professional
+\series default
+\emph default
+ presentation handouts.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+You can have a single 
+\bar under
+source file
+\bar default
+ for the slides and its handouts
+\end_layout
+
+\begin_layout Itemize
+You can still control the single source file so that the 
+\series bold
+slides
+\series default
+ and the 
+\series bold
+article
+\series default
+ are different
+\end_layout
+
+\begin_layout Itemize
+Beamer-Article class is also available within \SpecialChar LyX
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Keep your concentration
+\end_layout
+
+\begin_layout Standard
+Due to its WYSIWYM nature, I feel 
+\bar under
+very very very
+\bar default
+ concentrating while using 
+\series bold
+\SpecialChar LyX
+-Beamer
+\series default
+ as compared to 
+\series bold
+Ms-Power Point
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Installing Beamer
+\end_layout
+
+\begin_layout Standard
+Beamer class is usually installed by default with MiK\SpecialChar TeX
+, \SpecialChar TeX
+Live.
+ Also templates for both Beamer-presentation and Beamer-article are included
+ by default with \SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Section
+Learning Beamer Usage Within \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Itemize
+Help\SpecialChar menuseparator
+Specific Manuals \SpecialChar menuseparator
+ Beamer Presentations
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Explore the styles list and Insert menu
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Styles will be available after you set the current document type to Beamer.
+ This is done from the menu command 
+\begin_inset Quotes eld
+\end_inset
+
+Document>Settings>Document Class>Beamer
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Beamer
+\begin_inset space ~
+\end_inset
+
+User
+\begin_inset space ~
+\end_inset
+
+Guide
+\series default
+ explain creating Beamer presentations in plain \SpecialChar LaTeX
+ and \SpecialChar LyX
+ as well
+\end_layout
+
+\begin_layout Itemize
+For 
+\series bold
+customization
+\series default
+ of Beamer presentations, check the 
+\begin_inset Quotes eld
+\end_inset
+
+BEAMER appearance cheat sheet
+\begin_inset Quotes erd
+\end_inset
+
+ at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://science.thilucmic.fr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For various 
+\series bold
+themes
+\series default
+ of Beamer presentation, check 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.hartwork.org/beamer-theme-matrix/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Also a very good variety of presentations are attached to this course
+\end_layout
+
+\begin_layout Chapter
+Vector Graphics
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Vector graphics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Raster
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Raster graphics
+\end_layout
+
+\end_inset
+
+ vs Vector Graphics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To create a float at the left page
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{leftfullpage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Avoid using the subfloat feature suggested by LyX.
+ It has problems and is superseded by the subcaption package used below
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Raster.svg
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Letter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename SineFig3.png
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Matlab figure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Tiger_by_mittelpunkt.jpg
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tiger
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename YaoMingmeme.jpg
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Face
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sample-raster-graphics"
+
+\end_inset
+
+Sample raster graphics.
+ This figure is forced to be on a left page for easier comparison with figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vector-graphics-version"
+
+\end_inset
+
+ on the opposite page.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{leftfullpage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Vector.svg
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Letter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename SineFig3.pdf
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Matlab figure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Tiger.svg
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tiger
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename YaoMing.svg
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Face
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Vector-graphics-version"
+
+\end_inset
+
+Vector graphics version of figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sample-raster-graphics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Graphics Formats
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Raster
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vector
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.bmp
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+bmp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uncompressed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.pdf
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compressed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.png
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+png
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Loose-less compression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.eps
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eps
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.jpg
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+jpg
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lossy compression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.emf
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+emf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compatible with MS office
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.svg
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+svg
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Vector Graphics Editors
+\end_layout
+
+\begin_layout Itemize
+Adobe Illustrator
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Adobe Illustrator
+\end_layout
+
+\end_inset
+
+ 
+\size scriptsize
+(
+\emph on
+de facto
+\emph default
+ standard; bloated)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Corel Draw
+\end_layout
+
+\end_inset
+
+Corel Draw 
+\size scriptsize
+(bloated)
+\end_layout
+
+\begin_layout Itemize
+Inkscape
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Inkscape
+\end_layout
+
+\end_inset
+
+ (light, free, open source, cross-platform and popular; my favorite)
+\end_layout
+
+\begin_layout Itemize
+LibreOffice Draw
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Section
+Inkscape
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Inkscape
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Inkscape Features
+\end_layout
+
+\begin_layout Itemize
+Open source
+\end_layout
+
+\begin_layout Itemize
+Cross platform
+\end_layout
+
+\begin_layout Itemize
+Free
+\end_layout
+
+\begin_layout Itemize
+Has a big community, i.e.,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+it is mature enough
+\end_layout
+
+\begin_layout Itemize
+when you encounter a problem, google it.
+ Most likely you will find others had encountered it and found a solution
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Much much powerful than Ms-Word or Ms-Power point sketching capabilities
+\end_layout
+
+\begin_layout Itemize
+Has several plugins that greatly expand its capabilities
+\end_layout
+
+\begin_layout Subsection*
+Inkscape Capabilities
+\end_layout
+
+\begin_layout Standard
+Inkscape is based on brazier curves.
+ That is, a curve is defined using four information, 
+\series bold
+\bar under
+start
+\series default
+\bar default
+, 
+\series bold
+\bar under
+end
+\series default
+\bar default
+, 
+\series bold
+\bar under
+start
+\begin_inset space ~
+\end_inset
+
+tangent
+\series default
+\bar default
+ and 
+\series bold
+\bar under
+end
+\begin_inset space ~
+\end_inset
+
+tangent
+\series default
+\bar default
+.
+\end_layout
+
+\begin_layout Itemize
+Additionally, you can draw and edit:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+straight lines
+\end_layout
+
+\begin_layout Itemize
+circles/arcs/ellipses
+\end_layout
+
+\begin_layout Itemize
+text
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar LaTeX
+ formulas
+\end_layout
+
+\begin_layout Itemize
+function curves
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Import Graphics from pdf
+\end_layout
+
+\begin_layout Standard
+You can import vector graphics from pdf files, and even edit them, as shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vector-graphic-imported"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename BasicADSL_Router.svg
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Vector-graphic-imported"
+
+\end_inset
+
+Vector graphic imported from the user guide of a home use ADSL router
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Interesting Plug-ins
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Function plotter
+\end_layout
+
+\end_inset
+
+Function Plotter
+\end_layout
+
+\begin_layout Itemize
+It is a built in plugins
+\end_layout
+
+\begin_layout Itemize
+It uses brazier curves, same as Inkscape
+\end_layout
+
+\begin_layout Itemize
+It calculates the function derivative and use it to adjust the curve slope
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It produces very smooth curves using much less points than Matlab
+\end_layout
+
+\begin_layout Itemize
+You can still adjust/correct the curve manually
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FunctionPlotter"
+
+\end_inset
+
+ shows the plugin user interface, and the resulting curve.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Figure-illustrating-the"
+
+\end_inset
+
+ shows a more comprehensive example.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Avoid using the subfloat feature suggested by \SpecialChar LyX
+.
+ It has problems and is superseded by the subcaption package used below
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename FunctionPlotter_sinc.png
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "CatSubFig-1-1"
+
+\end_inset
+
+Function Plotter user interface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{.49
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename FunctionPlotterCapabilities.png
+	lyxscale 50
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "ElephantSubFig-1-1"
+
+\end_inset
+
+Curve generated by Function Plotter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FunctionPlotter"
+
+\end_inset
+
+The Function Plotter plugin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tex Text
+\end_layout
+
+\end_inset
+
+Tex Text
+\end_layout
+
+\begin_layout Standard
+It allows you to write/edit \SpecialChar LaTeX
+ formulas inside Inkscape.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename FTPairs12.svg
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Figure-illustrating-the"
+
+\end_inset
+
+Figure illustrating the capabilities of 
+\begin_inset Quotes eld
+\end_inset
+
+Function Plotter
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Tex Text
+\begin_inset Quotes erd
+\end_inset
+
+ plug ins.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Learning Inkscape
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Explore
+\series default
+ menus and toolbars
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Official
+\begin_inset space ~
+\end_inset
+
+manual
+\series default
+ [Tavmjong Bah, Inkscape: Guide to a Vector Drawing Program, Pearson Education,
+ 4th ed, 2011] is very good and detailed
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Chapters
+\begin_inset space ~
+\end_inset
+
+2 includes 10 examples
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The first 3 examples are enough for a good start
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Chapters
+\begin_inset space ~
+\end_inset
+
+5 explains editing
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Surf it fast
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Help
+\begin_inset space ~
+\end_inset
+
+menu
+\series default
+ includes tutorials, FAQ, \SpecialChar ldots
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://inkscapetutorials.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Floats, Figures, Tables and Equations
+\end_layout
+
+\begin_layout Section
+Concept of Floating Graphics, Tables
+\end_layout
+
+\begin_layout Standard
+For those users familiar with MS World, they expect figures are placed where
+ they put them.
+ This however does not look professional.
+ Therefore, \SpecialChar LaTeX
+, and consequently \SpecialChar LyX
+, uses floats for placing figures and tables.
+ For more information about this topic, refer to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DetailedFolats"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "sec. 4.6"
+key "LyX_UserGuide"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Compound Figures
+\end_layout
+
+\begin_layout Standard
+This is explained in figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CatSubFig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ElephantSubFig"
+
+\end_inset
+
+.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "AnimalsCompoundFigures"
+
+\end_inset
+
+ is created using the subcaption \SpecialChar LaTeX
+ package.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "AnimalsCompoundFigures-1"
+
+\end_inset
+
+ shows another way to organize subfigures.
+\end_layout
+
+\begin_layout Section
+Tables
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Table1_reference"
+
+\end_inset
+
+ shows a sample simple table, while table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "AnotherTable"
+
+\end_inset
+
+ shows a more complex table.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Table1_reference"
+
+\end_inset
+
+Table caption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="15line%">
+<column alignment="center" valignment="top" width="35line%">
+<column alignment="center" valignment="top" width="35line%">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Conventional Transducer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+This Transducer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Price
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Weight
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Coupling
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Material
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Generation 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Suitability
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Restrictions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Action type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+word word
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "AnotherTable"
+
+\end_inset
+
+Comparison between somethings
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="3line%">
+<column alignment="center" valignment="middle" width="20line%">
+<column alignment="center" valignment="middle" width="20line%">
+<column alignment="center" valignment="middle" width="20line%">
+<column alignment="center" valignment="middle" width="20line%">
+<row>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Type 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Type 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Type 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Type 4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature 4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+words words words words words words words
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-Proposed-Method"
+
+\end_inset
+
+Landscape Floats
+\end_layout
+
+\begin_layout Standard
+Have a look to figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:-cheat-sheet"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Subfigure and Subtable
+\end_layout
+
+\begin_layout Standard
+Have a look to figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Figure-composed-of"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Avoid using the subfloat feature suggested by LyX.
+ It has problems and is superseded by the subcaption package used below
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subfigure}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Heckert_GNU_white.svg
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GNU logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subfigure}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subtable}[b]{
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rho_{ij}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.8328$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0010$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.8328$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j=3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.8328$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0010$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.8328$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Correlation coefficient matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subtable}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Figure-composed-of"
+
+\end_inset
+
+Figure composed of a subfigure and subtable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Equations"
+
+\end_inset
+
+Equations
+\end_layout
+
+\begin_layout Standard
+Governing Ordinary Differential Equation (
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ode"
+description "ordinary differential equation"
+
+\end_inset
+
+ode)
+\begin_inset Formula 
+\begin{equation}
+m\ddot{x}(t)+c\dot{x}(t)+kx(t)=f(t)\label{MotherEquation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking Laplace transform, the 
+\emph on
+ode
+\emph default
+ is transformed to the algebraic equation
+\begin_inset Formula 
+\[
+m\left(s^{2}X(s)-sx_{0}-\dot{x}_{0}\right)+c\left(sX(s)-x_{0}\right)+kX(s)=F(s)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{0}\equiv x(t=0)$
+\end_inset
+
+ and 
+\begin_inset Formula $\dot{x}_{0}\equiv\dot{x}(t=0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Rearranging yields
+\begin_inset Formula 
+\begin{equation}
+\left(ms^{2}+cs+k\right)X(s)-\left(ms+c\right)x_{0}-m\dot{x}_{0}=F(s)\label{RawGovEqn}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dividing by 
+\begin_inset Formula $m$
+\end_inset
+
+ yields
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)X(s)-\left(s+2\zeta\omega_{\textrm{n}}\right)x_{0}-\dot{x}_{0}=\frac{F(s)}{m}\label{SDOF_eqn}
+\end{equation}
+
+\end_inset
+
+where the non-dimensional parameters 
+\begin_inset Formula $\omega_{\textrm{n}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ are the 
+\series bold
+\emph on
+natural frequency
+\series default
+\emph default
+ and 
+\series bold
+\emph on
+damping ratio
+\series default
+\emph default
+ defined as 
+\begin_inset Formula 
+\begin{equation}
+\boxed{\omega_{\textrm{n}}\equiv\sqrt{\frac{k}{m}}}\qquad\&\qquad\boxed{\zeta\equiv\frac{c}{c_{\textrm{c}}}}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{\textrm{c}}$
+\end_inset
+
+ is the 
+\series bold
+\emph on
+critical damping
+\series default
+\emph default
+ defined as
+\begin_inset Formula 
+\begin{equation}
+\boxed{c_{\textrm{c}}\equiv2\sqrt{km}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By solving the algebraic equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SDOF_eqn"
+
+\end_inset
+
+), the response 
+\begin_inset Formula $X(s)$
+\end_inset
+
+ is obtained as
+\begin_inset Formula 
+\begin{eqnarray*}
+X(s) & = & \frac{F(s)}{m\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)}\\
+ &  & +\frac{sx_{0}}{s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}}+\frac{2\zeta\omega_{\textrm{n}}x_{0}+\dot{x}_{0}}{s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+X(s)=F(s)\,H(s)+\frac{sx_{0}}{s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}}+\frac{2\zeta\omega_{\textrm{n}}x_{0}+\dot{x}_{0}}{s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}}\label{SDOF_Response_s}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $H(s)$
+\end_inset
+
+ is the 
+\emph on
+Transfer Function
+\emph default
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TF"
+description "Transfer Function"
+
+\end_inset
+
+(TF) defined as
+\begin_inset Formula 
+\begin{flalign}
+H(s) & \equiv\frac{\left.X(s)\right|_{\textrm{zero initial conditions}}}{F(s)}\label{FRF_Definition}\\
+ & =\frac{1}{ms^{2}+cs+k}\\
+ & =\frac{1}{m\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)}\\
+ & =\frac{1}{m\left(s-\left(-\zeta\omega_{\textrm{n}}+\omega_{\textrm{n}}\sqrt{\zeta^{2}-1}\right)\right)\left(s-\left(-\zeta\omega_{\textrm{n}}-\omega_{\textrm{n}}\sqrt{\zeta^{2}-1}\right)\right)}
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assuming the roots of 
+\begin_inset Formula $H(s)$
+\end_inset
+
+ are complex, the TF is written as
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{1}{m\left(s-\left(-\zeta\omega_{\textrm{n}}+i\omega_{\textrm{n}}\sqrt{1-\zeta^{2}}\right)\right)\left(s-\left(-\zeta\omega_{\textrm{n}}-i\omega_{\textrm{n}}\sqrt{1-\zeta^{2}}\right)\right)}
+\end{equation}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+\boxed{H(s)=\frac{1}{m\left(s-\left(-\zeta\omega_{\textrm{n}}+i\omega_{\textrm{d}}\right)\right)\left(s-\left(-\zeta\omega_{\textrm{n}}-i\omega_{\textrm{d}}\right)\right)}}\label{TF}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\boxed{\omega_{\textrm{d}}\equiv\omega_{\textrm{n}}\sqrt{1-\zeta^{2}}}\label{DampedNaturalFrequency}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus the response 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ can be obtained from equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SDOF_Response_s"
+
+\end_inset
+
+) as 
+\begin_inset Formula 
+\begin{flalign}
+x(t)= & \mathcal{L}^{-1}\left[X(s)\right]
+\end{flalign}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{\mathcal{L}}^{-1}$
+\end_inset
+
+ denotes inverse Laplace transform.
+\end_layout
+
+\begin_layout Standard
+Assuming the TF roots are complex, i.e., 
+\begin_inset Formula $\zeta<1$
+\end_inset
+
+, inverse Laplace transform tables yield
+\begin_inset Formula 
+\begin{flalign}
+x(t)= & \mathcal{L}^{-1}\left[F(s)\,H(s)\right]\nonumber \\
+ & +x_{0}e^{-\zeta\omega_{\textrm{n}}t}\left(\cos\left(\omega_{\textrm{d}}t\right)-\frac{\zeta\omega_{\textrm{n}}}{\omega_{\textrm{d}}}\sin\left(\omega_{\textrm{d}}t\right)\right)\nonumber \\
+ & +\left(2\zeta\omega_{\textrm{n}}x_{0}+\dot{x}_{0}\right)\,e^{-\zeta\omega_{\textrm{n}}t}\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\label{SDOF_Response-InverseLaplace-1}
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rearranging yields
+\begin_inset Formula 
+\begin{equation}
+\boxed{\begin{aligned}x(t)= & \mathcal{L}^{-1}\left[F(s)\,H(s)\right]\\
+ & +e^{-\zeta\omega_{\textrm{n}}t}\left[x_{0}\cos\left(\omega_{\textrm{d}}t\right)+\left(\zeta\omega_{\textrm{n}}x_{0}+\dot{x}_{0}\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]
+\end{aligned}
+}\label{SDOF_Response-InverseLaplace}
+\end{equation}
+
+\end_inset
+
+or from the convolution property
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}x(t)= & \left(f*h\right)(t)\\
+ & +e^{-\zeta\omega_{\textrm{n}}t}\left[x_{0}\cos\left(\omega_{\textrm{d}}t\right)+\left(\zeta\omega_{\textrm{n}}x_{0}+\dot{x}_{0}\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]
+\end{aligned}
+\label{SDOF_Response_Duhamel_Integ}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\boxed{\begin{aligned}h(t) & \equiv\mathcal{L}^{-1}\left[H(s)\right]=\frac{e^{-\zeta\omega_{\textrm{n}}t}}{m}\,\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\end{aligned}
+}\label{ImpulsiveResponse}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\boxed{\mathrm{sinc}(x)\equiv\frac{\sin(\pi x)}{\pi x}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+is the Impulse Response Function 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IRF"
+description "Impulse Response Function"
+
+\end_inset
+
+ (IRF), and
+\begin_inset Formula 
+\begin{flalign}
+\left(f*h\right)(t) & \equiv\int_{-\infty}^{\infty}f(\tau)h(t-\tau)\,d\tau\\
+ & =\int_{0}^{t}f(\tau)h(t-\tau)\,d\tau\quad,:f(t)=h(t)=0\;\forall t<0
+\end{flalign}
+
+\end_inset
+
+is the convolution of 
+\begin_inset Formula $f(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(t)$
+\end_inset
+
+, assuming stable, linear, physically possible and time invariant system.
+\end_layout
+
+\begin_layout Subsection
+Inverse Laplace Transform Derivation
+\end_layout
+
+\begin_layout Standard
+Using Laplace transform property, inverse Laplace can be obtained as
+\begin_inset Formula 
+\begin{equation}
+\frac{\Omega\,s}{\left(s^{2}+\Omega^{2}\right)\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)}\overset{\mathcal{L}}{\Longleftrightarrow}\dot{y}(t)+y(0)\label{ss3}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $y(t)$
+\end_inset
+
+ is the inverse Laplace transform of
+\begin_inset Formula 
+\[
+\frac{\Omega}{\left(s^{2}+\Omega^{2}\right)\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)}
+\]
+
+\end_inset
+
+previously derived as 
+\begin_inset Formula 
+\begin{equation}
+y(t)=\frac{-2\zeta r\,\cos\left(\Omega t\right)+\left(1-r^{2}\right)\sin\left(\Omega t\right)+r\,e^{-\zeta\omega_{\textrm{n}}t}\left[2\zeta\,\cos\left(\omega_{\textrm{d}}t\right)+\omega_{\textrm{n}}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus
+\begin_inset Formula 
+\begin{equation}
+y(0)=\frac{-2\zeta r+2\zeta r}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}=0\label{ss1}
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{flalign}
+\dot{y}(t)= & \frac{\Omega}{\omega_{\textrm{n}}^{2}}\,\frac{2\zeta r\,\sin\left(\Omega t\right)+\left(1-r^{2}\right)\cos\left(\Omega t\right)}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}+\frac{r}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}\nonumber \\
+ & \times\left[\omega_{\textrm{d}}e^{-\zeta\omega_{\textrm{n}}t}\left(-2\zeta\,\sin\left(\omega_{\textrm{d}}t\right)+\omega_{\textrm{n}}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)\frac{\cos\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right)\right.\nonumber \\
+ & \hphantom{\times\left[\left(\frac{\cos\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right)\right.}\left.-\zeta\omega_{\textrm{n}}e^{-\zeta\omega_{\textrm{n}}t}\left(2\zeta\,\cos\left(\omega_{\textrm{d}}t\right)+\omega_{\textrm{n}}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right)\right]\nonumber \\
+= & \frac{r}{\omega_{\textrm{n}}}\,\frac{\left(1-r^{2}\right)\cos\left(\Omega t\right)+2\zeta r\,\sin\left(\Omega t\right)}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}+\frac{r}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}\nonumber \\
+ & \times\left[\vphantom{\left(\frac{\zeta\omega_{\textrm{n}}^{2}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)}{\omega_{\textrm{d}}}\right)}\left(\omega_{\textrm{n}}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)-2\zeta^{2}\omega_{\textrm{n}}\right)\cos\left(\omega_{\textrm{d}}t\right)\right.\nonumber \\
+ & \hphantom{\times\left[\left(\frac{\zeta\omega_{\textrm{n}}^{2}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)}{\omega_{\textrm{d}}}\right)\right.}\left.+\left(-2\zeta\omega_{\textrm{d}}-\frac{\zeta\omega_{\textrm{n}}^{2}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)}{\omega_{\textrm{d}}}\right)\sin\left(\omega_{\textrm{d}}t\right)\right]\nonumber \\
+= & \frac{r}{\omega_{\textrm{n}}}\,\frac{\left(1-r^{2}\right)\cos\left(\Omega t\right)+2\zeta r\,\sin\left(\Omega t\right)}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}+\frac{re^{-\zeta\omega_{\textrm{n}}t}}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}\nonumber \\
+ & \times\left[\vphantom{\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}}-\omega_{\textrm{n}}\left(1-r^{2}\right)\,\cos\left(\omega_{\textrm{d}}t\right)\right.\nonumber \\
+ & \hphantom{\times\left[\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right.}\left.+\left(-2\zeta\omega_{\textrm{d}}^{2}-\zeta\omega_{\textrm{n}}^{2}\left(2\zeta^{2}-\left(1-r^{2}\right)\right)\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]\nonumber \\
+= & \frac{r}{\omega_{\textrm{n}}}\,\frac{\left(1-r^{2}\right)\cos\left(\Omega t\right)+2\zeta r\,\sin\left(\Omega t\right)}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}+\frac{re^{-\zeta\omega_{\textrm{n}}t}}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}\nonumber \\
+ & \times\left[\vphantom{\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}}-\omega_{\textrm{n}}\left(1-r^{2}\right)\,\cos\left(\omega_{\textrm{d}}t\right)\right.\nonumber \\
+ & \hphantom{\times\left[\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right.}\left.+\zeta\omega_{\textrm{n}}^{2}\left(-2\left(1-\zeta^{2}\right)-2\zeta^{2}+\left(1-r^{2}\right)\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]\nonumber \\
+= & \frac{r}{\omega_{\textrm{n}}}\,\frac{\left(1-r^{2}\right)\cos\left(\Omega t\right)+2\zeta r\,\sin\left(\Omega t\right)}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}+\frac{re^{-\zeta\omega_{\textrm{n}}t}}{\omega_{\textrm{n}}^{2}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}\nonumber \\
+ & \times\left[-\omega_{\textrm{n}}\left(1-r^{2}\right)\,\cos\left(\omega_{\textrm{d}}t\right)+\zeta\omega_{\textrm{n}}^{2}\left(-2+\left(1-r^{2}\right)\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]\nonumber \\
+= & \frac{r}{\omega_{\textrm{n}}}\,\frac{\left(1-r^{2}\right)\cos\left(\Omega t\right)+2\zeta r\,\sin\left(\Omega t\right)}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}+\frac{re^{-\zeta\omega_{\textrm{n}}t}}{\omega_{\textrm{n}}\left(\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}\right)}\nonumber \\
+ & \times\left[-\left(1-r^{2}\right)\,\cos\left(\omega_{\textrm{d}}t\right)-\zeta\omega_{\textrm{n}}\left(1+r^{2}\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]\label{ss2}
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substituting equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ss1"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ss2"
+
+\end_inset
+
+) in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ss3"
+
+\end_inset
+
+) yields
+\begin_inset Formula 
+\begin{equation}
+\boxed{\begin{aligned}\frac{\Omega\,s}{\left(s^{2}+\Omega^{2}\right)\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)}\overset{\mathcal{L}}{\Longleftrightarrow}\\
+\frac{r}{\omega_{\textrm{n}}}\,\frac{\left(1-r^{2}\right)\cos\left(\Omega t\right)+2\zeta r\,\sin\left(\Omega t\right)-e^{-\zeta\omega_{\textrm{n}}t}\left[\left(1-r^{2}\right)\,\cos\left(\omega_{\textrm{d}}t\right)+\zeta\omega_{\textrm{n}}\left(1+r^{2}\right)\frac{\sin\left(\omega_{\textrm{d}}t\right)}{\omega_{\textrm{d}}}\right]}{\left(1-r^{2}\right)^{2}+\left(2\zeta r\right)^{2}}
+\end{aligned}
+}\label{Harmonic2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Chapter*
+Appendices
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "BasicLinearAlgebra.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+bibname}{References}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Chapter*
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "ReferenceDataBase"
+options "bibtotoc,IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Part
+Index
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{part}{Index}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The Arabic covers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleartoleftpage
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{ArabicPlain}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\end_layout
+
+\end_inset
+
+
+\lang arabic_arabi
+الملخص
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+@openrightfalse
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+
+\lang arabic_arabi
+الملخص
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{ArabicPlain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+thispagestyle{empty}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleartoleftpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang arabic_arabi
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "75line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+\begin_inset VSpace 0cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+\lang arabic_arabi
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" width="17page%">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+اسم اسم اسم اسم
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+مهندس:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+\lang arabic_arabi
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+/
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+/
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1980
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+تاريخ الميلاد:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+مصرى
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+الجنسية:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+emailaddress@yahoo.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+البريد الالكترونى:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+\lang arabic_arabi
+01234567890
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+التليفون:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+الجيزة - الجيزة - الجيزة
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+العنوان:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+\lang arabic_arabi
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+/
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+/
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2011
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+تاريخ التسجيل:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+\begin_inset space \hspace{}
+\length 5mm
+\end_inset
+
+/
+\begin_inset space \hspace{}
+\length 5mm
+\end_inset
+
+/
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+تاريخ المنح:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+ماجيستير العلوم
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+الدرجة:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+هندسة الطيران و الفضاء
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+القسم:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "3.5cm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+\begin_inset VSpace 0cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename YaoMingmeme.jpg
+	lyxscale 50
+	width 3.4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang arabic_arabi
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="65line%">
+<column alignment="left" valignment="top" width="17page%">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+المشرفون:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+1
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+د.
+ اسم
+\numeric on
+2
+\numeric off
+ اسم
+\numeric on
+2
+\numeric off
+ اسم
+\numeric on
+2
+\numeric off
+ اسم
+\numeric on
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang arabic_arabi
+الممتحنون:
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\numeric off
+، المشرف الرئيسى
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+أ.م.د.
+ اسم
+\numeric on
+3
+\numeric off
+ اسم
+\numeric on
+3
+\numeric off
+ اسم
+\numeric on
+3
+\numeric off
+ اسم
+\numeric on
+3
+\numeric off
+، الممتحن الداخلى
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+4
+\numeric off
+ اسم
+\numeric on
+4
+\numeric off
+ اسم
+\numeric on
+4
+\numeric off
+ ، الممتحن الخارجى
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\lang arabic_arabi
+عنوان الرسالة:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\lang arabic_arabi
+نموذج رسالة معدَّ
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\lang arabic_arabi
+ة باستخدام برنامج 
+\lang english
+\SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\lang arabic_arabi
+الكلمات الدالة:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\lang arabic_arabi
+كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+8
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+9
+\numeric off
+، كلمة دالة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\lang arabic_arabi
+ملخص البحث:
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة
+ كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة كلمة.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+afterpage{
+\backslash
+thispagestyle{empty}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleartoleftpage
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+columnseprule}{0pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{centering}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size larger
+\lang arabic_arabi
+نموذج رسالة معدَّ
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\lang arabic_arabi
+ة باستخدام برنامج
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+\SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+إعداد
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+اسم اسم اسم اسم
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+رسالة مقدمة إلى
+\begin_inset Newline newline
+\end_inset
+
+كلية الهندسة - جامعة القاهرة
+\begin_inset Newline newline
+\end_inset
+
+كجزء من متطلبات الحصول على درجة
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 1cm
+\end_inset
+
+ ماجستير العلوم
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+فى
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+هندسة الطيران والفضاء
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+يعتمد من لجنة الممتحنين
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="1">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\numeric off
+ اسم
+\numeric on
+1
+\numeric off
+، المشرف الرئيسى
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+أ.م.د.
+ اسم
+\numeric on
+2
+\numeric off
+ اسم
+\numeric on
+2
+\numeric off
+ اسم
+\numeric on
+2
+\numeric off
+ اسم
+\numeric on
+2
+\numeric off
+، الممتحن الداخلى
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+3
+\numeric off
+ اسم
+\numeric on
+3
+\numeric off
+ اسم
+\numeric on
+3
+\numeric off
+، الممتحن الخارجى،
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+\begin_inset space \hfill{}
+\end_inset
+
+المركز القومى للبحوث
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+كلية الهندسة - جامعة القاهرة
+\begin_inset Newline newline
+\end_inset
+
+الجيزة - جمهورية مصر العربية
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+يوليو
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2017
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleartoleftpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\size larger
+\lang arabic_arabi
+نموذج رسالة معدَّ
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\lang arabic_arabi
+ة باستخدام برنامج
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+\SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+إعداد
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+اسم اسم اسم اسم
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+رسالة مقدمة إلى
+\begin_inset Newline newline
+\end_inset
+
+كلية الهندسة - جامعة القاهرة
+\begin_inset Newline newline
+\end_inset
+
+كجزء من متطلبات الحصول على درجة
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 1cm
+\end_inset
+
+ ماجستير العلوم
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+فى
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+هندسة الطيران والفضاء
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+تحت اشراف
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+1
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+أستاذ
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+قسم هندسة الطيران والفضاء
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+كلية الهندسة - جامعة القاهرة
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+2
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+أستاذ مساعد
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+قسم هندسة الطيران والفضاء
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+كلية الهندسة - جامعة القاهرة
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+أ.د.
+ اسم
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+اسم
+\numeric on
+3
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+\lang arabic_arabi
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+مدرس
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+قسم هندسة الطيران والفضاء
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang arabic_arabi
+كلية الهندسة - جامعة القاهرة
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+كلية الهندسة - جامعة القاهرة
+\begin_inset Newline newline
+\end_inset
+
+الجيزة - جمهورية مصر العربية
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+يوليو
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2017
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleartoleftpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Graphics
+	filename FE-Logo.png
+	height 3cm
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename CU-Pharonic Logo2.png
+	height 3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 1cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size largest
+\lang arabic_arabi
+نموذج رسالة معدَّ
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\lang arabic_arabi
+ة باستخدام برنامج 
+\series bold
+\lang english
+\SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+إعداد
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+اسم اسم اسم اسم
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size larger
+\lang arabic_arabi
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+رسالة مقدمة إلى
+\begin_inset Newline newline
+\end_inset
+
+كلية الهندسة - جامعة القاهرة
+\begin_inset Newline newline
+\end_inset
+
+كجزء من متطلبات الحصول على درجة
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+\begin_inset VSpace 1cm
+\end_inset
+
+ ماجستير العلوم
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+فى
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+هندسة الطيران والفضاء
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+كلية الهندسة - جامعة القاهرة
+\begin_inset Newline newline
+\end_inset
+
+الجيزة - جمهورية مصر العربية
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\lang arabic_arabi
+يوليو
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2017
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par
+\backslash
+end{centering}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
