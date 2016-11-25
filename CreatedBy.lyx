@@ -6,35 +6,63 @@
 \origin unavailable
 \textclass report
 \begin_preamble
-\mode<article>{\pdfminorversion=4}%
-
-\usepackage{calc}
-\usepackage{datetime}
 \usepackage{pdflscape}
 \usepackage{multicol}
-\usepackage{chngcntr}
-\usepackage{needspace}% http://ctan.org/pkg/needspace
 \usepackage{appendix}
-\usepackage{thmtools}
-\usepackage{tocloft}
+\usepackage{notoccite}	%This is to ignore citations in toc, lof and lot when ordering the references
+\usepackage{fancyhdr}
 \usepackage{afterpage}
+\usepackage{dpfloat}
+\usepackage[labelformat=simple]{subcaption}
+\usepackage{thmtools}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
-%\usetheme[hideothersubsections,right]{PaloAlto}
-%\usetheme[hideothersubsections]{Goettingen}
-\usetheme[hideothersubsections]{Goettingen}
-%\usetheme{Madrid}
-%\usetheme{default}
-%\useoutertheme[footline=empty]{miniframes}
-%\useoutertheme[hideothersubsections,right]{sidebar}
-%\usecolortheme{seahorse}
+%Improve the appearance of references to subcaption
+\renewcommand\thesubfigure{(\alph{subfigure})}
 
+\TOCLanguage{english}
 
-\usecolortheme{sidebartab}
-\usecolortheme{rose}
-%\setbeamertemplate{footline}[page number]
-%\useinnertheme{rounded}
-\setbeamertemplate{blocks}[rounded]
-%\setbeamercolor{frametitle}{bg=red!20!white}
+%%Redefine the plain page style to avoid violating it at every \chapter{} command
+%\fancypagestyle{plain}{%
+%\fancyhf{} % clear all header and footer fields
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}}
+
+%Redefine the plain page style which was destroyed by the arabi package to obtain roman page numbers for the front matter
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\cfoot{\textLR{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+%For arabic page numbers
+\fancypagestyle{ArabicPlain}{%
+\fancyhf{} % clear all header and footer fields
+\cfoot{\I{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\allowdisplaybreaks
+
+% for correct jump positions whe clicking on a link to a float
+\usepackage[figure]{hypcap}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
+% workaround for a makeindex bug,
+% see sec. "Index Entry Order"
+% only uncomment this when you are using makindex
+%\let\OrgIndex\index 
+%\renewcommand*{\index}[1]{\OrgIndex{#1}}
 
 \newcommand*{\blankpage}{%
   \begin{otherlanguage}{english}
@@ -49,6 +77,51 @@
   \clearpage
 }
 
+\newcommand*{\blankArabicPage}{%
+  \begin{otherlanguage}{arabic}
+    \vspace*{\fill}
+%    \hfill
+    \begin{center}
+      \emph{هذه الصفحة قد تركت فارغة عن عمد!}
+    \end{center}
+    \vspace{\fill}
+  \end{otherlanguage}
+  \clearpage
+}
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}
+    \blankArabicPage
+  \fi
+}
+
+\newcommand*\plainClearToLeftPage{%
+  \clearpage
+  \ifodd\value{page}
+
+    \vspace*{\fill}
+%    \hfill
+    \vspace{\fill}
+
+  \fi
+}
+
+%A more complex version that supports two-column
+%\makeatletter
+%\newcommand*{\cleartoleftpage}{%
+%  \clearpage
+%    \if@twoside
+%    \ifodd\c@page
+%      \hbox{}\newpage
+%      \if@twocolumn
+%        \hbox{}\newpage
+%      \fi
+%    \fi
+%  \fi
+%}
+%\makeatother
+
 \makeatletter
 \renewcommand*\cleardoublepage{\clearpage%
     \if@twoside
@@ -59,38 +132,28 @@
 }
 \makeatother
 
-\mode<presentation>{
-\usepackage{makeidx}
-\makeindex
-\newenvironment{theindex}
- {\let\item\par
-  %definitions for subitem etc
-  }{}
-\newcommand\indexspace{}
-}
+%Solve a bug of not displaying \times symbol when writing arabic
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
 
-\renewcommand{\thepart}{\arabic{part}}
+%Solve a bug of not displaying \omega symbol when writing arabic
+\DeclareRobustCommand{\omegar}{\fontfamily{aromega}\selectfont}
+\let\omega\relax
+\DeclareMathSymbol{\omega}{\mathord}{letters}{"21}
 
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 
-
-\allowdisplaybreaks
-
-%Correct indentation of unnumbered sections
-\makeatletter
-%\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
-%\let\sectionignore\@gobbletwo
-\let\latex@numberline\numberline
-\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
-\makeatother
-
-\makeatletter
-\let\latex@partnumberline\partnumberline
-\def\partnumberline#1{\if\relax#1\relax\else\latex@partnumberline{#1}\fi}
-\makeatother
+\let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
 \end_preamble
-\options intoc,notheorems
+\options openright,refpage,intoc,bibliography=totoc
 \use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-chap-bytype
+multicol
+logicalmkup
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -111,6 +174,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement t
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -128,60 +192,40 @@
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
-\use_package cancel 1
+\use_package cancel 0
 \use_package esint 0
 \use_package mathdots 1
-\use_package mathtools 1
+\use_package mathtools 0
 \use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
-\biblio_style plain
+\biblio_style unsrt
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
-\notefontcolor #0000ff
-\branch ProblemsAnswers
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
-\branch Problems
-\selected 1
-\filename_suffix 0
-\color #faf0e6
-\end_branch
-\branch Expose
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
-\branch Arabic
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2.5cm
+\leftmargin 3.5cm
 \topmargin 2.5cm
 \rightmargin 2.5cm
 \bottommargin 2.5cm
-\secnumdepth 4
-\tocdepth 4
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 2
 \paperpagestyle empty
+\listings_params "breaklines=true,numbers=left,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -287,12 +331,7 @@ Beamer \SpecialChar LaTeX
  class for creating presentation slides and handouts
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-\begin_inset Branch Arabic
-status open
-
-\begin_layout Standard
+\begin_layout Description
 \begin_inset ERT
 status open
 
@@ -300,9 +339,7 @@ status open
 
 
 \backslash
-item [{
-\backslash
-Arabi}]
+Arabi
 \end_layout
 
 \end_inset
@@ -311,12 +348,6 @@ Arabi}]
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Description
 Inkscape cross-platform vector graphics editor
 \end_layout
@@ -368,8 +399,8 @@ Areca cross-platform incremental backup package
 \end_layout
 
 \begin_layout Description
-pdfcrop a tool for removing white margins of a pdf file; indispensable for
- exported Matlab figures
+pdfcrop a Perl program for removing white margins of a pdf file; indispensable
+ for exported Matlab figures
 \end_layout
 
 \begin_layout Description
