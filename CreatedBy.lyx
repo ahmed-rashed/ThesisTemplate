@@ -153,6 +153,7 @@ theorems-ams-bytype
 theorems-chap-bytype
 multicol
 logicalmkup
+enumitem
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -209,6 +210,11 @@ logicalmkup
 \suppress_date false
 \justification true
 \use_refstyle 1
+\branch Arabic
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -331,7 +337,12 @@ Beamer \SpecialChar LaTeX
  class for creating presentation slides and handouts
 \end_layout
 
-\begin_layout Description
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Arabic
+status open
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -339,15 +350,24 @@ status open
 
 
 \backslash
-Arabi
+item [{
+\backslash
+Arabi}] Arabic typesetting package for 
+\backslash
+LaTeX{}
 \end_layout
 
 \end_inset
 
- Arabic typesetting package for \SpecialChar LaTeX
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 Inkscape cross-platform vector graphics editor
 \end_layout
