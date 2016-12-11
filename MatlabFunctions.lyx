@@ -103,7 +103,7 @@ Matlab Codes
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "SDOF_Free_Response_Visc_main.m"
-lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},caption={SDOF\\_Free\\_Response\\_Visc\\_main},label={SDOF_Free_Response_Visc_main}"
+lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},numbers=left,caption={SDOF\\_Free\\_Response\\_Visc\\_main},label={SDOF_Free_Response_Visc_main}"
 
 \end_inset
 
@@ -114,7 +114,7 @@ lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xri
 
 \size small
 \begin_inset listings
-lstparams "numbers=left,numberstyle={\footnotesize},breaklines=true,showstringspaces=false,tabsize=4,language=Matlab,frame=rBL,frameround=fttt,numbers=left,numberstyle={\footnotesize},xleftmargin={\fboxsep},xrightmargin={-\fboxsep}"
+lstparams "language=Matlab,numbers=left,numberstyle={\footnotesize},breaklines=true,showstringspaces=false,tabsize=4,frame=rBL,frameround=fttt,xleftmargin={\fboxsep},xrightmargin={-\fboxsep}"
 inline false
 status open
 

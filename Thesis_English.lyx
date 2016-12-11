@@ -20,6 +20,8 @@
 \usepackage{listings}
 \usepackage{caption}
 \usepackage{chngcntr}
+
+
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
@@ -103,6 +105,19 @@
 }
 \makeatother
 
+\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
+\let\orgdescriptionlabel\descriptionlabel
+\renewcommand*{\descriptionlabel}[1]{%
+  \let\orglabel\label
+  \let\label\@gobble
+  \phantomsection
+  \protected@edef\@currentlabel{#1}%
+  %\edef\@currentlabelname{#1}%
+  \let\label\orglabel
+  \orgdescriptionlabel{#1}%
+}
+\makeatother
+
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 
 \let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
@@ -114,7 +129,6 @@ theorems-ams-bytype
 theorems-chap-bytype
 multicol
 logicalmkup
-enumitem
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -192,7 +206,7 @@ enumitem
 \papercolumns 1
 \papersides 2
 \paperpagestyle empty
-\listings_params "breaklines=true,numbers=left,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
+\listings_params "breaklines=true,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -2024,7 +2038,7 @@ Or checkout in case you use SVN instead of Git.
 
 \end_inset
 
- the repository using Git and kindly share
+ (or fork) the repository using Git and kindly share
 \begin_inset Foot
 status collapsed
 
@@ -2050,7 +2064,7 @@ pull request
  Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "chap:Revision-Control-System"
+reference "chap:Version-Control-Using"
 
 \end_inset
 
@@ -8206,7 +8220,7 @@ Strawberry Perl
 \end_layout
 
 \begin_layout Chapter
-Nomenclature
+About the Nomenclature
 \end_layout
 
 \begin_layout Standard
@@ -8306,7 +8320,16 @@ Run the command
 
 \begin_deeper
 \begin_layout LyX-Code
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 makeindex 'Thesis.nlo' -s nomencl.ist -o 'Thesis.nls'
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -8317,11 +8340,14 @@ pdflatex the Thesis.tex file once more (or as needed)
 \begin_layout Chapter
 \begin_inset CommandInset label
 LatexCommand label
-name "chap:Revision-Control-System"
+name "chap:Version-Control-Using"
 
 \end_inset
 
+Version Control Using Git
+\end_layout
 
+\begin_layout Section
 \begin_inset Index idx
 status open
 
@@ -8688,22 +8714,11 @@ HG
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/SVN_Concept.png
+	filename SVN_vs_Git.svg
 	lyxscale 50
-	width 45line%
-
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
-
-\begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Git_Concept.png
-	lyxscale 50
-	width 45line%
+	width 70line%
 
 \end_inset
 
@@ -8723,69 +8738,2814 @@ HG
 
 \end_layout
 
-\begin_layout Section
-Git Roadmap
-\end_layout
-
 \begin_layout Standard
-Reference: [
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-http://rogerdudler.github.io/git-guide/
+https://stevebennett.me/2012/02/24/10-things-i-hate-about-git/
 \end_layout
 
 \end_inset
 
-]
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename UsualGit.png
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Usual commands and concepts needed to work with a Github-hosted project.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename UsualSVN.png
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Usual commands and concepts needed to work with a remote SVN repository.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducing Git 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitReference"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Introducing Git
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Git is an open source program for tracking changes in text files.
+ It was written by the author of the Linux operating system.
 \end_layout
 
 \begin_layout Subsection
-Project-Owner: Create a Repository
+Git is Very Different
+\end_layout
+
+\begin_layout Standard
+The first important thing to understand about Git is that it thinks about
+ version control very differently than Subversion or Perforce or whatever
+ Source Code Management (SCM
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SCM"
+description "Source Code Management"
+
+\end_inset
+
+) tool you may be used to.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+the Forget theorem
+\end_layout
+
+\end_inset
+
+ It is often easier to learn Git by trying to forget your assumptions about
+ how version control works and try to think about it in the Git way.
+\end_layout
+
+\begin_layout Subsection
+How to Think Like Git?
+\end_layout
+
+\begin_layout Standard
+Let's start from scratch.
+ Assume you are designing a new source code management system.
+ How did you do basic version control before you used a tool for it? Chances
+ are that you simply copied your project directory to save what it looked
+ like at that point.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ cp -R project project.bak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That way, you can easily revert files that get messed up later, or see what
+ you have changed by comparing what the project looks like now to what it
+ looked like when you copied it.
+\end_layout
+
+\begin_layout Standard
+If you are really paranoid, you may do this often, maybe putting the date
+ in the name of the backup:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ cp -R project project.2010-06-01.bak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In that case, you may have a bunch of snapshots of your project that you
+ can compare and inspect from.
+ You can even use this model to fairly effectively share changes with someone.
+ If you zip up your project at a known state and put it on your website,
+ other developers can download that, change it and send you a patch pretty
+ easily.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ wget http://example.com/project.2010-06-01.zip
+\end_layout
+
+\begin_layout Plain Layout
+
+$ unzip project.2010-06-01.zip
+\end_layout
+
+\begin_layout Plain Layout
+
+$ cp -R project.2010-06-01 project-my-copy
+\end_layout
+
+\begin_layout Plain Layout
+
+$ cd project-my-copy
+\end_layout
+
+\begin_layout Plain Layout
+
+$ (change something)
+\end_layout
+
+\begin_layout Plain Layout
+
+$ diff project-my-copy project.2010-06-01 > change.patch
+\end_layout
+
+\begin_layout Plain Layout
+
+$ (email change.patch)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now the original developer can apply that patch to their copy of the project
+ and they have your changes.
+ This is how many open source projects have been collaborated on for several
+ years.
+\end_layout
+
+\begin_layout Standard
+This actually works fairly well, so let's say we want to write a tool to
+ make this basic process faster and easier.
+ Instead of writing a tool that versions 
+\series bold
+each file individually
+\series default
+, like 
+\series bold
+Subversion
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Subversion
+\end_layout
+
+\end_inset
+
+, we would probably write one that makes it easier to store 
+\series bold
+snapshots of the project 
+\series default
+without having to copy the whole directory each time.
+\end_layout
+
+\begin_layout Standard
+This is essentially what Git is.
+ You tell Git you want to save a snapshot of your project with the git commit
+ command and it basically records a manifest of what all of the files in
+ your project look like at that point.
+ Then most of the commands work with those manifests to see how they differ
+ or pull content out of them, etc.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename IntroducingCommits.pdf
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you think about Git as a tool for storing and comparing and merging snapshots
+ of your project, it may be easier to understand what is going on and how
+ to do things properly.
+ 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Git-Glossary"
+
+\end_inset
+
+Git Terminology 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Git_Manual_Glossary,Git_Glossary"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Git Terminology
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first step towards learning git is to understand the meaning of its
+ terminology.
+ The following terms is ordered from the most basic to the less likely to
+ use/hear-about.
+\end_layout
+
+\begin_layout Description
+Repository
+\begin_inset CommandInset label
+LatexCommand label
+name "Repository"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Repository
+\end_layout
+
+\end_inset
+
+consists of three sections:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Quotes eld
+\end_inset
+
+.git
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+directory
+\begin_inset CommandInset label
+LatexCommand label
+name ".git_directory"
+
+\end_inset
+
+ is where Git stores the metadata and object database of the repository
+ in a compressed format.
+ It is what is copied when a repository is cloned.
+\end_layout
+
+\begin_layout Description
+working
+\begin_inset space ~
+\end_inset
+
+directory
+\series bold
+\bar under
+
+\begin_inset CommandInset label
+LatexCommand label
+name "working_Directory"
+
+\end_inset
+
+
+\series default
+\bar default
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+working directory
+\end_layout
+
+\end_inset
+
+ normally contains the contents of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ commit, plus any local changes made.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reverting to older 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+ replaces the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "working_Directory"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ with the snapshot of this commit.
 \end_layout
 
 \begin_layout Itemize
-For an open source project, a central
+Also checkingout a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ replaces the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "working_Directory"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ with the snapshot of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ commit of the checkedout branch.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+staging
+\begin_inset space ~
+\end_inset
+
+area
+\begin_inset CommandInset label
+LatexCommand label
+name "staging_area"
+
+\end_inset
+
+ is a file
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Also called 
-\begin_inset Quotes eld
+Generally, this file resides in 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference ".git_directory"
+
 \end_inset
 
-mainstream
-\begin_inset Quotes erd
-\end_inset
-
-, 
-\begin_inset Quotes eld
-\end_inset
-
-remote
-\begin_inset Quotes erd
-\end_inset
-
-, 
-\begin_inset Quotes eld
-\end_inset
-
-origin
-\begin_inset Quotes erd
-\end_inset
-
-, \SpecialChar ldots
 
 \end_layout
 
 \end_inset
 
- repository is created by 
+.
+\end_layout
+
+\end_inset
+
+ that stores information about what will be included into the next commit.
+ It is also called 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "index"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename GitAreas.pdf
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Git has three main states that your files can reside in: 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+committed
+\end_layout
+
+\end_inset
+
+ files means that the data is safely stored in your local database.
+ Staged means that you have marked a modified file in its current version
+ to go into your next commit snapshot.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+modified
+\end_layout
+
+\end_inset
+
+ files means that you have changed the file but have not committed it to
+ your database yet.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+staged
+\end_layout
+
+\end_inset
+
+ files means that you have marked a modified file in its current version
+ to go into your next commit snapshot.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GitFileStatus.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+working
+\begin_inset space ~
+\end_inset
+
+tree 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+working tree
+\end_layout
+
+\end_inset
+
+is a synonym to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "working_Directory"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+index
+\begin_inset CommandInset label
+LatexCommand label
+name "index"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+index
+\end_layout
+
+\end_inset
+
+is a synonym to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staging_area"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+stage
+\begin_inset CommandInset label
+LatexCommand label
+name "stage"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+stage
+\end_layout
+
+\end_inset
+
+ adds files to the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staging_area"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, so that they are included in the next 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Be warned that non-staged files may be removed (deleted) when checkingout
+ a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ or reverting to older an 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+add
+\begin_inset CommandInset label
+LatexCommand label
+name "add"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+add
+\end_layout
+
+\end_inset
+
+ is a synonym to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "stage"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+commit
+\begin_inset CommandInset label
+LatexCommand label
+name "commit"
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In other other revision control systems, the same thing is referred to as
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+revision
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+version
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+commit
+\end_layout
+
+\end_inset
+
+ stores a snapshot of the current state of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staging_area"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+tag
+\begin_inset CommandInset label
+LatexCommand label
+name "tag"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+tag
+\end_layout
+
+\end_inset
+
+is most typically used to mark a particular 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+head
+\begin_inset CommandInset label
+LatexCommand label
+name "head"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+head
+\end_layout
+
+\end_inset
+
+ is a named reference to the last 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ of a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+HEAD
+\begin_inset CommandInset label
+LatexCommand label
+name "HEAD"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+HEAD
+\end_layout
+
+\end_inset
+
+ is a named reference to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "head"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+current
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+clone
+\begin_inset CommandInset label
+LatexCommand label
+name "clone"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+clone
+\end_layout
+
+\end_inset
+
+ creates a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+local
+\end_layout
+
+\end_inset
+
+ copy of a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ repository, and aliases it as 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "origin"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "upstream"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+remote
+\begin_inset CommandInset label
+LatexCommand label
+name "remote"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+remote
+\end_layout
+
+\end_inset
+
+ is a repository that is used to track the local repository but resides
+ somewhere else.
+ Remotes can be managed using 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
+status open
+
+\begin_layout Plain Layout
+
+$ git init
+\end_layout
+
+\end_inset
+
+ command.
+ Remote data can be updated/synced using with/from 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+local
+\end_layout
+
+\end_inset
+
+ repository using 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pull"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pull"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ itself performs 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fetch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+/
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "push"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+upstream
+\begin_inset CommandInset label
+LatexCommand label
+name "upstream"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+upstream
+\end_layout
+
+\end_inset
+
+ refers to the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ with which the 
+\emph on
+local
+\emph default
+ syncs.
+\end_layout
+
+\begin_layout Description
+downstream 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+downstream
+\end_layout
+
+\end_inset
+
+ refers to the 
+\emph on
+local
+\emph default
+, as compared to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "upstream"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+origin
+\begin_inset CommandInset label
+LatexCommand label
+name "origin"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+origin
+\end_layout
+
+\end_inset
+
+is the default name assigned to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ by 
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$ git clone
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+pull
+\begin_inset CommandInset label
+LatexCommand label
+name "pull"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pull
+\end_layout
+
+\end_inset
+
+ means to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fetch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ it with the 
+\emph on
+local
+\emph default
+ branch.
+\end_layout
+
+\begin_layout Description
+push
+\begin_inset CommandInset label
+LatexCommand label
+name "push"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+push
+\end_layout
+
+\end_inset
+
+ means to use 
+\emph on
+local
+\emph default
+ to update 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+; in case if the remote was a 
+\series bold
+direct
+\series default
+ ancestor to the local.
+ Otherwise, the push fails.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If the owner of the 
+\emph on
+local
+\emph default
+ repository was not the owner of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ repository (or he does not have permission to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "push"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+), then 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "push"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ing 
+\emph on
+local
+\emph default
+ to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ is not possible.
+ In this case instead, the owner of the 
+\emph on
+local
+\emph default
+ repository sends a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pullrequest"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to the owner of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ repository.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+pull
+\begin_inset space ~
+\end_inset
+
+request
+\begin_inset CommandInset label
+LatexCommand label
+name "pullrequest"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pull
+\begin_inset space ~
+\end_inset
+
+request
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PR"
+description "Pull Request"
+
+\end_inset
+
+is a request from the owner of a 
+\emph on
+local
+\emph default
+ repository to the owner of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ repository to pull his changes.
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+'s owner can use 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "diff"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to review the changes and may selectively accepted/rejected changes.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If the owner of the 
+\emph on
+local
+\emph default
+ repository was also the owner of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ repository (or he has permission to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "push"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+), he can instead directly 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "push"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+local
+\emph default
+ to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pullrequest"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+is an announcing method, and are not a feature of Git.
+ So it depends on the hosting website
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fn:Such-as-"
+
+\end_inset
+
+Such as 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+GitHub.com
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+BitBucket.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and has no Git command.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+fetch
+\begin_inset CommandInset label
+LatexCommand label
+name "fetch"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+fetch
+\end_layout
+
+\end_inset
+
+ refers to getting the latest commit from a remote repository, so that you
+ can compare the fetched changes to your 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "index"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+diff
+\begin_inset CommandInset label
+LatexCommand label
+name "diff"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+diff
+\end_layout
+
+\end_inset
+
+ is the difference in changes between two commits, or saved changes.
+ The diff will visually describe what was added or removed from a file since
+ its last commit.
+\end_layout
+
+\begin_layout Description
+branch
+\begin_inset CommandInset label
+LatexCommand label
+name "branch"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+branch
+\end_layout
+
+\end_inset
+
+is a way to request a parallel isolated 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "working_Directory"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staging_area"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, and 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ history, so that you test new experimental features without disturbing
+ the main branch.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In many VCS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "VCS"
+description "Version Control System"
+
+\end_inset
+
+ tools, 
+\emph on
+branching
+\emph default
+ a somewhat expensive process, often requiring creating a new copy of the
+ source code directory, which can take a long time for large projects.
+ Therefore, Git’s branching model is referred to as a “
+\emph on
+killer feature
+\emph default
+” that sets superior in the VCS community.
+ This is because Git branches in incredibly lightweight way, making branching
+ operations nearly instantaneous, and switching back and forth between branches
+ generally just as fast.
+ Unlike many other VCSs, Git encourages workflows that branch and merge
+ often, even multiple times in a day.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+checkout
+\begin_inset CommandInset label
+LatexCommand label
+name "checkout"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+checkout
+\end_layout
+
+\end_inset
+
+ a branch means to switch to this branch, 
+\series bold
+\emph on
+replace
+\series default
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Non commited, staged or stashed files may be removed (deleted).
+ Therefore, it is advisable to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+/
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "stage"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+/
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "stash"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ your modifications before checkingout.
+\end_layout
+
+\end_inset
+
+ the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "working_Directory"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ with the snapshot of the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "head"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ of this branch and update the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staging_area"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to point to this branch.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/1304626/git-switch-branch-and-ignore-any-chang
+es-without-committing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+You need a clean state to change branches.
+ The branch checkout will only be allowed if it does not affect the 'dirty
+ files'.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+master
+\begin_inset CommandInset label
+LatexCommand label
+name "master"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+master
+\end_layout
+
+\end_inset
+
+ is the default name of the branch created and checked-out by 
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$ git init
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+merge
+\begin_inset CommandInset label
+LatexCommand label
+name "merge"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+merge
+\end_layout
+
+\end_inset
+
+ takes the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "head"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ of a branch, and tries to automatically merge it into 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ If there are merge conflicts, manual intervention may be required to complete
+ the merge.
+\end_layout
+
+\begin_layout Description
+rebase reapply a series of changes from a branch to a different base
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/git_pull_--rebase.png
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+fast
+\begin_inset space ~
+\end_inset
+
+forward
+\begin_inset CommandInset label
+LatexCommand label
+name "fast-forward"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+fast
+\begin_inset space ~
+\end_inset
+
+forward
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "FastForward-is-a"
+
+\end_inset
+
+is a special type of 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, where you are merging a branch that happens to be descendant of your HEAD.
+ In such a case, you do not make a new merge commit but instead just update
+ to branch HEAD.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename fast_forward.pdf
+	width 100line%
+	height 90theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+stash
+\begin_inset CommandInset label
+LatexCommand label
+name "stash"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+stash
+\end_layout
+
+\end_inset
+
+When you are developing some new feature and your work is not yet ready
+ for a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, and want to checkout another branch to work on something else, 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+stash
+\end_layout
+
+\end_inset
+
+ is designed to help you in this situation.
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+stash
+\end_layout
+
+\end_inset
+
+ saves your local modifications away and reverts the working directory to
+ match the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ commit.
+ After finishing, you can return and re-apply the stashed work and can continue
+ on it.
+\end_layout
+
+\begin_layout Description
+cherry
+\begin_inset space ~
+\end_inset
+
+pick
+\begin_inset CommandInset label
+LatexCommand label
+name "cherrypick"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+cherry
+\begin_inset space ~
+\end_inset
+
+pick
+\end_layout
+
+\end_inset
+
+means to extract the change introduced by an existing commit and to record
+ it based on the tip of the current branch as a new commit.
+ 
+\end_layout
+
+\begin_layout Description
+DAG
+\begin_inset CommandInset label
+LatexCommand label
+name "DAG"
+
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DAG"
+description "Directed acyclic graph"
+
+\end_inset
+
+Directed acyclic graph.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename DAG.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+resolve is fixing up manually what a failed automatic 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ left behind.
+ 
+\end_layout
+
+\begin_layout Description
+blame 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+blame
+\end_layout
+
+\end_inset
+
+ describes the last modification to each line of a file, which generally
+ displays the revision, author and time.
+ This is helpful, for example, in tracking down when a feature was added,
+ or which commit led to a particular bug.
+\end_layout
+
+\begin_layout Description
+Fork 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fork
+\end_layout
+
+\end_inset
+
+ fork is a copy of another repository that lives on your account.
+ Forks allow you to freely make changes to a project without affecting the
+ original.
+ Forks remain attached to the original, allowing you to submit a pull request
+ to the original's author to update with your changes.
+ You can also keep your fork up to date by pulling in updates from the original.
+\end_layout
+
+\begin_layout Description
+SHA-1 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SHA-1
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SHA-1"
+description "Secure Hash Algorithm 1"
+
+\end_inset
+
+(Secure Hash Algorithm 1) a cryptographic hash function used as a synonym
+ for object name.
+\end_layout
+
+\begin_layout Description
+submodule
+\begin_inset CommandInset label
+LatexCommand label
+name "submodule"
+
+\end_inset
+
+ is a repository inside another repository (the latter of which is called
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "superproject"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+superproject
+\begin_inset CommandInset label
+LatexCommand label
+name "superproject"
+
+\end_inset
+
+ is a repository that references repositories of other projects in its working
+ tree as 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "submodule"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The superproject knows about the names of (but does not hold copies of)
+ commit objects of the contained submodules.
+\end_layout
+
+\begin_layout Description
+Hook
+\begin_inset CommandInset label
+LatexCommand label
+name "Hook"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hook
+\end_layout
+
+\end_inset
+
+is a script that runs automatically every time a particular event occurs
+ in a Git repository.
+ Hooks let you customize Git’s internal behavior and trigger customizable
+ actions at key points in the development life cycle.
+\end_layout
+
+\begin_layout Section
+Sample Git Workflow 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Git_Simple"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Sample Git Workflow
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Initialize a Repository
+\end_layout
+
+\begin_layout Standard
+To create a new 
+\series bold
+empty
+\series default
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Repository"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, issue the following command from inside the repository directory
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
 status open
 
 \begin_layout Plain Layout
@@ -8799,53 +11559,45 @@ $ git init
 \end_layout
 
 \begin_layout Itemize
-The repository consists of three 
+This will also call the created repository branch as 
 \begin_inset Quotes eld
 \end_inset
 
-trees
+
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "master"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Quotes erd
 \end_inset
 
- maintained by git:
+.
+ If you dislike this name, you can rename using
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
-
-\series bold
-\bar under
-Working Directory:
-\series default
-\bar default
- holds the actual files
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-\bar under
-Index:
-\series default
-\bar default
- acts as a staging area
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-\bar under
-HEAD:
-\series default
-\bar default
- points to the last commit made
-\end_layout
-
 \begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename /home/Documents/MyWork/Courses/ComputerApplications/Lectures/GitTrees.png
-	width 70line%
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git branch -m master new_branch_name
+\end_layout
 
 \end_inset
 
@@ -8853,29 +11605,51 @@ HEAD:
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Project files need to be added to the 
-\begin_inset Quotes eld
+\begin_layout Subsection
+Adding Files to a Repository
+\end_layout
+
+\begin_layout Standard
+If the project files are 
+\emph on
+locally
+\emph default
+ available within the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "working_Directory"
+
 \end_inset
 
 
-\series bold
-Index
-\series default
+\end_layout
 
-\begin_inset Quotes erd
 \end_inset
 
- so that they are monitored by git
+, they can be 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "stage"
+
+\end_inset
+
+d
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Git does not monitor the files within the repository folder by default
+\end_inset
+
+, by
 \end_layout
 
 \begin_layout Itemize
-To add one file, 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -8888,11 +11662,10 @@ $ git add <filename>
 
 \end_inset
 
-
+ to stage one file, or
 \end_layout
 
 \begin_layout Itemize
-To add all files, 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -8905,11 +11678,52 @@ $ git add *
 
 \end_inset
 
-
+ to stage all files
 \end_layout
 
 \begin_layout Itemize
-To remove/delete a file 
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$ git reset <filename>
+\end_layout
+
+\end_inset
+
+ to unstage
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+unstage
+\end_layout
+
+\end_inset
+
+ one file
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$ git reset *
+\end_layout
+
+\end_inset
+
+ to unstage all files
+\end_layout
+
+\begin_layout Itemize
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -8922,113 +11736,100 @@ $ git rm <filename>
 
 \end_inset
 
-
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Contributor: Clone Repository
-\end_layout
-
-\begin_layout Itemize
-The project owner can now work and modify the 
+ unstage 
 \series bold
-central repository
+and delete
 \series default
- files
+ a file
+\end_layout
+
+\begin_layout Subsection
+Clone a Repository
+\end_layout
+
+\begin_layout Standard
+To clone a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ repository,
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git clone /path/to/remote/repository
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Contributors, on the other hand, do not work on the files of the 
-\series bold
-central repository
+This also aliases the remote repository as 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "origin"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "upstream"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ If you dislike this name, you can rename using
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-A contributor rather 
-\series bold
-clone
-\series default
-s the central repository to his 
-\series bold
-\emph on
-local
-\series default
-\emph default
- machine to create a 
-\series bold
-local repository
-\series default
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Also called 
-\begin_inset Quotes eld
-\end_inset
-
-working copy
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- of the project
-\end_layout
-
-\begin_layout Itemize
-To clone local repository: 
+\begin_layout Standard
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
-inline true
+inline false
 status open
 
 \begin_layout Plain Layout
 
-$ git clone /path/to/repository
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-To clone repository on another computer: 
-\begin_inset listings
-lstparams "language=bash,tabsize=4"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-$ git clone username@host:/path/to/repository
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-To connect an existing local repository to a 
-\series bold
-remote
-\series default
- repository, 
-\begin_inset listings
-lstparams "language=bash,tabsize=4"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-$ git remote add origin <server>
+$ git remote rename origin new_origin_name
 \end_layout
 
 \end_inset
@@ -9037,12 +11838,82 @@ $ git remote add origin <server>
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Start updating/modifying the project files
+\begin_layout Subsection
+Add a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to an Existing Repository
+\end_layout
+
+\begin_layout Standard
+To connect an existing 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+local
+\end_layout
+
+\end_inset
+
+ repository to a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "remote"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and alias the remote as 
+\begin_inset Quotes eld
+\end_inset
+
+origin2
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git remote add origin2 /path/to/remote/repository
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Project-Owner/contributor: Commit
+Commit
 \end_layout
 
 \begin_layout Itemize
@@ -9098,7 +11969,7 @@ $ git commit -m "Commit message"
 
 \end_deeper
 \begin_layout Subsection
-Project-Owner/contributor: Branch
+Branch
 \end_layout
 
 \begin_layout Standard
@@ -9120,15 +11991,19 @@ When you want to develop several features, it is better to create branches
 \begin_deeper
 \begin_layout Itemize
 The default branch is called 
-\begin_inset Quotes eld
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "master"
+
 \end_inset
 
 
-\series bold
-master
-\series default
+\end_layout
 
-\begin_inset Quotes erd
 \end_inset
 
 
@@ -9143,44 +12018,19 @@ feature_x
 \begin_inset Quotes erd
 \end_inset
 
- and switch to it, 
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
-inline true
+inline false
 status open
 
 \begin_layout Plain Layout
 
-$ git checkout -b feature_x
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-To switch back to 
-\begin_inset Quotes eld
-\end_inset
-
-
-\series bold
-master
-\series default
-
-\begin_inset Quotes erd
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=bash,tabsize=4"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-$ git checkout master
+$ git branch feature_x
 \end_layout
 
 \end_inset
@@ -9189,8 +12039,49 @@ $ git checkout master
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+To switch to (checkout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+checkout
+\end_layout
+
+\end_inset
+
+) the 
+\begin_inset Quotes eld
+\end_inset
+
+feature_x
+\begin_inset Quotes erd
+\end_inset
+
+ branch,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ git checkout feature_x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Subsection
-Project-Owner/contributor: Merge
+Merge
 \begin_inset Index idx
 status open
 
@@ -9216,15 +12107,13 @@ Merge
 
 \begin_layout Itemize
 After completing a feature, merge its branch to the 
-\begin_inset Quotes eld
-\end_inset
+\begin_inset Flex Emph
+status open
 
-
-\series bold
+\begin_layout Plain Layout
 master
-\series default
+\end_layout
 
-\begin_inset Quotes erd
 \end_inset
 
  branch by 
@@ -9268,8 +12157,33 @@ $ git diff <source_branch> <target_branch>
 
 \end_layout
 
+\begin_layout Itemize
+Check 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+fast
+\begin_inset space ~
+\end_inset
+
+forward
+\end_layout
+
+\end_inset
+
+ merge 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "FastForward-is-a"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Contributor: Pull
+Pull
 \begin_inset Index idx
 status open
 
@@ -9309,7 +12223,11 @@ local repository
 \series bold
 origin
 \series default
- repository by either one of the following: 
+ repository by 
+\bar under
+either one
+\bar default
+ of the following: 
 \end_layout
 
 \begin_layout Itemize
@@ -9445,7 +12363,7 @@ Rebase
 status open
 
 \begin_layout Plain Layout
-fetch
+rebase
 \end_layout
 
 \end_inset
@@ -9508,9 +12426,43 @@ I want to add my changes to what everyone else has already done.
  workflows.
 \end_layout
 
+\begin_layout Itemize
+Golden rule: 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+Never rebase while you're on a public branch
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://support.gitkraken.com/repositories/remote
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Subsection
-Contributor: Push
+Push
 \end_layout
 
 \begin_layout Itemize
@@ -9587,267 +12539,6 @@ $ git push origin feature_x
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Pull
-\begin_inset space ~
-\end_inset
-
-request
-\end_layout
-
-\begin_layout Standard
-Source: [
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://oss-watch.ac.uk/resources/pullrequest
-\end_layout
-
-\end_inset
-
-]
-\end_layout
-
-\begin_layout Itemize
-The owner of a local repository, after pushing his changes, requests the
- owner of the central repository to pull the pushed changes by issuing a
- 
-\begin_inset Quotes eld
-\end_inset
-
-pull
-\begin_inset space ~
-\end_inset
-
-request
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-pull request
-\end_layout
-
-\end_inset
-
-
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Pull requests are an announcing method, and are not a feature of the version
- control system itself.
- So it depends on the hosting website and has no git command.
-\end_layout
-
-\begin_layout Description
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="45line%">
-<column alignment="center" valignment="top" width="45line%">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Master central Repository
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Clone Local repository
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Make modifications
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Make modifications
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Commit
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Commit
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pull (fetch + merge) from master repository and resolve conflicts
-\end_layout
-
-\begin_layout Plain Layout
-Before the developer can publish his feature, he needs to fetch the updated
- central commits and 
-\series bold
-rebase
-\series default
- his changes on top of them.
- This is like saying, 
-\begin_inset Quotes eld
-\end_inset
-
-I want to add my changes to what everyone else has already done.
-\begin_inset Quotes erd
-\end_inset
-
- The result is a perfectly linear history, just like in traditional SVN
- workflows.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Commit
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Pull (fetch + merge) from master repository and resolve conflicts
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Push
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Commit (I think unnecessary)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://guides.github.com/activities/hello-world/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \align center
 \begin_inset Float figure
@@ -9858,7 +12549,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/git_cheat_sheet.png
+	filename git-cheatsheet-EN-white.pdf
 	lyxscale 25
 	width 100line%
 	height 90theight%
@@ -9871,21 +12562,31 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename git-cheatsheet-EN-white.pdf
+	lyxscale 25
+	width 100line%
+	height 90theight%
+	keepAspectRatio
+	special page=2
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Git Cheat Sheet; [
+Git Cheat Sheet; presented by 
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-http://rogerdudler.github.io/git-guide/
-\end_layout
-
-\end_inset
-
-]
+www.git-tower.com
 \end_layout
 
 \end_inset
@@ -9898,23 +12599,23 @@ http://rogerdudler.github.io/git-guide/
 
 \end_layout
 
-\begin_layout Section
-Try Git
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-To learn/practice Git in your browser for free, visit 
-\begin_inset Flex URL
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-http://try.github.io/
+Many of the above commands that changes the master do change the files on
+ the HDD 
 \end_layout
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Section
@@ -9944,7 +12645,141 @@ I'm still beginner in using git!
 
 \end_inset
 
- prefer GitKraken since it is free, cross platform and seems good.
+ prefer GitKraken
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Unlike other Git GUI clients, GitKraken is not a front-end GUI for your
+ command line; no Git tools are required.
+ It works directly with your repositories with no dependencies, which means
+ a separate Git installation isn’t even required.
+ Because of this, we currently do not offer direct integration between GitKraken
+ and the CLI.
+\end_layout
+
+\end_inset
+
+ since it is free, cross platform and seems good.
+ It is however not open source!
+\end_layout
+
+\begin_layout Subsection
+Tips Using GitKraken
+\end_layout
+
+\begin_layout Itemize
+If you use remotes on 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+GitHub.com
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+BitBucket.org
+\end_layout
+
+\end_inset
+
+, make sure to authenticate as explained in 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://support.gitkraken.com/integrations/github
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://support.gitkraken.com/integrations/bitbucket
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Good Reads
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitReference"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitMagic"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://gitimmersion.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://yakiloo.com/getting-started-git/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://ndpsoftware.com/git-cheatsheet.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

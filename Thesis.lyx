@@ -138,6 +138,19 @@
 }
 \makeatother
 
+\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
+\let\orgdescriptionlabel\descriptionlabel
+\renewcommand*{\descriptionlabel}[1]{%
+  \let\orglabel\label
+  \let\label\@gobble
+  \phantomsection
+  \protected@edef\@currentlabel{#1}%
+  %\edef\@currentlabelname{#1}%
+  \let\label\orglabel
+  \orgdescriptionlabel{#1}%
+}
+\makeatother
+
 %Solve a bug of not displaying \times symbol when writing arabic
 \DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
 \let\times\relax
@@ -159,7 +172,6 @@ theorems-ams-bytype
 theorems-chap-bytype
 multicol
 logicalmkup
-enumitem
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -237,7 +249,7 @@ enumitem
 \papercolumns 1
 \papersides 2
 \paperpagestyle empty
-\listings_params "breaklines=true,numbers=left,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
+\listings_params "breaklines=true,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -458,7 +470,34 @@ Git
 \begin_layout Standard
 
 \lang arabic_arabi
-بقية الخلاصة موجودة فى النسخة الانجليزية فى اول صفحة من الرسالة.
+انظر النسخة الانجليزية من الخلاصة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+(Abstract)
+\lang arabic_arabi
+ فى اول صفحة من الرسالة لمزيد من التفاصيل.
 \end_layout
 
 \begin_layout Standard
@@ -1747,6 +1786,39 @@ Git
 انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث، و ان يداوم
  على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر
  المصدر.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+انظر النسخة الانجليزية من الخلاصة
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+(Abstract)
+\lang arabic_arabi
+ فى اول صفحة من الرسالة لمزيد من التفاصيل.
 \end_layout
 
 \begin_layout Standard
