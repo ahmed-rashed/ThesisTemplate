@@ -20,6 +20,7 @@
 \usepackage{listings}
 \usepackage{caption}
 \usepackage{chngcntr}
+\usepackage{realboxes}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
