@@ -1808,13 +1808,8 @@ Summary:
 \end_layout
 
 \begin_layout Standard
-I'm Ahmed Mohamed Rashed Desoki, an assistant professor at Aerospace Engineering
- Department, Cairo University.
-\end_layout
-
-\begin_layout Standard
-This abstract is brief.
- For the complete abstract, refer to the abstract 
+This abstract is incomplete.
+ Refer to the complete abstract 
 \begin_inset CommandInset ref
 LatexCommand vpageref
 reference "chap:Abstract"
@@ -1825,23 +1820,19 @@ reference "chap:Abstract"
 \end_layout
 
 \begin_layout Standard
-I created this thesis template to help you how you can create a professional
- thesis using OSS.
- I tried to cite all the sources that helped me create this sample.
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word.
 \end_layout
 
 \begin_layout Standard
-If you face a problem, please try hard to read, learn and dig for a solution
- by yourself.
- In case you have suggestions, corrections, bugs or improvement, please
- contribute to the Git page of this template.
-\end_layout
-
-\begin_layout Standard
-This template should be available with you from the very beginning of your
- research.
- Whenever you find a new useful information, you should immediately write
- it in this document with clear citation.
+Word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word word word
+ word word word word word word word word word word word word word.
 \end_layout
 
 \begin_layout Standard
@@ -1948,49 +1939,31 @@ description "Open Source Software"
 \end_inset
 
 ).
+ Chapters of this template themselves concisely explain the necessary background
+ you need to know about \SpecialChar LaTeX
+, \SpecialChar LyX
+, floating figures and tables, equations, references
+ management, vector graphics, Inkscape, including program codes and others.
 \end_layout
 
 \begin_layout Standard
-I tried to cite all the sources that helped me create this sample.
+I strongly urge you to prepare your thesis file from the very beginning
+ of your research.
+ This is invaluable since it enables you to immediately document and cite
+ every piece of new information you learn.
+ I strongly urge you to stick to immediate documentation and citation as
+ you learn.
+ Citation itself expresses the value of your writing.
+ You will find your citations invaluable especially after you read and learn
+ a lot.
+ At this time you will really fail to remember  from where you learned every
+ information.
 \end_layout
 
 \begin_layout Standard
-If you face a problem, please try hard to read, learn and dig for a solution
- by yourself.
- In case you have suggestions, corrections, bugs or improvement, please
- send me a 
-\begin_inset Quotes eld
-\end_inset
-
-pull request
-\begin_inset Quotes erd
-\end_inset
-
- at the Git page of this template at 
+This template is hosted at 
 \begin_inset Flex URL
 status open
-
-\begin_layout Plain Layout
-
-https://github.com/ahmed-rashed/ThesisTemplate
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-This template should be available with you from the very beginning of your
- research.
- Whenever you find a new useful information, you should immediately write
- it in this document with clear citation.
-\end_layout
-
-\begin_layout Standard
-This template is hosted at github.com at 
-\begin_inset Flex URL
-status collapsed
 
 \begin_layout Plain Layout
 
@@ -2025,8 +1998,8 @@ www.gnu.org/licenses/quick-guide-gplv3.en.html
 \end_inset
 
 .
- If you just want to use this template, then download it as a zip file at
- 
+ If you just want to use this template, simply download it as a zip file
+ using 
 \begin_inset Flex URL
 status open
 
@@ -2037,9 +2010,37 @@ https://github.com/ahmed-rashed/ThesisTemplate/archive/master.zip
 
 \end_inset
 
-.
- If you plan to improve/debug/extend this template, then clone the repository
- using 
+ and proceed.
+ While you are using this template, if you faced problems, try hard to read,
+ learn and dig for solutions by yourself.
+ If you improved/corrected/debugged/extended this template, then please
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "clone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ the template repository using 
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+Git
+\end_layout
+
+\end_inset
+
+ by 
 \begin_inset ERT
 status open
 
@@ -2076,7 +2077,7 @@ status open
 
 \end_inset
 
- and kindly share
+, and kindly
 \begin_inset Foot
 status open
 
@@ -2090,23 +2091,86 @@ GPLv3 license.
 
 \end_inset
 
- your modifications by contributing to the template by issuing a 
-\begin_inset Quotes eld
+ send me your modifications as a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pullrequest"
+
 \end_inset
 
-pull request
-\begin_inset Quotes erd
+
+\end_layout
+
 \end_inset
 
 .
- Chapter 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Also if you have suggestions, corrections, bugs or improvement, please send
+ them a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pullrequest"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+If you don't know what is 
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+Git
+\end_layout
+
+\end_inset
+
+, you can find concise explanation to revision control using 
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+Git
+\end_layout
+
+\end_inset
+
+ in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Version-Control-Using"
 
 \end_inset
 
- presents concise explanation to revision control using git.
+, or in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Git_Tower_Ebook"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2128,11 +2192,13 @@ Mostly the problem is not specific to Arabic, but to several other languages
 
 .
  To do so, just use the 
-\begin_inset Quotes eld
-\end_inset
+\begin_inset Flex Strong
+status open
 
+\begin_layout Plain Layout
 Thesis_English.lyx
-\begin_inset Quotes erd
+\end_layout
+
 \end_inset
 
  file.
