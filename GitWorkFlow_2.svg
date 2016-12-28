@@ -714,11 +714,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.83369612"
-     inkscape:cx="372.55565"
-     inkscape:cy="294.1762"
+     inkscape:zoom="1.7976573"
+     inkscape:cx="184.8113"
+     inkscape:cy="71.664374"
      inkscape:document-units="px"
-     inkscape:current-layer="g9034"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="703"
@@ -801,7 +801,7 @@
        x="422.78397"
        y="1739.3358">
       <tspan
-         x="422.78397 430.55896 438.33395 446.10895 453.88397 461.65897 469.43396 477.20895 484.98395 492.75897 500.53397 508.30896 516.08398 523.85895 531.63397 539.40894 547.18396 554.95898 562.73395 570.50897 578.28394 586.05896 593.83398 601.60895 609.38397 617.15894 624.93396 632.70898 640.48395 648.25897 656.034 663.80896 671.58392"
+         x="422.78397"
          y="1739.3358"
          sodipodi:role="line"
          id="tspan4581">$ git merge &lt;branch-to-integrate&gt;</tspan>

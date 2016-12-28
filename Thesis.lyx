@@ -391,8 +391,41 @@ makeatother
 \begin_layout Standard
 
 \lang arabic_arabi
-اسمى هو أحمد محمد راشد دسوقى، و اعمل مدرس بقسم هندسة الطيران و الفضاء بجامعة
- القاهرة.
+انظر بقية الخلاصة الكاملة فى النسخة الانجليزية
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+(Abstract)
+\lang arabic_arabi
+ فى اول صفحة من الرسالة.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+اسمى هو أحمد محمد راشد دسوقى، و أعمل مدرساً بقسم هندسة الطيران و الفضاء
+ بجامعة القاهرة.
 \end_layout
 
 \begin_layout Standard
@@ -466,39 +499,6 @@ Git
 انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث، و ان يداوم
  على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر
  المصدر.
-\end_layout
-
-\begin_layout Standard
-
-\lang arabic_arabi
-انظر بقية التفاصيل فى النسخة الانجليزية من الخلاصة
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-(Abstract)
-\lang arabic_arabi
- فى اول صفحة من الرسالة.
 \end_layout
 
 \begin_layout Standard
@@ -1712,8 +1712,41 @@ noboundary
 \begin_layout Standard
 
 \lang arabic_arabi
-اسمى هو أحمد محمد راشد دسوقى، و اعمل مدرس بقسم هندسة الطيران و الفضاء بجامعة
- القاهرة.
+انظر بقية الخلاصة الكاملة فى النسخة الانجليزية
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+(Abstract)
+\lang arabic_arabi
+ فى اول صفحة من الرسالة.
+\end_layout
+
+\begin_layout Standard
+
+\lang arabic_arabi
+اسمى هو أحمد محمد راشد دسوقى، و أعمل مدرساً بقسم هندسة الطيران و الفضاء
+ بجامعة القاهرة.
 \end_layout
 
 \begin_layout Standard
@@ -1787,39 +1820,6 @@ Git
 انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث، و ان يداوم
  على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر
  المصدر.
-\end_layout
-
-\begin_layout Standard
-
-\lang arabic_arabi
-انظر بقية التفاصيل فى النسخة الانجليزية من الخلاصة
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-(Abstract)
-\lang arabic_arabi
- فى اول صفحة من الرسالة.
 \end_layout
 
 \begin_layout Standard

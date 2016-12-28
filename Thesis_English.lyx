@@ -2146,17 +2146,7 @@ Git
 
 \end_inset
 
-, you can find concise explanation to revision control using 
-\begin_inset Flex Strong
-status open
-
-\begin_layout Plain Layout
-Git
-\end_layout
-
-\end_inset
-
- in chapter 
+, you can find concise explanation in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Version-Control-Using"
@@ -8466,19 +8456,6 @@ name "chap:Version-Control-Using"
 Version Control Using Git
 \end_layout
 
-\begin_layout Section
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Revision Control
-\end_layout
-
-\end_inset
-
-Revision Control System
-\end_layout
-
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -8499,8 +8476,49 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-Revision control systems are examples of tools that help centrally manage
- the source code files and the changes to those files for a software project.
+Version
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotemark{}
+\end_layout
+
+\end_inset
+
+ Control Systems (VCS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "VCS"
+description "Vevision Control System"
+
+\end_inset
+
+) 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Revision Control
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Version Control
+\end_layout
+
+\end_inset
+
+are examples of tools that help centrally manage the source code files and
+ the changes to those files for a software project.
 \end_layout
 
 \begin_layout Itemize
@@ -8610,7 +8628,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "23line%"
+width "20line%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -8655,7 +8673,60 @@ status collapsed
 
 
 \backslash
-addtocounter{footnote}{-2} %2=n
+addtocounter{footnote}{-3} %3=n
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+stepcounter{footnote}
+\backslash
+footnotetext{
+\end_layout
+
+\end_inset
+
+Also denoted as 
+\begin_inset Quotes eld
+\end_inset
+
+Revision Control Systems (RCS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RCS"
+description "Revision Control System"
+
+\end_inset
+
+)
+\begin_inset Quotes erd
+\end_inset
+
+, or Source Code Management (SCM
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SCM"
+description "Source Code Management"
+
+\end_inset
+
+) system.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -8733,7 +8804,7 @@ status collapsed
 \end_layout
 
 \begin_layout Section
-Centralized vs Decentralized Revision Control
+Centralized vs Decentralized Version Control
 \end_layout
 
 \begin_layout Standard
@@ -8837,7 +8908,7 @@ HG
 \begin_inset Graphics
 	filename SVN_vs_Git.svg
 	lyxscale 50
-	width 70line%
+	width 90line%
 
 \end_inset
 
@@ -8900,8 +8971,23 @@ ing extremely easy: in most cases, Git will figure out how to integrate
 \end_layout
 
 \begin_layout Itemize
-You can always undo a merge and go back to the state before the conflict
- occurred.
+You can always undo a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and go back to the state before a conflict occurred.
  You're always able to undo and start fresh.
 \end_layout
 
@@ -8925,7 +9011,22 @@ Subversion
  have the (rightful) reputation of being incredibly complex and nasty.
  One reason for this is that Git, simply stated, works completely different
  in this regard than Subversion.
- As a consequence, Git is able to take care of most things during a merge
+ As a consequence, Git is able to take care of most things during a 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  - leaving you with comparatively simple scenarios to solve.
 \end_layout
 
@@ -8944,16 +9045,8 @@ Git is Very Different
 
 \begin_layout Standard
 The first important thing to understand about Git is that it thinks about
- version control very differently than Subversion or Perforce or whatever
- Source Code Management (SCM
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "SCM"
-description "Source Code Management"
-
-\end_inset
-
-) tool you may be used to.
+ version control very differently than Subversion or whatever VCS tool you
+ may be used to.
 \end_layout
 
 \begin_layout Theorem
@@ -8961,7 +9054,7 @@ description "Source Code Management"
 status open
 
 \begin_layout Plain Layout
-the Forget theorem
+Forget theorem
 \end_layout
 
 \end_inset
@@ -8975,194 +9068,6 @@ forget
 \end_layout
 
 \begin_layout Subsection
-How to Think Like Git? 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "GitReference"
-
-\end_inset
-
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-How to Think Like Git?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Let's start from scratch.
- Assume you are designing a new source code management system.
- How did you do basic version control before you used a tool for it? Chances
- are that you simply copied your project directory to save what it looked
- like at that point.
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-lstparams "language=bash,tabsize=4,backgroundcolor={\color[rgb]{.93,.93,.93}}"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-$ cp -R project project.bak
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-That way, you can easily revert files that get messed up later, or see what
- you have changed by comparing what the project looks like now to what it
- looked like when you copied it.
-\end_layout
-
-\begin_layout Standard
-If you are really paranoid, you may do this often, maybe putting the date
- in the name of the backup:
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-lstparams "language=bash,tabsize=4,backgroundcolor={\color[rgb]{.93,.93,.93}}"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-$ cp -R project project.2010-06-01.bak
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In that case, you may have a bunch of snapshots of your project that you
- can compare and inspect from.
- You can even use this model to fairly effectively share changes with someone.
- If you zip up your project at a known state and put it on your website,
- other developers can download that, change it and send you a patch pretty
- easily.
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-lstparams "language=bash,tabsize=4,backgroundcolor={\color[rgb]{.93,.93,.93}}"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-$ wget http://example.com/project.2010-06-01.zip
-\end_layout
-
-\begin_layout Plain Layout
-
-$ unzip project.2010-06-01.zip
-\end_layout
-
-\begin_layout Plain Layout
-
-$ cp -R project.2010-06-01 project-my-copy
-\end_layout
-
-\begin_layout Plain Layout
-
-$ cd project-my-copy
-\end_layout
-
-\begin_layout Plain Layout
-
-$ (change something)
-\end_layout
-
-\begin_layout Plain Layout
-
-$ diff project-my-copy project.2010-06-01 > change.patch
-\end_layout
-
-\begin_layout Plain Layout
-
-$ (email change.patch)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now the original developer can apply that patch to their copy of the project
- and they have your changes.
- This is how many open source projects have been collaborated on for several
- years.
-\end_layout
-
-\begin_layout Standard
-This actually works fairly well, so let's say we want to write a tool to
- make this basic process faster and easier.
- Instead of writing a tool that versions 
-\series bold
-each file individually
-\series default
-, like 
-\series bold
-Subversion
-\series default
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Subversion
-\end_layout
-
-\end_inset
-
-, we would probably write one that makes it easier to store 
-\series bold
-snapshots of the project 
-\series default
-without having to copy the whole directory each time.
-\end_layout
-
-\begin_layout Standard
-This is essentially what Git is.
- You tell Git you want to save a snapshot of your project with the git commit
- command and it basically records a manifest of what all of the files in
- your project look like at that point.
- Then most of the commands work with those manifests to see how they differ
- or pull content out of them, etc.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename IntroducingCommits.pdf
-	width 60line%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If you think about Git as a tool for storing and comparing and merging snapshots
- of your project, it may be easier to understand what is going on and how
- to do things properly.
-\end_layout
-
-\begin_layout Section
 Installing Git
 \end_layout
 
@@ -9371,26 +9276,141 @@ https://www.git-tower.com/learn/cheat-sheets/vcs-workflow
 
 \end_layout
 
-\begin_layout Section
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Git-Glossary"
+\begin_layout Subsection
+Git Cheat Sheet
+\end_layout
+
+\begin_layout Standard
+Check figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Git-Cheat-Sheet"
 
 \end_inset
 
-Git Terminology Explained 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Git_Manual_Glossary,Git_Glossary"
+.
+\end_layout
 
-\end_inset
-
-
-\begin_inset Argument 1
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement p
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Git Terminology Explained
+\align center
+\begin_inset Graphics
+	filename git-cheatsheet.svg
+	lyxscale 25
+	width 100line%
+	height 90theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Git-Cheat-Sheet"
+
+\end_inset
+
+Git Cheat Sheet [
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.git-tower.com/learn/cheat-sheets/git
+\end_layout
+
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Git Best Practices
+\end_layout
+
+\begin_layout Standard
+Check figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Git-Best-practices"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename git-BestPractices.svg
+	lyxscale 25
+	width 100line%
+	height 90theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Git-Best-practices"
+
+\end_inset
+
+Git Best practices [
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.git-tower.com/learn/cheat-sheets/git
+\end_layout
+
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9399,10 +9419,40 @@ Git Terminology Explained
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Many of the above commands that changes the master do change the files on
+ the HDD 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Git-Glossary"
+
+\end_inset
+
+Git Terminology Explained
+\end_layout
+
+\begin_layout Standard
 The first step towards learning git is to understand the meaning of its
  terminology.
- The following terms is ordered from the most basic to the less likely to
- use/hear-about.
+ The following terms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Git_Manual_Glossary"
+
+\end_inset
+
+ is ordered from the most basic to the less likely to use/hear-about.
 \end_layout
 
 \begin_layout Description
@@ -9501,9 +9551,18 @@ reference "HEAD"
 \begin_deeper
 \begin_layout Itemize
 Reverting to older 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -9956,8 +10015,7 @@ name "commit"
 status collapsed
 
 \begin_layout Plain Layout
-In other other revision control systems, the same thing is referred to as
- 
+In other other VCS's, the same thing is referred to as 
 \begin_inset Flex Emph
 status open
 
@@ -11096,7 +11154,7 @@ reference "branch"
 \begin_deeper
 \begin_layout Itemize
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -11122,7 +11180,7 @@ $ git pull
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -11216,24 +11274,11 @@ local
 \end_inset
 
  branch.
- This is suitable for updating after a long time.
- However, this creates diamond shape, which many people find very confusing.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/git_pull.png
-	width 50line%
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -11259,7 +11304,7 @@ $ git pull --rebase
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -11317,6 +11362,10 @@ reference "branch"
 \end_inset
 
  updates and (2) 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "rebase"
@@ -11324,11 +11373,6 @@ reference "rebase"
 \end_inset
 
 
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-rebase
 \end_layout
 
 \end_inset
@@ -11393,31 +11437,8 @@ reference "branch"
 
 .
  This is suitable for updating after a short time.
- The diamond shape is avoided, and history stays nice straight line.
- Most developers love that! For more information, refer to 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "sec. Rebase as an Alternative to Merge"
-key "Git_Tower_Ebook"
-
-\end_inset
-
-.
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/git_pull_--rebase.png
-	width 50line%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Description
 push
@@ -12154,15 +12175,7 @@ reference "commit"
 status open
 
 \begin_layout Plain Layout
-In many VCS
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "VCS"
-description "Version Control System"
-
-\end_inset
-
- tools, 
+In many VCS tools, 
 \emph on
 branching
 \emph default
@@ -12575,6 +12588,39 @@ reference "branch"
 \end_inset
 
 .
+ As a result, it creates a merge 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ combining both 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+es
+\end_layout
+
+\end_inset
+
+.
  If there are merge conflicts, manual intervention may be required to complete
  the merge.
 \end_layout
@@ -12682,9 +12728,99 @@ key "Git_Tower_Ebook"
 \end_layout
 
 \begin_layout Itemize
-You can always undo a merge and go back to the state before the conflict
- occurred.
+You can always undo a merge and go back to the state before a conflict occurred.
  You're always able to undo and start fresh.
+\end_layout
+
+\begin_layout Itemize
+If the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "branch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to be merged happens to be descendant of 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ will automatically perform 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fast-forward"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, as depicted in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fast_forward_merge"
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -12696,12 +12832,11 @@ name "rebase"
 
 \end_inset
 
- reapply a series of changes from a branch to a different base.
- For more information, refer to 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "sec. Rebase as an Alternative to Merge"
-key "Git_Tower_Ebook"
+ reapply a series of changes from a branch to a different base, as depicted
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge_vs_rebase"
 
 \end_inset
 
@@ -12711,13 +12846,132 @@ key "Git_Tower_Ebook"
 \begin_deeper
 \begin_layout Standard
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/git_pull_--rebase.png
-	width 50line%
+	filename Rebase.svg
+	lyxscale 50
+	width 90line%
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "merge_vs_rebase"
+
+\end_inset
+
+
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ versus 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "rebase"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Caution: 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+rebase
+\end_layout
+
+\end_inset
+
+ rewrites history.
+ Therefore, 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+rebase
+\end_layout
+
+\end_inset
+
+ should only be used for cleaning up local commits.
+ 
+\series bold
+Do not
+\series default
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+rebase
+\end_layout
+
+\end_inset
+
+ commits that have already been published to 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "upstream"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -12763,15 +13017,14 @@ reference "merge"
 
 \end_inset
 
-, where you are merging a branch that happens to be descendant of your HEAD.
- In such a case, you do not make a new 
+ that can occur while merging a 
 \begin_inset Flex Emph
 status open
 
 \begin_layout Plain Layout
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "merge"
+reference "branch"
 
 \end_inset
 
@@ -12780,23 +13033,7 @@ reference "merge"
 
 \end_inset
 
- 
-\begin_inset Flex Emph
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "commit"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- but instead just update to branch 
+ that happens to be descendant of 
 \begin_inset Flex Emph
 status open
 
@@ -12813,18 +13050,211 @@ reference "HEAD"
 \end_inset
 
 .
- Check figure 
+ In this case, 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Fast-Forward-Merge"
+reference "merge"
 
 \end_inset
 
- for visual explanation.
- For more information, refer to 
+
+\end_layout
+
+\end_inset
+
+ will not make a new 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+merge 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "commit"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Instead, 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ will 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "rebase"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ the merged branch on top of 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, as depicted in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fast_forward_merge"
+
+\end_inset
+
+.
+ This is simply performed in this case just by pointing 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "HEAD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to the 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "head"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ of the merged branch.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename FastForwardMerge.svg
+	lyxscale 50
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fast_forward_merge"
+
+\end_inset
+
+
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fast-forward"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "merge"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For more information, refer to 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "sec. Rebase as an Alternative to Merge"
+after "Rebase as an Alternative to Merge"
 key "Git_Tower_Ebook"
 
 \end_inset
@@ -12832,6 +13262,7 @@ key "Git_Tower_Ebook"
 .
 \end_layout
 
+\end_deeper
 \begin_layout Description
 stash
 \begin_inset CommandInset label
@@ -13005,7 +13436,7 @@ blame
 \end_inset
 
  describes the last modification to each line of a file, which generally
- displays the revision, author and time.
+ displays the version, author and time.
  This is helpful, for example, in tracking down when a feature was added,
  or which commit led to a particular bug.
 \end_layout
@@ -13208,7 +13639,7 @@ reference "working_Directory"
 
 \end_inset
 
- and stores git revision history in the root folder of the repository instead
+ and stores git version history in the root folder of the repository instead
  of in a 
 \begin_inset Flex Emph
 status open
@@ -13345,217 +13776,27 @@ http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename fast_forward.pdf
-	width 90line%
-	height 90theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Fast-Forward-Merge"
-
-\end_inset
-
-Fast Forward Merge [
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.sandofsky.com
-\end_layout
-
-\end_inset
-
-]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
-Git Cheat Sheet
+Further Details
+\end_layout
+
+\begin_layout Subsection
+Submodules
 \end_layout
 
 \begin_layout Standard
-Check figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Git-Cheat-Sheet"
+Check 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Submodules"
+key "Git_Tower_Ebook"
 
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement p
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename git-cheatsheet.svg
-	lyxscale 25
-	width 100line%
-	height 90theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Git-Cheat-Sheet"
-
-\end_inset
-
-Git Cheat Sheet [
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.git-tower.com/learn/cheat-sheets/git
-\end_layout
-
-\end_inset
-
-]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Git Best Practices
-\end_layout
-
-\begin_layout Standard
-Check figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Git-Best-practices"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement p
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename git-BestPractices.svg
-	lyxscale 25
-	width 100line%
-	height 90theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Git-Best-practices"
-
-\end_inset
-
-Git Best practices [
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.git-tower.com/learn/cheat-sheets/git
-\end_layout
-
-\end_inset
-
-]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Many of the above commands that changes the master do change the files on
- the HDD 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
+\begin_layout Subsection
 Undoing Things
 \end_layout
 
@@ -13563,7 +13804,7 @@ Undoing Things
 Check 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "sec. Undoing Things"
+after "Undoing Things"
 key "Git_Tower_Ebook"
 
 \end_inset
@@ -13571,7 +13812,7 @@ key "Git_Tower_Ebook"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Dangerous Commands
 \end_layout
 
@@ -13719,6 +13960,93 @@ reference "stash"
 \end_inset
 
  your modifications before checking-out.
+\end_layout
+
+\begin_layout Subsection
+Further Reading
+\end_layout
+
+\begin_layout Standard
+Reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Git_Tower_Ebook"
+
+\end_inset
+
+ is very good for learning git.
+ It is concise and very well written.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Enumerate
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitReference"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitMagic"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://gitimmersion.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://yakiloo.com/getting-started-git/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://ndpsoftware.com/git-cheatsheet.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -13916,82 +14244,6 @@ https://support.gitkraken.com/integrations/bitbucket
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Section
-Good Reads
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Git_Tower_Ebook"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset citation
-LatexCommand cite
-key "GitReference"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset citation
-LatexCommand cite
-key "GitMagic"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://gitimmersion.com
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://yakiloo.com/getting-started-git/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://ndpsoftware.com/git-cheatsheet.html
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
