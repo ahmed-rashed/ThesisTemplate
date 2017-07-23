@@ -6,6 +6,8 @@
 \origin unavailable
 \textclass report
 \begin_preamble
+\PassOptionsToPackage{hyphens}{url}
+
 \usepackage{pdflscape}
 \usepackage{multicol}
 \usepackage{appendix}
@@ -32,7 +34,7 @@
 
 %To use symbols for footnotes
 %\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-%To reset footnote numbering every part
+%To reset footnote numbering every page
 \counterwithin*{footnote}{page}
 
 %%Redefine the plain page style to avoid violating it at every \chapter{} command
@@ -76,7 +78,7 @@
     \vspace*{\fill}
 %    \hfill
     \begin{center}
-      \emph{This page intentionally left blank!}
+      \emph{This page is intentionally left blank!}
     \end{center}
     \vspace{\fill}
 %    \thispagestyle{empty}
@@ -166,7 +168,7 @@
 
 \let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
 \end_preamble
-\options openright,refpage,intoc,bibliography=totoc
+\options hyphens,openright,refpage,intoc,bibliography=totoc
 \use_default_options true
 \begin_modules
 theorems-ams-bytype
@@ -1837,6 +1839,10 @@ thispagestyle{empty}}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 cleartoleftpage
@@ -1844,9 +1850,17 @@ cleartoleftpage
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 %
 \backslash
 pagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset

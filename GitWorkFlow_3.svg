@@ -15,7 +15,7 @@
    viewBox="0 0 649.15201 1574.1714"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.0 unknown"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="GitWorkFlow_3.svg">
   <defs
      id="defs4">
@@ -714,8 +714,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.32338442"
-     inkscape:cx="346.21441"
+     inkscape:zoom="0.69729766"
+     inkscape:cx="321.11752"
      inkscape:cy="839.55805"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -762,7 +762,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

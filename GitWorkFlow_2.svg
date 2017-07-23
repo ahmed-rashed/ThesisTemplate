@@ -15,7 +15,7 @@
    viewBox="0 0 644.88178 1274.4265"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="GitWorkFlow_2.svg">
   <defs
      id="defs4">
@@ -714,9 +714,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7976573"
-     inkscape:cx="184.8113"
-     inkscape:cy="71.664374"
+     inkscape:zoom="1.1655031"
+     inkscape:cx="50.320817"
+     inkscape:cy="929.31625"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -725,7 +725,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:snap-global="true"
+     inkscape:snap-global="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -734,7 +734,8 @@
      inkscape:object-paths="true"
      inkscape:object-nodes="true"
      showguides="false"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:snap-text-baseline="true">
     <sodipodi:guide
        position="152.36522,951.51471"
        orientation="1,0"
@@ -785,7 +786,7 @@
        style="fill:none;stroke:#e0e1e2;stroke-width:22.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        d="m 417.11471,1735.1724 272.6275,0" />
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4575"
        x="456.74268"
        y="1709.9146">
@@ -796,7 +797,7 @@
          id="tspan4577">Integrate Changes</tspan>
     </text>
     <text
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4579"
        x="422.78397"
        y="1739.3358">
@@ -812,17 +813,18 @@
        style="fill:#ffffff;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 553.42859,1668.217 c 11.895,0 21.5725,-9.6775 21.5725,-21.5725 0,-11.895 -9.6775,-21.5725 -21.5725,-21.5725 -11.895,0 -21.5725,9.6775 -21.5725,21.5725 0,11.895 9.6775,21.5725 21.5725,21.5725 z" />
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4615"
        x="545.7937"
        y="1655.1448">
       <tspan
          x="545.7937"
          y="1655.1448"
-         id="tspan4617">3</tspan>
+         id="tspan4617"
+         style="fill:#000000;">3</tspan>
     </text>
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4635"
        x="775.67957"
        y="865.87964">
@@ -832,11 +834,6 @@
          sodipodi:role="line"
          id="tspan4637">Understanding Branches</tspan>
     </text>
-    <path
-       inkscape:connector-curvature="0"
-       id="path4683"
-       style="fill:none;stroke:#ffffff;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 750.18584,838.39377 c -2.775,0 -8.02375,1.6775 -8.02375,8.02375 l 0,409.04628 c 0,2.775 1.67625,8.0237 8.02375,8.0237 l 286.80126,0 c 2.775,0 8.0237,-1.6775 8.0237,-8.0237 l 0,-409.04628 c 0,-2.775 -1.6762,-8.02375 -8.0237,-8.02375 l -286.80126,0 z" />
     <path
        inkscape:connector-curvature="0"
        id="path4687"
@@ -863,7 +860,7 @@
        style="fill:none;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 743.24109,842.0949 c -0.66125,1.11375 -1.07875,2.5325 -1.07875,4.3225 l 0,4.85625 m 0,399.33505 0,4.855 c 0,1.1862 0.30625,2.8237 1.1525,4.3112 m 2.5475,2.6338 c 1.115,0.6612 2.53375,1.0787 4.32375,1.0787 l 4.91375,0 m 276.97376,0 4.9137,0 c 1.1863,0 2.8238,-0.3062 4.3113,-1.1525 m 2.6337,-2.5487 c 0.6613,-1.1138 1.0788,-2.5325 1.0788,-4.3225 l 0,-4.855 m 0,-399.33505 0,-4.85625 c 0,-1.185 -0.3063,-2.82375 -1.1525,-4.31125 m -2.5488,-2.6325 c -1.1137,-0.6625 -2.5325,-1.08 -4.3225,-1.08 l -4.9137,0 m -276.97376,0 -4.91375,0 c -1.18625,0 -2.825,0.30625 -4.3125,1.15375" />
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:middle;text-align:center;"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:middle;text-align:center;"
        id="text4709"
        x="895.03516"
        y="1328.5925">
@@ -873,11 +870,6 @@
          sodipodi:role="line"
          id="tspan4711">master Branch</tspan>
     </text>
-    <path
-       inkscape:connector-curvature="0"
-       id="path4745"
-       style="fill:none;stroke:#ffffff;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 750.18547,1301.1069 c -2.775,0 -8.02375,1.6775 -8.02375,8.0238 l 0,299.1287 c 0,2.7763 1.67625,8.025 8.02375,8.025 l 286.80123,0 c 2.775,0 8.0238,-1.6775 8.0238,-8.025 l 0,-299.1287 c 0,-2.775 -1.6763,-8.0238 -8.0238,-8.0238 l -286.80123,0 z" />
     <path
        inkscape:connector-curvature="0"
        id="path4749"
@@ -913,14 +905,15 @@
        style="fill:#ffffff;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 553.42859,1331.6029 c 11.895,0 21.5725,-9.6775 21.5725,-21.5725 0,-11.895 -9.6775,-21.5725 -21.5725,-21.5725 -11.895,0 -21.5725,9.6775 -21.5725,21.5725 0,11.895 9.6775,21.5725 21.5725,21.5725 z" />
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4817"
        x="545.7937"
        y="1318.5306">
       <tspan
          x="545.7937"
          y="1318.5306"
-         id="tspan4819">2</tspan>
+         id="tspan4819"
+         style="fill:#000000;">2</tspan>
     </text>
     <path
        inkscape:connector-curvature="0"
@@ -928,7 +921,7 @@
        style="fill:none;stroke:#e0e1e2;stroke-width:22.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        d="m 417.11471,1008.1591 272.6275,0" />
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="text4841"
        x="457.4071"
        y="982.90125">
@@ -936,10 +929,10 @@
          x="457.4071"
          y="982.90125"
          sodipodi:role="line"
-         id="tspan4843">Start a New Feature</tspan>
+         id="tspan4843">Start a New Branch</tspan>
     </text>
     <text
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4845"
        x="422.78397"
        y="1012.3225">
@@ -950,7 +943,7 @@
          id="tspan4847">$ git branch &lt;new-branch-name&gt;</tspan>
     </text>
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text5761"
        x="457.79269"
        y="737.53119">
@@ -1445,7 +1438,7 @@
        y="1027.5715" />
     <flowRoot
        xml:space="preserve"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="flowRoot4525"><flowRegion
          id="flowRegion4527"><use
            x="0"
@@ -1454,8 +1447,8 @@
            id="use4529"
            width="100%"
            height="100%" /></flowRegion><flowPara
-         id="flowPara4531">Whenever you start a new feature, a new experiment or a new bugfix, you should create a new branch. In Git, this is extremely fast and easy: just </flowPara><flowPara
-         id="flowPara4937">call “git branch &lt;new-branch-name&gt;” and you have a new, separate context. Don’t be shy about creating new branches: it costs you nothing.</flowPara></flowRoot>    <rect
+         id="flowPara4937">A branch is a way to request a parallel and isolated working-directory, staging-area and commit history, so that you test new experimental features without disturbing the main branch.</flowPara><flowPara
+         id="flowPara4527">Git branches in incredibly lightweight way, making branching and switching back/forth between branches nearly instantaneous.</flowPara></flowRoot>    <rect
        style="fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4533"
        width="278.00873"
@@ -1464,7 +1457,7 @@
        y="963.6571" />
     <flowRoot
        xml:space="preserve"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="flowRoot4671"><flowRegion
          id="flowRegion4673"><use
            x="0"
@@ -1474,9 +1467,9 @@
            width="100%"
            height="100%" /></flowRegion><flowPara
          id="flowPara4677"
-         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">We often have to work on multiple things in parallel: feature A, bugfix #32, feature B… This makes it all too easy to lose track of where each change belongs. Therefore, it’s essential to keep these contexts separate from each other.</flowPara><flowPara
+         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;">We often have to work on multiple things in parallel: feature A, bugfix #32, feature B… This makes it all too easy to lose track of where each change belongs. Therefore, it’s essential to keep these contexts separate from each other.</flowPara><flowPara
          id="flowPara4939"
-         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">   Grouping related changes in their own context has multiple benefits: your coworkers can better understand what happened because they only have to look at code that really concerns them. And you can stay relaxed, because when you mess up, you mess up only this context. Branches do just this: they provide a context that keeps your work and your changes separate from any other context.</flowPara></flowRoot>    <rect
+         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;">   Grouping related changes in their own context has multiple benefits: your coworkers can better understand what happened because they only have to look at code that really concerns them. And you can stay relaxed, because when you mess up, you mess up only this context. Branches do just this: they provide a context that keeps your work and your changes separate from any other context.</flowPara></flowRoot>    <rect
        style="fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:5.00000048;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4679"
        width="270.46875"
@@ -1514,7 +1507,7 @@
          y="1373.2419"
          x="475.12372"
          id="text4775"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none">
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;">
         <tspan
            id="tspan4777"
            sodipodi:role="line"
@@ -1525,7 +1518,7 @@
          y="1402.6633"
          x="422.78397"
          id="text4779"
-         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none">
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;">
         <tspan
            id="tspan4781"
            sodipodi:role="line"
@@ -1534,7 +1527,7 @@
       </text>
       <flowRoot
          id="flowRoot4949"
-         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
          xml:space="preserve"><flowRegion
            id="flowRegion4951"><use
              height="100%"
@@ -1543,13 +1536,13 @@
              xlink:href="#rect4679"
              y="0"
              x="0" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;"
            id="flowPara4955">To start working on a different context, you need to tell Git that you want to switch to it.</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;"
            id="flowPara4957">You do this by “checking out” the branch with the “git checkout” command. Every commit you make – until you switch branches again – will be recorded in this branch and kept separate from your other contexts.</flowPara></flowRoot>    </g>
     <flowRoot
        xml:space="preserve"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="flowRoot5002"><flowRegion
          id="flowRegion5004"><use
            x="0"
@@ -1559,22 +1552,17 @@
            width="100%"
            height="100%" /></flowRegion><flowPara
          id="flowPara5008"
-         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">When your new feature is ready, you might want to integrate it into another branch (e.g. your production or testing branch). First, switch to the branch that is supposed to receive these changes. Then, call the “git merge” command with the name of the branch you want to integrate.</flowPara></flowRoot>    <text
+         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;">When your new feature is ready, you might want to integrate it into another branch (e.g. your production or testing branch). First, switch to the branch that is supposed to receive these changes. Then, call the “git merge” command with the name of the branch you want to integrate.</flowPara></flowRoot>    <text
        y="1610.2074"
        x="824.14648"
        id="text5340"
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none">
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;">
       <tspan
          id="tspan5342"
          sodipodi:role="line"
          y="1610.2074"
          x="824.14648">HEAD Branch</tspan>
     </text>
-    <path
-       d="m 750.18547,1582.7217 c -2.775,0 -8.02375,1.6775 -8.02375,8.0238 l 0,299.1287 c 0,2.7763 1.67625,8.025 8.02375,8.025 l 286.80123,0 c 2.775,0 8.0238,-1.6775 8.0238,-8.025 l 0,-299.1287 c 0,-2.775 -1.6763,-8.0238 -8.0238,-8.0238 l -286.80123,0 z"
-       style="fill:none;stroke:#ffffff;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path5344"
-       inkscape:connector-curvature="0" />
     <path
        d="m 742.16146,1600.1002 0,282.6525"
        style="fill:none;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:9.78, 4.465;stroke-dashoffset:0;stroke-opacity:1"
@@ -1591,15 +1579,17 @@
        id="path5350"
        inkscape:connector-curvature="0" />
     <path
-       d="m 1027.5603,1582.7217 -270.205,0"
+       d="m 1032.0732,1582.7214 -276.97373,0 -4.91375,0 c -1.18625,0 -2.825,0.3062 -4.3125,1.1537"
        style="fill:none;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:9.8275, 4.5125;stroke-dashoffset:0;stroke-opacity:1"
        id="path5352"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc" />
     <path
-       d="m 743.24072,1586.4226 c -0.66125,1.1138 -1.07875,2.5325 -1.07875,4.3225 l 0,4.89 m 0,289.35 0,4.89 c 0,1.1863 0.30625,2.8238 1.1525,4.3113 m 2.5475,2.6337 c 1.115,0.6613 2.53375,1.0788 4.32375,1.0788 l 4.91375,0 m 276.97373,0 4.9138,0 c 1.1862,0 2.825,-0.3063 4.3112,-1.1525 m 2.6338,-2.5488 c 0.6612,-1.1137 1.0787,-2.5325 1.0787,-4.3225 l 0,-4.89 m 0,-289.35 0,-4.89 c 0,-1.185 -0.3062,-2.8237 -1.1525,-4.3112 m -2.5487,-2.6325 c -1.1138,-0.6625 -2.5325,-1.08 -4.3225,-1.08 l -4.9138,0 m -276.97373,0 -4.91375,0 c -1.18625,0 -2.825,0.3062 -4.3125,1.1537"
+       d="m 743.24072,1586.4226 c -0.66125,1.1138 -1.07875,2.5325 -1.07875,4.3225 l 0,4.89 m 0,289.35 0,4.89 c 0,1.1863 0.30625,2.8238 1.1525,4.3113 m 2.5475,2.6337 c 1.115,0.6613 2.53375,1.0788 4.32375,1.0788 l 4.91375,0 m 276.97373,0 4.9138,0 c 1.1862,0 2.825,-0.3063 4.3112,-1.1525 m 2.6338,-2.5488 c 0.6612,-1.1137 1.0787,-2.5325 1.0787,-4.3225 l 0,-4.89 m 0,-289.35 0,-4.89 c 0,-1.185 -0.3062,-2.8237 -1.1525,-4.3112 m -2.5487,-2.6325 c -1.1138,-0.6625 -2.5325,-1.08 -4.3225,-1.08 l -4.9138,0"
        style="fill:none;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5354"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccsccsccsccsccsccsc" />
     <path
        d="m 916.58709,1641.9584 -10.09875,8.6813"
        style="fill:none;stroke:#4c6b8f;stroke-width:1.625;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1835,7 +1825,7 @@
        style="fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
     <flowRoot
        id="flowRoot5444"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        xml:space="preserve"
        transform="translate(0,281.61486)"><flowRegion
          id="flowRegion5446"><use
@@ -1846,11 +1836,11 @@
            y="0"
            x="0" /></flowRegion><flowPara
          id="flowPara5450"
-         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">At each point in time, you can only work in one context – the context of the currently checked out branch (which is called the “<flowSpan
-   style="font-weight:bold"
+         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;">At each point in time, you can only work in one context – the context of the currently checked out branch (which is called the “<flowSpan
+   style="font-weight:bold;fill:#000000;"
    id="flowSpan5482">HEAD</flowSpan>” branch). Your project’s working directory contains the files that correspond to this branch. When you check out a different branch (make it “HEAD”), Git replaces the files in your working directory with the ones that match this branch.</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:start;text-align:justify;"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:start;text-align:justify;"
        id="flowRoot5468"><flowRegion
          id="flowRegion5470"><use
            x="0"
@@ -1860,24 +1850,82 @@
            width="100%"
            height="100%" /></flowRegion><flowPara
          id="flowPara5474"
-         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:justify;"><flowSpan
-   style="font-weight:bold"
+         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:justify;fill:#000000;"><flowSpan
+   style="font-weight:bold;fill:#000000;"
    id="flowSpan5480">master</flowSpan> is the default name of the branch that is automatically created by $ git init. If you dislike this name, you can rename using</flowPara><flowPara
          id="flowPara5476"
-         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:justify;">$ git branch -m master new_branch_name</flowPara></flowRoot>    <path
+         style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:justify;fill:#000000;">$ git branch -m master new_branch_name</flowPara></flowRoot>    <path
        inkscape:connector-curvature="0"
        id="path4897"
        style="fill:#ffffff;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 553.43206,794.0904 c 11.895,0 21.5725,-9.6775 21.5725,-21.5725 0,-11.895 -9.6775,-21.5725 -21.5725,-21.5725 -11.895,0 -21.5725,9.6775 -21.5725,21.5725 0,11.895 9.6775,21.5725 21.5725,21.5725 z" />
     <text
-       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#2e353d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'Titillium Bd';-inkscape-font-specification:Titillium-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        id="text4883"
        x="545.79718"
        y="781.01788">
       <tspan
          x="545.79718"
          y="781.01788"
-         id="tspan4885">1</tspan>
+         id="tspan4885"
+         style="fill:#000000;">1</tspan>
     </text>
+    <g
+       id="g4515"
+       transform="translate(-340,-160)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4517"
+         style="fill:#ffffff;stroke:#777c81;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 410.02809,1345.7564 c -2.775,0 -8.02375,1.6775 -8.02375,8.0238 l 0,217.83 c 0,2.775 1.67625,8.0237 8.02375,8.0237 l 286.80125,0 c 2.775,0 8.02375,-1.6762 8.02375,-8.0237 l 0,-217.83 c 0,-2.775 -1.67625,-8.0238 -8.02375,-8.0238 z"
+         sodipodi:nodetypes="sssssssss" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4519"
+         style="fill:none;stroke:#e0e1e2;stroke-width:22.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 417.11471,1398.4999 272.6275,0" />
+      <text
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:DejaVuSansMono;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+         id="text4525"
+         x="422.78397"
+         y="1402.6633">
+        <tspan
+           x="422.78397 430.55896 438.33395 446.10895 453.88397 461.65897 469.43396 477.20895 484.98395 492.75897 500.53397 508.30896 516.08398 523.85895 531.63397 539.40894 547.18396 554.95898 562.73395 570.50897 578.28394 586.05896 593.83398 601.60895 609.38397 617.15894 624.93396 632.70898 640.48395 648.25897 656.034 663.80896"
+           y="1402.6633"
+           sodipodi:role="line"
+           id="tspan4527">$ git checkout &lt;new-branch-name&gt;</tspan>
+      </text>
+      <flowRoot
+         xml:space="preserve"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;font-family:Titillium;-inkscape-font-specification:Titillium-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+         id="flowRoot4529"><flowRegion
+           id="flowRegion4531"><use
+             x="0"
+             y="0"
+             xlink:href="#rect4679"
+             id="use4533"
+             width="100%"
+             height="100%" /></flowRegion><flowPara
+           id="flowPara4535"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;">To start working on a different context, you need to tell Git that you want to switch to it.</flowPara><flowPara
+           id="flowPara4537"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;">You do this by “checking out” the branch with the “git checkout” command. Every commit you make – until you switch branches again – will be recorded in this branch and kept separate from your other contexts.</flowPara></flowRoot>      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:100%;font-family:'Titillium Bd';-inkscape-font-specification:'Titillium Bd';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="475.12372"
+         y="1373.2419"
+         id="text4541"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan4543"
+           x="475.12372"
+           y="1373.2419"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;line-height:100%;font-family:'Titillium Bd';-inkscape-font-specification:'Titillium Bd Bold'">Stash</tspan><tspan
+           sodipodi:role="line"
+           x="475.12372"
+           y="1390.7419"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;line-height:100%;font-family:'Titillium Bd';-inkscape-font-specification:'Titillium Bd Bold'"
+           id="tspan4547">Save your  uncommited changes</tspan></text>
+    </g>
   </g>
 </svg>
