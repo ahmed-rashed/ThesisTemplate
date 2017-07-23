@@ -131,6 +131,7 @@ theorems-ams-bytype
 theorems-chap-bytype
 multicol
 logicalmkup
+enumitem
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -189,6 +190,11 @@ logicalmkup
 \use_refstyle 1
 \branch Arabic
 \selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch No Arabic
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -1891,6 +1897,32 @@ status open
 
 \begin_layout Plain Layout
 
+%To remove all vertical spaces between different kinds of lists (enumerate,
+ itemize, description)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist{nosep}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 %To force breaking long URL's
 \end_layout
 
@@ -2419,6 +2451,37 @@ listtablename}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch No Arabic
+status open
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For unknown reason, the following conflicts with the enumitem package (and
+ its 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist{nosep}
+\end_layout
+
+\end_inset
+
+) in documents with Arabic text !!!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
 
@@ -2508,6 +2571,11 @@ newlofname}
 
 \begin_layout Standard
 \begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -4536,14 +4604,14 @@ reference "fig:Effort-and-time"
 
 \end_inset
 
-, 
+ and 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphic-imported"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard

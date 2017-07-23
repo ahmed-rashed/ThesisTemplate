@@ -23,6 +23,12 @@
 \usepackage{caption}
 \usepackage{chngcntr}
 \usepackage{realboxes}
+
+%To correct enumerations corrupted by the enumitem package
+\setlist[enumerate,1]{label=\arabic*., ref=\arabic*}
+\setlist[enumerate,2]{label=\alph*., ref=\alph*}
+\setlist[enumerate,3]{label=\roman*., ref=\roman*}
+
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
@@ -175,6 +181,7 @@ theorems-ams-bytype
 theorems-chap-bytype
 multicol
 logicalmkup
+enumitem
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -233,6 +240,11 @@ logicalmkup
 \use_refstyle 1
 \branch Arabic
 \selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch No Arabic
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -1173,7 +1185,26 @@ status open
 \begin_layout Plain Layout
 
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size default
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 1
@@ -1300,7 +1331,26 @@ status open
 \begin_layout Plain Layout
 
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size default
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 1
@@ -1323,7 +1373,45 @@ status open
 \begin_layout Plain Layout
 
 \lang arabic_arabi
-أ.م.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size default
+\lang arabic_arabi
+م.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size default
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 3
@@ -1346,7 +1434,26 @@ status open
 \begin_layout Plain Layout
 
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size default
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 4
@@ -1397,7 +1504,7 @@ status open
 \lang english
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2120,7 +2227,26 @@ end{centering}
 
 \size large
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 1
@@ -2168,7 +2294,45 @@ end{centering}
 
 \size large
 \lang arabic_arabi
-أ.م.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+م.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 2
@@ -2216,7 +2380,26 @@ end{centering}
 
 \size large
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 3
@@ -2541,7 +2724,26 @@ centering
 
 \size large
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 1
@@ -2670,7 +2872,26 @@ centering
 
 \size large
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 2
@@ -2812,7 +3033,26 @@ centering
 
 \size large
 \lang arabic_arabi
-أ.د.
+أ.
+\size largest
+\lang english
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noboundary
+\end_layout
+
+\end_inset
+
+
+\size large
+\lang arabic_arabi
+د.
  اسم
 \numeric on
 3
