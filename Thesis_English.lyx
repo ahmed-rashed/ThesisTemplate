@@ -1858,29 +1858,6 @@ status open
 
 
 \backslash
-phantomsection
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{Abstract}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
 setlength{
 \backslash
 columnseprule}{1pt}
@@ -1935,6 +1912,29 @@ status open
 
 \backslash
 sloppy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abstract}
 \end_layout
 
 \end_inset
@@ -9009,7 +9009,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename centralized-vs-distributed.1ac.png
-	lyxscale 50
+	lyxscale 25
 	width 70line%
 
 \end_inset
@@ -9058,9 +9058,9 @@ status open
 \align center
 \begin_inset Graphics
 	filename /home/Documents/MyWork/Courses/ComputerApplications/Lectures/VersionControlSystems.svg
+	lyxscale 50
 	width 80line%
 	height 80line%
-	keepAspectRatio
 
 \end_inset
 
@@ -9423,6 +9423,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename GitWorkFlow_1.svg
+	lyxscale 50
 	width 100line%
 	height 90theight%
 	keepAspectRatio
@@ -9477,6 +9478,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename GitWorkFlow_2.svg
+	lyxscale 50
 	width 100line%
 	height 90theight%
 	keepAspectRatio
@@ -9531,6 +9533,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename GitWorkFlow_3.svg
+	lyxscale 50
 	width 100line%
 	height 90theight%
 	keepAspectRatio
