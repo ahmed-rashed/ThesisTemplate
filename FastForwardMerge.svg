@@ -15,7 +15,7 @@
    viewBox="0 0 951.98125 491.76293"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="FastForwardMerge.svg">
   <defs
      id="defs4">
@@ -938,9 +938,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0818221"
-     inkscape:cx="475.99067"
-     inkscape:cy="245.88145"
+     inkscape:zoom="1.0185216"
+     inkscape:cx="507.72337"
+     inkscape:cy="263.61732"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -965,7 +965,8 @@
     <sodipodi:guide
        position="356.66138,163.24752"
        orientation="0,1"
-       id="guide4446" />
+       id="guide4446"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -1031,13 +1032,14 @@
       <text
          y="401.21356"
          x="155.20772"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="text5422">
         <tspan
            x="155.20772"
            y="401.21356"
            sodipodi:role="line"
-           id="tspan5424">Before Merge</tspan>
+           id="tspan5424"
+           style="font-size:22.5px;line-height:1.25">Before Merge</tspan>
       </text>
       <g
          transform="translate(194.53477,-149.84082)"
@@ -1049,27 +1051,28 @@
            inkscape:connector-curvature="0" />
         <text
            id="text5828"
-           style="font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;font-family:'Lucida Grande';-inkscape-font-specification:LucidaGrande;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:500;font-stretch:normal;line-height:0%;font-family:'Lucida Grande';-inkscape-font-specification:LucidaGrande;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            x="28.574455"
            y="319.84537">
           <tspan
              id="tspan5830"
              sodipodi:role="line"
              y="319.84537"
-             x="28.574455">HEAD</tspan>
+             x="28.574455"
+             style="font-size:22.5px;line-height:1.25">HEAD</tspan>
         </text>
       </g>
       <text
-         sodipodi:linespacing="125%"
          id="text9435"
          y="312.95496"
          x="313.2522"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="312.95496"
            x="313.2522"
            id="tspan9437"
-           sodipodi:role="line">new-branch</tspan></text>
+           sodipodi:role="line"
+           style="font-size:22.5px;line-height:1.25">new-branch</tspan></text>
       <use
          x="0"
          y="0"
@@ -1084,41 +1087,6 @@
          style="fill:#c2ffdb;fill-opacity:1;stroke:#f20000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          d="m 430.49691,373.60534 c 14.4988,0 26.2525,-11.75375 26.2525,-26.25375 0,-14.49875 -11.7537,-26.25375 -26.2525,-26.25375 -14.5,0 -26.255,11.755 -26.255,26.25375 0,14.5 11.755,26.25375 26.255,26.25375 z" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="959"
-       y="586.36218"
-       id="text9443"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="959"
-         y="586.36218"
-         style="font-size:22.5px"
-         id="tspan9447" /></text>
-    <text
-       y="1079.8185"
-       x="197.34889"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="text9451">
-      <tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'"
-         x="197.34889"
-         y="1079.8185"
-         sodipodi:role="line"
-         id="tspan9453" />
-    </text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="323.28793"
-       y="1081.2272"
-       id="text9463"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan9465"
-         x="323.28793"
-         y="1081.2272" /></text>
     <rect
        style="fill:none;fill-opacity:0;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:6.375;stroke-opacity:1"
        id="rect9477"
@@ -1128,7 +1096,7 @@
        y="352.29099" />
     <flowRoot
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot9493"
        transform="translate(0,-16.335755)"><flowRegion
          id="flowRegion9495"><use
@@ -1139,7 +1107,7 @@
            width="100%"
            height="100%" /></flowRegion><flowPara
          id="flowPara9499"
-         style="font-size:22.5px">If the branch to be merged is descendant of HEAD,  git merge would normally do fast forward merge.</flowPara></flowRoot>    <g
+         style="font-size:22.5px;line-height:1.25">If the branch to be merged is descendant of HEAD,  git merge would normally do fast forward merge.</flowPara></flowRoot>    <g
        id="g10289"
        transform="translate(-500.82383,0)">
       <rect
@@ -1236,22 +1204,22 @@
       <text
          y="828.37018"
          x="535.47729"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="text9467">
         <tspan
            x="535.47729"
            y="828.37018"
            sodipodi:role="line"
-           id="tspan9469">Normal merge</tspan>
+           id="tspan9469"
+           style="font-size:22.5px;line-height:1.25">Normal merge</tspan>
       </text>
       <text
-         sodipodi:linespacing="125%"
          id="text9455"
          y="694.27374"
          x="455.08566"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           style="font-size:22.5px"
+           style="font-size:22.5px;line-height:1.25"
            y="694.27374"
            x="455.08566"
            id="tspan9457"
@@ -1344,27 +1312,27 @@
       </g>
       <text
          id="text8929"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="64.596504"
          y="828.37018">
         <tspan
            id="tspan8931"
            sodipodi:role="line"
            y="828.37018"
-           x="64.596504">Fast forward merge</tspan>
+           x="64.596504"
+           style="font-size:22.5px;line-height:1.25">Fast forward merge</tspan>
       </text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="-47.680901"
          y="694.27374"
-         id="text9459"
-         sodipodi:linespacing="125%"><tspan
+         id="text9459"><tspan
            sodipodi:role="line"
            id="tspan9461"
            x="-47.680901"
            y="694.27374"
-           style="font-size:22.5px">$ git merge new-branch</tspan></text>
+           style="font-size:22.5px;line-height:1.25">$ git merge new-branch</tspan></text>
     </g>
   </g>
 </svg>

@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -23,6 +23,7 @@
 \usepackage{caption}
 \usepackage{chngcntr}
 \usepackage{realboxes}
+\usepackage{xpatch}
 
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}}
@@ -123,6 +124,10 @@
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 
 \let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
+
+\makeatletter
+\xpretocmd\lstinline{\Colorbox{lightgray}\bgroup\appto\lst@DeInit{\egroup}}{}{}
+\makeatother
 \end_preamble
 \options hyphens,openright,refpage,intoc,bibliography=totoc
 \use_default_options true
@@ -148,6 +153,8 @@ enumitem
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -188,6 +195,7 @@ enumitem
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \branch Arabic
 \selected 0
 \filename_suffix 0
@@ -210,7 +218,10 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle empty
@@ -294,6 +305,7 @@ begin{centering}%
 SAMPLE THESIS CREATED BY USING \SpecialChar LyX
 
 \begin_inset Branch Arabic
+inverted 0
 status open
 
 \begin_layout Standard
@@ -489,6 +501,7 @@ begin{centering}%
 SAMPLE THESIS CREATED BY USING \SpecialChar LyX
 
 \begin_inset Branch Arabic
+inverted 0
 status open
 
 \begin_layout Standard
@@ -864,6 +877,7 @@ July, 2017
 SAMPLE THESIS CREATED BY USING \SpecialChar LyX
 
 \begin_inset Branch Arabic
+inverted 0
 status open
 
 \begin_layout Standard
@@ -1784,6 +1798,7 @@ Title of Thesis:
 SAMPLE THESIS CREATED BY USING \SpecialChar LyX
 
 \begin_inset Branch Arabic
+inverted 0
 status open
 
 \begin_layout Standard
@@ -1987,6 +2002,7 @@ I created this thesis template to show you how you can create a professional
 LatexCommand nomenclature
 symbol "OSS"
 description "Open Source Software"
+literal "true"
 
 \end_inset
 
@@ -2093,19 +2109,6 @@ Git
 \end_inset
 
  by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -2114,17 +2117,6 @@ status open
 \begin_layout Plain Layout
 
 $ git clone https://github.com/ahmed-rashed/ThesisTemplate.git
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -2209,6 +2201,7 @@ reference "chap:Version-Control-Using"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -2452,6 +2445,7 @@ listtablename}
 
 \begin_layout Standard
 \begin_inset Branch No Arabic
+inverted 0
 status open
 
 \begin_layout Standard
@@ -2878,6 +2872,7 @@ Word Processors; \SpecialChar LaTeX
 LatexCommand nomenclature
 symbol "MS"
 description "Microsoft"
+literal "true"
 
 \end_inset
 
@@ -3710,6 +3705,7 @@ To install and use \SpecialChar LaTeX
 LatexCommand nomenclature
 symbol "IDE"
 description "Integrated Development Environment"
+literal "true"
 
 \end_inset
 
@@ -4460,6 +4456,7 @@ reference "sec:Arabic-Support"
 
 \begin_layout Standard
 \begin_inset Branch Arabic
+inverted 0
 status open
 
 \begin_layout Standard
@@ -4619,6 +4616,7 @@ For more information about this topic, refer to
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DetailedFolats"
+literal "true"
 
 \end_inset
 
@@ -4627,6 +4625,7 @@ key "DetailedFolats"
 LatexCommand cite
 after "sec. 4.6"
 key "LyX_UserGuide"
+literal "true"
 
 \end_inset
 
@@ -4772,6 +4771,7 @@ Free vibration of a SDOF
 LatexCommand nomenclature
 symbol "SDOF"
 description "Single Degree Of Freedom"
+literal "true"
 
 \end_inset
 
@@ -5300,6 +5300,7 @@ reference "AnotherTable"
 LatexCommand cite
 after "sec. 4.5"
 key "LyX_UserGuide"
+literal "true"
 
 \end_inset
 
@@ -5308,6 +5309,7 @@ key "LyX_UserGuide"
 LatexCommand cite
 after "chapter 2"
 key "DetailedFolats"
+literal "true"
 
 \end_inset
 
@@ -5983,6 +5985,7 @@ For details about equations, refer to
 \begin_inset CommandInset citation
 LatexCommand cite
 key "LyX_MathManual"
+literal "true"
 
 \end_inset
 
@@ -6037,6 +6040,7 @@ Governing Ordinary Differential Equation (
 LatexCommand nomenclature
 symbol "ode"
 description "ordinary differential equation"
+literal "true"
 
 \end_inset
 
@@ -6194,6 +6198,7 @@ Transfer Function
 LatexCommand nomenclature
 symbol "TF"
 description "Transfer Function"
+literal "true"
 
 \end_inset
 
@@ -6342,6 +6347,7 @@ is the Impulse Response Function
 LatexCommand nomenclature
 symbol "IRF"
 description "Impulse Response Function"
+literal "true"
 
 \end_inset
 
@@ -6487,6 +6493,7 @@ Reference management software
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wiki:RefManaSW"
+literal "true"
 
 \end_inset
 
@@ -6496,6 +6503,7 @@ key "wiki:RefManaSW"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "UseRefMan"
+literal "true"
 
 \end_inset
 
@@ -6530,6 +6538,7 @@ Comparisons of these software are available in
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wiki:RefManComp"
+literal "true"
 
 \end_inset
 
@@ -8292,6 +8301,7 @@ manual
 \begin_inset CommandInset citation
 LatexCommand cite
 key "InkscapeOfficialManual"
+literal "true"
 
 \end_inset
 
@@ -8367,6 +8377,7 @@ There is the listings \SpecialChar LaTeX
 LatexCommand cite
 after "chapter 8"
 key "DetailedFolats"
+literal "true"
 
 \end_inset
 
@@ -8589,7 +8600,7 @@ Version Control Using Git
 \begin_layout Standard
 You can think of a Version
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Also denoted as 
@@ -8601,6 +8612,7 @@ Revision Control Systems (RCS
 LatexCommand nomenclature
 symbol "RCS"
 description "Revision Control System"
+literal "true"
 
 \end_inset
 
@@ -8613,6 +8625,7 @@ description "Revision Control System"
 LatexCommand nomenclature
 symbol "SCM"
 description "Source Code Management"
+literal "true"
 
 \end_inset
 
@@ -8626,6 +8639,7 @@ description "Source Code Management"
 LatexCommand nomenclature
 symbol "VCS"
 description "Vevision Control System"
+literal "true"
 
 \end_inset
 
@@ -8641,6 +8655,7 @@ database
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -8765,6 +8780,7 @@ VCS illustration
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -9031,6 +9047,7 @@ Git commands versus SVN commands
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -9184,6 +9201,7 @@ https://git-scm.com/downloads/guis
 LatexCommand nomenclature
 symbol "GUI"
 description "Graphical User Interface"
+literal "true"
 
 \end_inset
 
@@ -9212,6 +9230,7 @@ www.git-tower.com
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -9377,6 +9396,7 @@ Installation and execution guidance is available in
 LatexCommand cite
 after "Part1; Getting Ready"
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -9760,12 +9780,12 @@ Git Terminology Explained
 \end_layout
 
 \begin_layout Standard
-The first step towards learning git is to understand the meaning of its
- terminology.
+The most important obstacle against learning Git is its awkward terminology.
  The following terms 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Manual_Glossary"
+literal "true"
 
 \end_inset
 
@@ -10319,7 +10339,7 @@ name "add"
 
  
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 add
@@ -10386,7 +10406,7 @@ version
 
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 commit
@@ -10671,19 +10691,6 @@ status open
 
 \begin_layout Plain Layout
 This enables using 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -10696,31 +10703,7 @@ $ git push
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
  and 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -10729,17 +10712,6 @@ status open
 \begin_layout Plain Layout
 
 $ git pull
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -10881,19 +10853,6 @@ current
 \end_layout
 
 \begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -10902,17 +10861,6 @@ status open
 \begin_layout Plain Layout
 
 $ git clone <remote-url>
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -11002,19 +10950,6 @@ reference "Repository"
 \end_inset
 
 , clone using 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11023,17 +10958,6 @@ status open
 \begin_layout Plain Layout
 
 $ git clone -o remote_alias <remote-url>
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -11113,19 +11037,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Remotes can be managed using 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11138,19 +11049,7 @@ $ git remote
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
  command.
- 
 \end_layout
 
 \end_inset
@@ -11273,6 +11172,7 @@ reference "remote"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -11455,19 +11355,6 @@ reference "remote"
 \end_inset
 
  by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11480,32 +11367,8 @@ $ git clone
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
 .
  If you dislike this name, you can rename using 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11514,17 +11377,6 @@ status open
 \begin_layout Plain Layout
 
 $ git remote rename origin new_origin_name
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -11542,7 +11394,7 @@ name "pull"
 
  
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 pull
@@ -11658,19 +11510,6 @@ reference "merge_vs_rebase"
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11679,17 +11518,6 @@ status open
 \begin_layout Plain Layout
 
 $ git pull
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -11782,19 +11610,6 @@ local
 \end_layout
 
 \begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11803,17 +11618,6 @@ status open
 \begin_layout Plain Layout
 
 $ git pull --rebase
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -12315,6 +12119,7 @@ request
 LatexCommand nomenclature
 symbol "PR"
 description "Pull Request"
+literal "true"
 
 \end_inset
 
@@ -13138,19 +12943,6 @@ master
 \end_inset
 
  is the default name of the branch that is automatically created by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -13163,32 +12955,8 @@ $ git init
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
 .
  If you dislike this name, you can rename using 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -13197,17 +12965,6 @@ status open
 \begin_layout Plain Layout
 
 $ git branch -m master new_branch_name
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -13565,6 +13322,7 @@ conflict
 LatexCommand cite
 after "Part 4; Dealing With Merge Conflicts"
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -14017,6 +13775,7 @@ reference "head"
 LatexCommand cite
 after "Part 4; Rebase as an Alternative to Merge"
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -14448,6 +14207,7 @@ name "DAG"
 LatexCommand nomenclature
 symbol "DAG"
 description "Directed acyclic graph"
+literal "true"
 
 \end_inset
 
@@ -14539,6 +14299,7 @@ SHA-1
 LatexCommand nomenclature
 symbol "SHA-1"
 description "Secure Hash Algorithm 1"
+literal "true"
 
 \end_inset
 
@@ -14730,19 +14491,6 @@ reference ".git_directory"
 
  extension.
  A blank bare repository can be created with 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -14755,32 +14503,8 @@ $ git init --bare
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
 .
  Alternatively, it can be cloned from a local repository with 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -14789,17 +14513,6 @@ status open
 \begin_layout Plain Layout
 
 $ git clone --bare
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -14832,6 +14545,38 @@ http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+squash
+\begin_inset CommandInset label
+LatexCommand label
+name "squash"
+
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+squash
+\end_layout
+
+\end_inset
+
+Squashing a commit is to take the changes from one commit and add them to
+ its parent commit.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+It is a kind of rebase I think
 \end_layout
 
 \end_inset
@@ -15166,6 +14911,7 @@ Check
 LatexCommand cite
 after "Part 1; Starting with an Unversioned Project; Ignoring Files"
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -15182,6 +14928,7 @@ Check
 LatexCommand cite
 after "Part 4; Submodules"
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -15198,6 +14945,7 @@ Check
 LatexCommand cite
 after "Part 4; Undoing Things"
 key "Git_Tower_Ebook"
+literal "true"
 
 \end_inset
 
@@ -15255,19 +15003,6 @@ Dangerous Commands
 \end_layout
 
 \begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -15280,36 +15015,12 @@ $ git rm <filename>
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
  unstage 
 \series bold
 and delete
 \series default
  a file.
  Use 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Colorbox{lightgray}{
-\end_layout
-
-\end_inset
-
-
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -15318,17 +15029,6 @@ status open
 \begin_layout Plain Layout
 
 $ git reset <filename>
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -15359,6 +15059,7 @@ status open
 \begin_inset CommandInset citation
 LatexCommand cite
 key "GitReference"
+literal "true"
 
 \end_inset
 
@@ -15369,6 +15070,7 @@ key "GitReference"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "GitMagic"
+literal "true"
 
 \end_inset
 
@@ -15581,6 +15283,8 @@ addcontentsline{toc}{chapter}{Index}
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Index"
+literal "true"
 
 \end_inset
 
