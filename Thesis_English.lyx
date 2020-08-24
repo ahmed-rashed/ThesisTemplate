@@ -253,7 +253,7 @@ begin{titlepage}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/FE-Logo.png
+	filename FE-Logo.png
 	height 3cm
 
 \end_inset
@@ -264,7 +264,7 @@ begin{titlepage}
 
 
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/CU-Pharonic Logo2.png
+	filename CU-Pharonic Logo2.png
 	height 3cm
 
 \end_inset
@@ -422,7 +422,7 @@ GIZA, EGYPT
 \noindent
 
 \size large
-July, 2017 - Version 1.0.2
+August, 2020
 \end_layout
 
 \begin_layout Standard
@@ -859,7 +859,7 @@ GIZA, EGYPT
 \noindent
 
 \size large
-July, 2017
+August, 2020
 \end_layout
 
 \begin_layout Standard
@@ -1146,7 +1146,7 @@ GIZA, EGYPT
 \noindent
 
 \size large
-July, 2017
+August, 2020
 \end_layout
 
 \begin_layout Standard
@@ -1609,7 +1609,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Face_blank_male.jpg
+	filename Face_blank_male.jpg
 	lyxscale 50
 	width 100line%
 
@@ -3071,7 +3071,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Latex_vs_Word1.png
+	filename Latex_vs_Word1.png
 	width 60line%
 
 \end_inset
@@ -3319,7 +3319,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/LatexCheatSheet.pdf
+	filename LatexCheatSheet.pdf
 	width 100line%
 	height 90theight%
 	keepAspectRatio
@@ -3461,7 +3461,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/LatexCheatSheet.pdf
+	filename LatexCheatSheet.pdf
 	width 100line%
 	height 90theight%
 	keepAspectRatio
@@ -4159,7 +4159,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/LyxInkscape0.png
+	filename LyxInkscape0.png
 	width 80line%
 	height 25theight%
 	keepAspectRatio
@@ -4220,7 +4220,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/LyxInkscape.png
+	filename LyxInkscape.png
 	width 80line%
 	height 25theight%
 	keepAspectRatio
@@ -4281,7 +4281,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/LyxInkscape1.png
+	filename LyxInkscape1.png
 	width 80line%
 	height 25theight%
 	keepAspectRatio
@@ -4748,7 +4748,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/SDOF_FreeResponse.pdf
+	filename SDOF_FreeResponse.pdf
 	width 70line%
 
 \end_inset
@@ -6009,7 +6009,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Mass_spring_damper.svg
+	filename Mass_spring_damper.svg
 	width 40col%
 
 \end_inset
@@ -6645,7 +6645,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Raster.png
+	filename Raster.png
 	lyxscale 50
 	width 100line%
 
@@ -6702,7 +6702,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/SineFig3.png
+	filename SineFig3.png
 	lyxscale 50
 	width 100line%
 
@@ -6761,7 +6761,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Tiger_by_mittelpunkt.jpg
+	filename Tiger_by_mittelpunkt.jpg
 	lyxscale 50
 	width 100line%
 
@@ -6818,7 +6818,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/YaoMingmeme.jpg
+	filename YaoMingmeme.jpg
 	width 100line%
 
 \end_inset
@@ -6931,7 +6931,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Vector.pdf
+	filename Vector.pdf
 	lyxscale 50
 	width 100line%
 
@@ -6988,7 +6988,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/SineFig3.pdf
+	filename SineFig3.pdf
 	lyxscale 50
 	width 100line%
 
@@ -7047,7 +7047,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/Tiger.svg
+	filename Tiger.svg
 	lyxscale 50
 	width 100line%
 
@@ -7104,7 +7104,7 @@ linewidth}
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/YaoMing.svg
+	filename YaoMing.svg
 	width 100line%
 
 \end_inset
@@ -7717,7 +7717,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/BasicADSL_Router.svg
+	filename BasicADSL_Router.svg
 	width 60line%
 
 \end_inset
@@ -7848,7 +7848,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/FunctionPlotter_sinc.png
+	filename FunctionPlotter_sinc.png
 	lyxscale 50
 	width 100line%
 
@@ -7910,7 +7910,7 @@ linewidth}
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/FunctionPlotterCapabilities.png
+	filename FunctionPlotterCapabilities.png
 	lyxscale 50
 	width 100line%
 
@@ -8006,7 +8006,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/Documents/CairoUniversity/FacultyOfEngineering/ThesisTemplate/FTPairs12.svg
+	filename FTPairs12.svg
 	width 100line%
 
 \end_inset
@@ -9074,7 +9074,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/Documents/MyWork/Courses/ComputerApplications/Lectures/VersionControlSystems.svg
+	filename D:/home/Documents/MyWork/Courses/ComputerApplications/Lectures/VersionControlSystems.svg
 	lyxscale 50
 	width 80line%
 	height 80line%

@@ -786,17 +786,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Flex URL
-status open
 
-\begin_layout Plain Layout
-
-emailaddress@yahoo.com
-\end_layout
-
+\lang arabic_arabi
+\begin_inset space ~
 \end_inset
 
 
+\bar under
+\color blue
+\lang english
+emailaddress@yahoo.com
 \end_layout
 
 \end_inset
@@ -2480,13 +2479,14 @@ begin{centering}%
 
 \size large
 \lang arabic_arabi
-يوليو
+أغسطس
 \family roman
 \series medium
 \shape up
 \emph off
 \bar no
 \strikeout off
+\xout off
 \uuline off
 \uwave off
 \noun off
@@ -2499,11 +2499,12 @@ begin{centering}%
 \numeric on
 \bar default
 \strikeout default
+\xout default
 \uuline default
 \uwave default
 \noun default
 \color inherit
-2017
+2020
 \end_layout
 
 \begin_layout Standard
@@ -3179,13 +3180,14 @@ noboundary
 
 \size large
 \lang arabic_arabi
-يوليو
+أغسطس
 \family roman
 \series medium
 \shape up
 \emph off
 \bar no
 \strikeout off
+\xout off
 \uuline off
 \uwave off
 \noun off
@@ -3198,11 +3200,12 @@ noboundary
 \numeric on
 \bar default
 \strikeout default
+\xout default
 \uuline default
 \uwave default
 \noun default
 \color inherit
-2017
+2020
 \end_layout
 
 \begin_layout Standard
@@ -3408,13 +3411,14 @@ noboundary
 
 \size large
 \lang arabic_arabi
-يوليو
+أغسطس
 \family roman
 \series medium
 \shape up
 \emph off
 \bar no
 \strikeout off
+\xout off
 \uuline off
 \uwave off
 \noun off
@@ -3427,11 +3431,12 @@ noboundary
 \numeric on
 \bar default
 \strikeout default
+\xout default
 \uuline default
 \uwave default
 \noun default
 \color inherit
-2017
+2020
 \end_layout
 
 \begin_layout Standard
