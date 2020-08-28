@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="VersionControlSystems.svg"
+   inkscape:version="0.48.3.1 r9886"
+   version="1.1"
+   id="svg2"
+   height="411.79175"
+   width="515.21088">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     units="mm"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-3"
+     inkscape:window-x="-2"
+     inkscape:window-height="713"
+     inkscape:window-width="1366"
+     inkscape:object-nodes="true"
+     inkscape:object-paths="true"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="208.17318"
+     inkscape:cx="-0.19643931"
+     inkscape:zoom="0.9899495"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <sodipodi:guide
+       id="guide3051"
+       position="0.5,36.191768"
+       orientation="0,1" />
+    <sodipodi:guide
+       id="guide3053"
+       position="0.49999976,63.75427"
+       orientation="0,1" />
+    <sodipodi:guide
+       id="guide3059"
+       position="0.50000024,8.629268"
+       orientation="0,1" />
+    <sodipodi:guide
+       id="guide3061"
+       position="0.49999976,284.25302"
+       orientation="0,1" />
+    <sodipodi:guide
+       id="guide3063"
+       position="0.49999976,146.44049"
+       orientation="0,1" />
+    <sodipodi:guide
+       id="guide3067"
+       position="-19.5,256.69052"
+       orientation="0,1" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-55.539078,-373.69592)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       style="line-height:0%"
+       y="383.95276"
+       x="137.88408"
+       id="text3192"><tspan
+         id="tspan3194"
+         sodipodi:role="line"
+         y="383.95276"
+         x="137.88408 153.04459 162.85909 171.59358 177.80357 182.50159 190.34508 198.94458 206.04558 213.61908 218.74908 227.72658 237.54108 242.23907 250.46057 259.43808 269.25259 275.47607 282.57709 291.56808 296.68457 301.38257 308.95609 316.81308 324.38657 330.61008 339.19608 353.47906 361.06607 365.75058 374.48508 381.59958 390.18558 394.88358 409.1666 418.14407 425.73108 431.95456 436.63907 441.76907 456.05206 465.48856 474.46606 481.5806 487.79059 496.52509 506.3396 512.56305 517.24762 523.47107 532.4621 537.14661 545.00354 553.98108 563.79559"
+         style="font-variant:normal;font-weight:bold;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif Bold';-inkscape-font-specification:DejaVuSerif-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">What version control systems are most important to you?</tspan></text>
+    <text
+       style="line-height:0%"
+       y="745.07898"
+       x="55.196579"
+       id="text3196"><tspan
+         id="tspan3198"
+         sodipodi:role="line"
+         y="745.07898"
+         x="55.196579 60.529076 64.808578 73.448578 81.575577 90.269577 93.968567 99.38208 103.66158 112.35558 119.28108 127.25958 131.53908 139.15308 147.13158 153.58458 160.51009 164.81657 172.94359 181.63759 185.91708 193.47708 201.60408 210.29808 215.71158 222.16458 230.29158 234.59807"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">I don't use version control</tspan></text>
+    <text
+       style="line-height:0%"
+       y="743.85419"
+       x="239.03564"
+       id="text3200"><tspan
+         id="tspan3202"
+         sodipodi:role="line"
+         y="743.85419"
+         x="239.03564 243.31345 250.27859 260.69891 264.17603 267.65311 274.62924 278.10632 285.02762 291.6308 296.02927 302.51181 308.13876"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(1%, 5 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="441.89026"
+       x="55.196579"
+       id="text3212"><tspan
+         id="tspan3214"
+         sodipodi:role="line"
+         y="441.89026"
+         x="55.196579 65.969582 70.276077 75.689575"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Git</tspan></text>
+    <text
+       style="line-height:0%"
+       y="441.89026"
+       x="80.016891"
+       id="text3216"><tspan
+         id="tspan3218"
+         sodipodi:role="line"
+         y="441.89026"
+         x="80.016891 84.294701 91.259857 98.235977 108.6563 112.13339 115.61049 122.58661 129.55176 136.52789 140.00499 146.92627 153.52945 157.92792 164.41045 170.03743"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(58%, 465 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="497.01526"
+       x="55.196579"
+       id="text3220"><tspan
+         id="tspan3222"
+         sodipodi:role="line"
+         y="497.01526"
+         x="55.196579 65.105576 73.138077 80.239082 88.28508 96.331078 102.78408"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Bazaar</tspan></text>
+    <text
+       style="line-height:0%"
+       y="497.01526"
+       x="107.10127"
+       id="text3224"><tspan
+         id="tspan3226"
+         sodipodi:role="line"
+         y="497.01526"
+         x="107.10127 111.37909 118.34424 125.32036 135.74068 139.21777 142.69487 149.67099 156.63614 160.11324 167.03452 173.63771 178.03618 184.51871 190.14568"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(12%, 94 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="524.57776"
+       x="55.196579"
+       id="text3228"><tspan
+         id="tspan3230"
+         sodipodi:role="line"
+         y="524.57776"
+         x="55.196579 65.969582 77.782082 89.149078 93.428581 103.17558 109.62859 117.18858 125.88258"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">GNU Arch</tspan></text>
+    <text
+       style="line-height:0%"
+       y="524.57776"
+       x="130.20595"
+       id="text3232"><tspan
+         id="tspan3234"
+         sodipodi:role="line"
+         y="524.57776"
+         x="130.20595 134.48376 141.44891 151.86923 155.34633 158.82343 165.79955 169.27664 176.19792 182.8011 187.19957 193.68211 199.30908"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(1%, 5 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="552.14026"
+       x="55.196579"
+       id="text3236"><tspan
+         id="tspan3238"
+         sodipodi:role="line"
+         y="552.14026"
+         x="55.196579 63.661079 71.63958 78.092575 83.087578 91.214577 97.66758 105.22758 113.20609"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Perforce</tspan></text>
+    <text
+       style="line-height:0%"
+       y="552.14026"
+       x="117.53564"
+       id="text3240"><tspan
+         id="tspan3242"
+         sodipodi:role="line"
+         y="552.14026"
+         x="117.53564 121.81345 128.77861 139.19893 142.67601 146.15311 153.12923 160.10536 163.58244 170.49277 177.10692 181.49443 187.98792 193.60393"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(1%, 10 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="579.70276"
+       x="55.196579"
+       id="text3244"><tspan
+         id="tspan3246"
+         sodipodi:role="line"
+         y="579.70276"
+         x="55.196579 63.836578 71.882576 78.335579 85.895576 92.821083"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">darcs</tspan></text>
+    <text
+       style="line-height:0%"
+       y="579.70276"
+       x="97.130951"
+       id="text3248"><tspan
+         id="tspan3250"
+         sodipodi:role="line"
+         y="579.70276"
+         x="97.130951 101.40876 108.37392 118.79424 122.27133 125.74841 132.72455 139.70067 143.17776 150.08807 156.70222 161.08974 167.58324 173.19923"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(1%, 12 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="607.26526"
+       x="55.196579"
+       id="text3252"><tspan
+         id="tspan3254"
+         sodipodi:role="line"
+         y="607.26526"
+         x="55.196579 65.105576 69.412079 74.825577 82.99308 90.971581 98.950081 107.59008 115.56857 122.02158"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Bitkeeper</tspan></text>
+    <text
+       style="line-height:0%"
+       y="607.26526"
+       x="126.39502"
+       id="text3256"><tspan
+         id="tspan3258"
+         sodipodi:role="line"
+         y="607.26526"
+         x="126.39502 130.67284 137.63799 148.0583 151.5354 155.01248 161.98862 165.46571 172.38699 178.99017 183.38864 189.87117 195.49815"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(0%, 2 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="634.82776"
+       x="55.196579"
+       id="text3268"><tspan
+         id="tspan3270"
+         sodipodi:role="line"
+         y="634.82776"
+         x="55.196579 69.00708 76.98558 83.438583 90.998581 99.692581 106.14558 110.45207 118.49808 122.80458"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Mercurial</tspan></text>
+    <text
+       style="line-height:0%"
+       y="634.82776"
+       x="127.14034"
+       id="text3272"><tspan
+         id="tspan3274"
+         sodipodi:role="line"
+         y="634.82776"
+         x="127.14034 131.41814 138.3833 145.35942 155.77974 159.25684 162.73392 169.71005 176.6752 183.65134 187.12842 194.0497 200.65289 205.05136 211.53389 217.16086"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(17%, 139 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="662.39026"
+       x="55.196579"
+       id="text3276"><tspan
+         id="tspan3278"
+         sodipodi:role="line"
+         y="662.39026"
+         x="55.196579 69.00708 77.134079 85.828079 93.955078 99.368584 107.49557 116.18958 124.16808"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Monotone</tspan></text>
+    <text
+       style="line-height:0%"
+       y="662.39026"
+       x="128.49033"
+       id="text3280"><tspan
+         id="tspan3282"
+         sodipodi:role="line"
+         y="662.39026"
+         x="128.49033 132.76814 139.73329 150.15361 153.63071 157.1078 164.08392 167.56102 174.4823 181.08549 185.48395 191.96649 197.59346"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(0%, 2 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="689.95276"
+       x="55.196579"
+       id="text3284"><tspan
+         id="tspan3286"
+         sodipodi:role="line"
+         y="689.95276"
+         x="55.196579 65.524078 69.830582 77.809082 85.85508 92.308067 99.86808 107.91408 114.83958 122.81808"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Clearcase</tspan></text>
+    <text
+       style="line-height:0%"
+       y="689.95276"
+       x="127.15439"
+       id="text3288"><tspan
+         id="tspan3290"
+         sodipodi:role="line"
+         y="689.95276"
+         x="127.15439 131.43221 138.39735 148.81767 152.29477 155.77185 162.74799 169.72411 173.2012 180.11151 186.72568 191.11317 197.60667 203.22267"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(1%, 11 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="717.51526"
+       x="55.196579"
+       id="text3292"><tspan
+         id="tspan3294"
+         sodipodi:role="line"
+         y="717.51526"
+         x="55.196579 66.253082 71.66658 80.36058 88.339081 94.792084 340.95108"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Other</tspan></text>
+    <text
+       style="line-height:0%"
+       y="717.51526"
+       x="105.50281"
+       id="text3296"><tspan
+         x="105.50281 109.78064 116.74579 127.16611 130.64319 134.1203 141.09641 144.57352 151.49478 158.09799 162.49643 168.97897 174.60596"
+         y="717.51526"
+         id="tspan3298"
+         sodipodi:role="line"
+         style="font-variant:normal;font-weight:normal;font-size:10.9688px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">(0%, 0 Votes)</tspan></text>
+    <text
+       style="line-height:0%"
+       y="785.29651"
+       x="295.69345"
+       id="text3300"><tspan
+         id="tspan3302"
+         sodipodi:role="line"
+         y="785.29651"
+         x="295.69345 303.64496 311.77194 317.18546 325.21796 329.52444 333.80396 342.30896 350.43594 355.86295 363.82794 370.29446 377.21994 381.74246"
+         style="font-variant:normal;font-weight:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:DejaVuSerif;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">Total Voters:</tspan></text>
+    <text
+       style="line-height:0%"
+       y="785.29651"
+       x="386.02194"
+       id="text3304"><tspan
+         id="tspan3306"
+         sodipodi:role="line"
+         y="785.29651"
+         x="386.02194 395.40445 404.78693"
+         style="font-variant:normal;font-weight:bold;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif Bold';-inkscape-font-specification:DejaVuSerif-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none">808</tspan></text>
+    <rect
+       y="749.2959"
+       x="56.039078"
+       height="9.0037498"
+       width="8.3249998"
+       id="rect4021"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="418.5459"
+       x="56.039078"
+       height="9.0037498"
+       width="427.89001"
+       id="rect4025"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="446.1084"
+       x="56.039078"
+       height="9"
+       width="354.92126"
+       id="rect4027"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="501.23462"
+       x="56.039078"
+       height="9"
+       width="75.205002"
+       id="rect4029"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="528.7984"
+       x="56.039078"
+       height="8.9987497"
+       width="8.3249998"
+       id="rect4031"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="556.35718"
+       x="56.039078"
+       height="9.0037498"
+       width="8.3249998"
+       id="rect4033"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="583.9209"
+       x="56.039078"
+       height="9.0037498"
+       width="8.3249998"
+       id="rect4035"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="611.4834"
+       x="56.039078"
+       height="9"
+       width="2.25125"
+       id="rect4037"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="473.67215"
+       x="56.039078"
+       height="9"
+       width="63.056252"
+       id="rect4039"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="639.0484"
+       x="56.039078"
+       height="8.9987497"
+       width="105.61"
+       id="rect4041"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="666.60718"
+       x="56.039078"
+       height="9.0037498"
+       width="2.25125"
+       id="rect4043"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="694.1709"
+       x="56.039078"
+       height="9.0037498"
+       width="8.3249998"
+       id="rect4045"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4049"
+       d="m 56.039078,730.7334 0,-9"
+       style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       id="text3133"
+       y="414.32776"
+       x="55.196579"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif'"
+         y="414.32776"
+         x="55.196579"
+         id="tspan3135"
+         sodipodi:role="line">SVN (Subversion) (70%, 567 Votes)</tspan></text>
+    <text
+       id="text3137"
+       y="469.45273"
+       x="55.196602"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.5px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif'"
+         y="469.45273"
+         x="55.196602"
+         id="tspan3139"
+         sodipodi:role="line">CVS (Concurrent Versions System) (10%, 79 Votes)</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3055"
+       d="m 36.039078,694.1709 0,27.5625"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <use
+       height="411.79175"
+       width="515.21088"
+       transform="translate(0,27.5625)"
+       id="use3057"
+       xlink:href="#path3055"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3055"
+       id="use3065"
+       transform="translate(0,-192.93625)"
+       width="515.21088"
+       height="411.79175" />
+  </g>
+</svg>

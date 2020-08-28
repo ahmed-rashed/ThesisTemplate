@@ -2822,6 +2822,29 @@ pdflatex the Thesis.tex file once more (or as needed)
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Nomenclature}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "auto"
@@ -3552,34 +3575,40 @@ clearpage% Flush page
 
 \begin_layout Section
 \SpecialChar LaTeX
- Editors
+ Integrated Development Environment (IDE)
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDE"
+description "Integrated Development Environment"
+literal "true"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IDE
+\end_layout
+
+\end_inset
+
+To write a document using \SpecialChar LaTeX
+, any text editor can be used.
 \end_layout
 
 \begin_layout Itemize
-To write C/C++ code, any text editor can be used
+But using a dedicated \SpecialChar LaTeX
+ editor/IDE can greatly ease your job
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-But using a good IDE can greatly ease your job
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-\SpecialChar LaTeX
- is similar
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Any text editor is OK, but a dedicated \SpecialChar LaTeX
- editor is strongly recommended
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 A dedicated \SpecialChar LaTeX
- editor
+ IDE:
 \end_layout
 
 \begin_deeper
@@ -3594,7 +3623,7 @@ has several \SpecialChar LaTeX
 \end_layout
 
 \begin_layout Itemize
-facilitates compiling and debugging
+facilitates compiling, solving compile errors and debugging
 \end_layout
 
 \begin_layout Itemize
@@ -3605,23 +3634,10 @@ facilitates compiling and debugging
 \end_deeper
 \begin_layout Itemize
 Sample \SpecialChar LaTeX
- editors are:
+ IDE's are Texstudio, Kile, \SpecialChar ldots
+
 \end_layout
 
-\begin_deeper
-\begin_layout Description
-Texstudio; cross-platform
-\end_layout
-
-\begin_layout Description
-Kile; for Linux
-\end_layout
-
-\begin_layout Description
-and many others
-\end_layout
-
-\end_deeper
 \begin_layout Section
 Porting a \SpecialChar LaTeX
  Document
@@ -3696,123 +3712,108 @@ Installing \SpecialChar LaTeX
 
 \end_layout
 
-\begin_layout Standard
-To install and use \SpecialChar LaTeX
-, basically you need two things; (1) \SpecialChar LaTeX
- implementation
- and (2) Integrated Development Environment (IDE
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "IDE"
-description "Integrated Development Environment"
-literal "true"
-
-\end_inset
-
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-IDE
+\begin_layout Enumerate
+Install \SpecialChar LaTeX
+ implementation.
+ Notable implementations are:
 \end_layout
 
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-For MS Windows users, proText
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.tug.org/protext/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-proText
-\end_layout
-
-\end_inset
-
- is a \SpecialChar TeX
-/\SpecialChar LaTeX
- distribution that includes:
-\end_layout
-
+\begin_deeper
 \begin_layout Itemize
+
+\series bold
 MiK\SpecialChar TeX
 
+\series default
+
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-MiKTex
+MiK\SpecialChar TeX
+
 \end_layout
 
 \end_inset
 
-: \SpecialChar LaTeX
- Implementation for MS Windows
-\end_layout
-
-\begin_layout Itemize
-TexStudio: cross-platform \SpecialChar TeX
-/\SpecialChar LaTeX
- IDE
-\end_layout
-
-\begin_layout Standard
-For Linux and MAC OS, \SpecialChar TeX
-
-\begin_inset space ~
-\end_inset
-
-Live
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Tex
-\begin_inset space ~
-\end_inset
-
-Live
-\end_layout
-
-\end_inset
-
- is a cross platform \SpecialChar LaTeX
- implementation
+ Windows only
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-That is, it is a cross-platform alternative to MiK\SpecialChar TeX
+Download the full MiK\SpecialChar TeX
+.
+ This is done using the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+Net Installer
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ First, download the full MiK\SpecialChar TeX
+.
+ After download completes, run the downloaded installer and install the
+ full MiK\SpecialChar TeX
 .
 \end_layout
 
 \end_inset
 
-, and there is a wide range of IDE's including TexStudio.
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\SpecialChar TeX
+
+\begin_inset space ~
+\end_inset
+
+Live
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tex Live
+\end_layout
+
+\end_inset
+
+ cross-platform
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fn:Available-for-MS-Windows,"
+
+\end_inset
+
+Available for MS-Windows, Mac OS and Linux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Install \SpecialChar TeX
+/\SpecialChar LaTeX
+ editor/IDE.
+ Notable examples include Texstudio, Kile, \SpecialChar ldots
+
 \end_layout
 
 \begin_layout Section*
@@ -3930,52 +3931,6 @@ Installing \SpecialChar LyX
 
 \end_layout
 
-\begin_layout Description
-Windows installer is available at 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.lyx.org/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-There are two installer variants:
-\end_layout
-
-\begin_layout Enumerate
-Installer (recommended)
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-This needs a pre-installed \SpecialChar LaTeX
- distribution
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Bundle
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-It includes a minimal \SpecialChar LaTeX
- distribution
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-I recommend installing as follows:
-\end_layout
-
 \begin_layout Enumerate
 Install Inkscape
 \end_layout
@@ -3995,16 +3950,83 @@ PATH
 
 \end_deeper
 \begin_layout Enumerate
-Install MiK\SpecialChar TeX
+Install the 
+\series bold
+\emph on
+\bar under
+full
+\series default
+\emph default
+\bar default
+ MiK\SpecialChar TeX
  (or \SpecialChar TeX
  Live)
 \end_layout
 
 \begin_layout Enumerate
 Install \SpecialChar LyX
- (Installer option)
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Windows
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Installers are available at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Linux
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\SpecialChar LyX
+ is usually available in most Linux distributions' repositories
+\end_layout
+
+\begin_layout Itemize
+To receive the latest stable updates in 
+\series bold
+Ubuntu
+\series default
+, add the following ppa by executing the following shell command
+\begin_inset listings
+lstparams "language=bash,showstringspaces=false,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> sudo add-apt-repository ppa:lyx-devel/release
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 Modify \SpecialChar LyX
  configurations to use Inkscape as graphics translator, as explained
@@ -4016,27 +4038,43 @@ reference "fig:Correcting-svg-converters"
 \end_inset
 
 .
- That is, Tools\SpecialChar menuseparator
-Preferences\SpecialChar menuseparator
-Converters
+ That is, Tools \SpecialChar menuseparator
+ Preferences \SpecialChar menuseparator
+ Converters
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Note that Inkscape CLI has changed since version 1.0 [
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://wiki.inkscape.org/wiki/index.php/Using_the_Command_Line
+\backslash
+#Changes_from_0.92
+\end_layout
+
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+ \SpecialChar menuseparator
+
 \end_layout
 
 \begin_deeper
-\begin_layout Description
-SVG
-\begin_inset space ~
-\end_inset
-
-->
-\begin_inset space ~
-\end_inset
-
-EPS: 
+\begin_layout Itemize
+SVG -> EPS > Converter > 
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-inkscape --export-area-drawing $$i --export-eps=$$o
+inkscape $$i --export-area-drawing --export-type="eps"
 \end_layout
 
 \end_inset
@@ -4044,25 +4082,12 @@ inkscape --export-area-drawing $$i --export-eps=$$o
 
 \end_layout
 
-\begin_layout Description
-SVG
-\begin_inset space ~
-\end_inset
-
-->
-\begin_inset space ~
-\end_inset
-
-PDF
-\begin_inset space ~
-\end_inset
-
-(graphics): 
+\begin_layout Itemize
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-inkscape --export-area-drawing $$i --export-pdf=$$o
+SVG -> PDF > Converter > inkscape $$i --export-area-drawing --export-type="pdf"
 \end_layout
 
 \end_inset
@@ -4070,21 +4095,53 @@ inkscape --export-area-drawing $$i --export-pdf=$$o
 
 \end_layout
 
-\begin_layout Description
-SVG
-\begin_inset space ~
-\end_inset
-
-->
-\begin_inset space ~
-\end_inset
-
-PNG: 
+\begin_layout Itemize
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-inkscape --export-area-drawing $$i --export-png=$$o
+SVG -> PNG > Converter > inkscape $$i --export-type="png"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+GIF -> PNG > Converter > magick convert '$$i[0]' $$o
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For ImageMagick older than release 7.x, use 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+convert '$$i[0]' $$o
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4114,7 +4171,6 @@ Spellcheck
 continuously
 \end_layout
 
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Float figure
@@ -4340,10 +4396,6 @@ Correcting svg converters in Inkscape
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-Linux packages are usually available in most Linux distributions' repositories
 \end_layout
 
 \begin_layout Section
@@ -4830,10 +4882,10 @@ linewidth}
 <lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="decimal" decimal_point="." valignment="top">
+<column alignment="decimal" decimal_point="." valignment="top">
+<column alignment="decimal" decimal_point="." valignment="top">
+<column alignment="decimal" decimal_point="." valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -4847,7 +4899,7 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4859,7 +4911,7 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4871,7 +4923,7 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4883,7 +4935,7 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4909,50 +4961,46 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.0000$
-\end_inset
 
-
+\family typewriter
+1.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0000$
-\end_inset
 
-
+\family typewriter
+-0.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.8328$
-\end_inset
 
-
+\family typewriter
+-0.8328
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0010$
-\end_inset
 
-
+\family typewriter
+-0.0010
 \end_layout
 
 \end_inset
@@ -4971,50 +5019,46 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0000$
-\end_inset
 
-
+\family typewriter
+-0.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.0000$
-\end_inset
 
-
+\family typewriter
+1.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0000$
-\end_inset
 
-
+\family typewriter
+-0.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.8328$
-\end_inset
 
-
+\family typewriter
+-0.8328
 \end_layout
 
 \end_inset
@@ -5033,50 +5077,46 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.8328$
-\end_inset
 
-
+\family typewriter
+-0.8328
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0000$
-\end_inset
 
-
+\family typewriter
+-0.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.0000$
-\end_inset
 
-
+\family typewriter
+1.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0000$
-\end_inset
 
-
+\family typewriter
+-0.0000
 \end_layout
 
 \end_inset
@@ -5095,50 +5135,46 @@ linewidth}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0010$
-\end_inset
 
-
+\family typewriter
+-0.0010
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.8328$
-\end_inset
 
-
+\family typewriter
+-0.8328
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0.0000$
-\end_inset
 
-
+\family typewriter
+-0.0000
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="decimal" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.0000$
-\end_inset
 
-
+\family typewriter
+1.0000
 \end_layout
 
 \end_inset
@@ -5155,7 +5191,15 @@ linewidth}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Correlation coefficient matrix
+Table with numbers aligned at the decimal point and formatted as 
+\begin_inset Quotes eld
+\end_inset
+
+typewriter
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7188,7 +7232,7 @@ Graphics Formats
 \begin_inset Text
 
 \begin_layout Plain Layout
-Raster
+Raster file formats
 \end_layout
 
 \end_inset
@@ -7206,7 +7250,7 @@ Raster
 \begin_inset Text
 
 \begin_layout Plain Layout
-Vector
+Vector file formats
 \end_layout
 
 \end_inset
@@ -7254,12 +7298,12 @@ Uncompressed
 \begin_inset Text
 
 \begin_layout Plain Layout
-.pdf
+.eps
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-pdf
+eps
 \end_layout
 
 \end_inset
@@ -7273,7 +7317,7 @@ pdf
 \begin_inset Text
 
 \begin_layout Plain Layout
-Compressed
+
 \end_layout
 
 \end_inset
@@ -7312,12 +7356,12 @@ Loose-less compression
 \begin_inset Text
 
 \begin_layout Plain Layout
-.eps
+.pdf
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-eps
+pdf
 \end_layout
 
 \end_inset
@@ -7331,7 +7375,7 @@ eps
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Compressed
 \end_layout
 
 \end_inset
@@ -7437,7 +7481,7 @@ svg
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Compatible with MS office & web browsers
 \end_layout
 
 \end_inset
@@ -7575,7 +7619,7 @@ Inkscape Features
 \end_layout
 
 \begin_layout Itemize
-Open source
+FOSS
 \end_layout
 
 \begin_layout Itemize
@@ -7583,7 +7627,11 @@ Cross platform
 \end_layout
 
 \begin_layout Itemize
-Free
+Much much powerful than MS-Word or MS-Power point sketching capabilities
+\end_layout
+
+\begin_layout Itemize
+Has several plugins that greatly expand its capabilities
 \end_layout
 
 \begin_layout Itemize
@@ -7601,57 +7649,57 @@ when you encounter a problem, google it.
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Much much powerful than Ms-Word or Ms-Power point sketching capabilities
-\end_layout
-
-\begin_layout Itemize
-Has several plugins that greatly expand its capabilities
-\end_layout
-
 \begin_layout Subsection*
 Inkscape Capabilities
 \end_layout
 
 \begin_layout Standard
-Inkscape is based on brazier curves.
- That is, a curve is defined using four information, 
-\series bold
-\bar under
-start
-\series default
-\bar default
-, 
-\series bold
-\bar under
-end
-\series default
-\bar default
-, 
-\series bold
-\bar under
-start
-\begin_inset space ~
+Inkscape is based on cubic Bézier
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+[
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/B
+\backslash
+%C3
+\backslash
+%A9zier_curve
+\end_layout
+
 \end_inset
 
-tangent
-\series default
-\bar default
- and 
-\series bold
-\bar under
-end
-\begin_inset space ~
+]
+\end_layout
+
 \end_inset
 
-tangent
-\series default
-\bar default
-.
+ curves
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename BezierCurves.svg
+	width 100line%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Additionally, you can draw and edit:
+A curve is defined using two end points (nodes) and two control points (handles).
+\end_layout
+
+\begin_layout Itemize
+Additionally, Inkscape can draw and edit:
 \end_layout
 
 \begin_deeper
@@ -7697,7 +7745,7 @@ Import Graphics from pdf
 
 \begin_layout Standard
 You can import vector graphics from pdf files, and even edit them, as shown
- in 
+ in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphic-imported"
@@ -7749,10 +7797,42 @@ Vector graphic imported from the user guide of a home use ADSL router
 \end_layout
 
 \begin_layout Section
+Interesting Preferences
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename InkscapePereferences1.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename InkscapePereferences.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Interesting Plug-ins
 \end_layout
 
 \begin_layout Subsection
+Function Plotter
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Index idx
 status open
 
@@ -7762,10 +7842,6 @@ Function plotter
 
 \end_inset
 
-Function Plotter
-\end_layout
-
-\begin_layout Itemize
 It is a built in plugins
 \end_layout
 
@@ -8053,229 +8129,6 @@ TexText
 
 \end_layout
 
-\begin_layout Subsubsection
-Installing TexText on MS Windows (all versions, including 32 & 64 bit)
-\end_layout
-
-\begin_layout Standard
-Follow the instructions of 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://people.orie.cornell.edu/jmd388/design/guides/textext.pdf
-\end_layout
-
-\end_inset
-
-.
- That is:
-\end_layout
-
-\begin_layout Enumerate
-Install Inkscape (the 32-bit version)
-\end_layout
-
-\begin_layout Enumerate
-Install TexText from 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://pav.iki.fi/_downloads/textext-0.4.4.exe
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Install 32 or 64 bit versions of ghostscript, imagemagick, pstoedit
-\end_layout
-
-\begin_layout Enumerate
-Make sure the following paths are added to the the 
-\begin_inset Quotes eld
-\end_inset
-
-Path
-\begin_inset Quotes erd
-\end_inset
-
- environment variable:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-C:
-\backslash
-Program Files
-\backslash
-gs
-\backslash
-gs9.xx
-\backslash
-lib
-\end_layout
-
-\begin_layout Itemize
-C:
-\backslash
-Program Files
-\backslash
-gs
-\backslash
-gs9.xx
-\backslash
-bin
-\end_layout
-
-\begin_layout Itemize
-C:
-\backslash
-Program Files
-\backslash
-ImageMagick
-\end_layout
-
-\begin_layout Itemize
-C:
-\backslash
-Program Files
-\backslash
-ghostgum
-\backslash
-pstoedit
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Download the file 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://people.orie.cornell.edu/jmd388/design/guides/textext.zip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Replace the 
-\begin_inset Quotes eld
-\end_inset
-
-C:
-\backslash
-Program Files (x86)
-\backslash
-Inkscape
-\backslash
-share
-\backslash
-extensions
-\backslash
-textext.py
-\begin_inset Quotes erd
-\end_inset
-
- file with the file in the textext.zip file
-\end_layout
-
-\begin_layout Enumerate
-Extract
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-You must have administrator privileges to to this.
-\end_layout
-
-\end_inset
-
- the 
-\begin_inset Quotes eld
-\end_inset
-
-site-packages.zip
-\begin_inset Quotes erd
-\end_inset
-
- file in the textext.zip file to 
-\begin_inset Quotes eld
-\end_inset
-
-C:
-\backslash
-Program Files (x86)
-\backslash
-Inkscape
-\backslash
-python
-\backslash
-Lib
-\backslash
-site-packages
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-For more information, 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://en.wikiversity.org/wiki/User:Egm6341.s10.team3.heejun/Inkscape#Install_Textex
-t
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Installing TexText on Linux
-\end_layout
-
-\begin_layout Standard
-Installation on Linux is too easy and straight forward.
- Just follow the instructions at TexText web page; 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://pav.iki.fi/software/textext/
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Section
 Learning Inkscape
 \end_layout
@@ -8314,7 +8167,7 @@ Chapters
 \begin_inset space ~
 \end_inset
 
-2 includes 10 examples
+1 includes 10 examples
 \end_layout
 
 \begin_deeper
@@ -9074,10 +8927,11 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename D:/home/Documents/MyWork/Courses/ComputerApplications/Lectures/VersionControlSystems.svg
+	filename VersionControlSystems.svg
 	lyxscale 50
 	width 80line%
 	height 80line%
+	keepAspectRatio
 
 \end_inset
 
