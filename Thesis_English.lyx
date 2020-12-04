@@ -7739,7 +7739,7 @@ function curves
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
+\begin_layout Section
 Import Graphics from pdf
 \end_layout
 
@@ -8067,7 +8067,15 @@ TexText
 
 \begin_layout Standard
 It allows you to write/edit \SpecialChar LaTeX
- formulas inside Inkscape.
+ formulas inside Inkscape, as shown in figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Figure-illustrating-the"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
