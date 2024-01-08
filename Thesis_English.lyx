@@ -128,6 +128,14 @@
 \makeatletter
 \xpretocmd\lstinline{\Colorbox{lightgray}\bgroup\appto\lst@DeInit{\egroup}}{}{}
 \makeatother
+
+%To organize the nomenclature in two columns
+\renewcommand*\nompreamble{
+\setlength{\columnsep}{15mm}
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
+}
+\renewcommand*\nompostamble{\end{multicols}}
 \end_preamble
 \options hyphens,openright,refpage,intoc,bibliography=totoc
 \use_default_options true
