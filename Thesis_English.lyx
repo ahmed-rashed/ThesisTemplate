@@ -14454,6 +14454,51 @@ It is a kind of rebase I think
 
 \end_layout
 
+\begin_layout Description
+orphan
+\begin_inset space ~
+\end_inset
+
+branch 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://graphite.dev/guides/git-orphan-branches
+\end_layout
+
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+is a branch that starts from an empty state with no prior parent commits.
+ This is particularly useful for starting new projects within the same repositor
+y without inheriting the commit history of the main project.
+ Orphan branch can be created using 
+\begin_inset listings
+lstparams "language=bash,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$ git checkout --orphan new_branch_name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status open
