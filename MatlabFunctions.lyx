@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -15,11 +15,11 @@
 \end_preamble
 \options usenames,dvipsnames,svgnames
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding utf8
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -27,14 +27,20 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 1
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -48,7 +54,7 @@
 \pdf_backref false
 \pdf_pdfusetitle true
 \pdf_quoted_options "linkcolor=blue,anchorcolor=blue,filecolor=blue,menucolor=blue,runcolor=blue,urlcolor=blue,citecolor=blue"
-\papersize a4paper
+\papersize a4
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -69,6 +75,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -81,16 +90,24 @@
 \tocdepth 4
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \listings_params "breaklines=true,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -104,6 +121,7 @@ Matlab Codes
 LatexCommand lstinputlisting
 filename "SDOF_Free_Response_Visc_main.m"
 lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},numbers=left,caption={SDOF\\_Free\\_Response\\_Visc\\_main},label={SDOF_Free_Response_Visc_main}"
+literal "true"
 
 \end_inset
 
@@ -139,7 +157,11 @@ function SDOF_Free_Response_Visc.m
 
 \begin_layout Plain Layout
 
-function x_vec=SDOF_Free_Response_Visc(w_n, zeta, x0, x_dot_0, t_vec)
+function x_vec=SDOF_Free_Response_Visc(w_n,
+ zeta,
+ x0,
+ x_dot_0,
+ t_vec)
 \end_layout
 
 \begin_layout Plain Layout
@@ -158,8 +180,7 @@ if zeta~=1
 
 \begin_layout Plain Layout
 
-    x_vec=exp(-zeta*w_n*t_vec).*(x0*cos(w_d*t_vec)+(zeta*w_n*x0+x_dot_0)*sin(w_d*
-t_vec)/w_d);
+    x_vec=exp(-zeta*w_n*t_vec).*(x0*cos(w_d*t_vec)+(zeta*w_n*x0+x_dot_0)*sin(w_d*t_vec)/w_d);
 \end_layout
 
 \begin_layout Plain Layout
@@ -187,6 +208,7 @@ end
 LatexCommand lstinputlisting
 filename "export_figure.m"
 lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},caption={function export\\_figure},label={export_figure}"
+literal "true"
 
 \end_inset
 

@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -196,7 +196,7 @@ multicol
 logicalmkup
 enumitem
 \end_modules
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
@@ -208,7 +208,9 @@ enumitem
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -232,7 +234,7 @@ enumitem
 \pdf_backref false
 \pdf_pdfusetitle true
 \pdf_quoted_options "linkcolor=blue,anchorcolor=blue,filecolor=blue,menucolor=blue,runcolor=blue,urlcolor=blue,citecolor=blue,pdfpagelayout=TwoPageRight,pdfstartview=Fit"
-\papersize a4paper
+\papersize a4
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -253,16 +255,18 @@ enumitem
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \branch Arabic
 \selected 1
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch No Arabic
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \index Index
 \shortcut idx
@@ -283,12 +287,17 @@ enumitem
 \papercolumns 1
 \papersides 2
 \paperpagestyle empty
+\tablestyle default
 \listings_params "breaklines=true,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -297,6 +306,7 @@ enumitem
 \begin_inset CommandInset include
 LatexCommand input
 filename "Thesis_English.lyx"
+literal "true"
 
 \end_inset
 
@@ -457,23 +467,23 @@ makeatother
 \begin_layout Standard
 
 \lang arabic_arabi
-اسمى هو أحمد محمد راشد دسوقى، و أعمل مدرساً بقسم هندسة الطيران و الفضاء
- بجامعة القاهرة.
+اسمى هو أحمد محمد راشد دسوقى،
+ و أعمل مدرساً بقسم هندسة الطيران و الفضاء بجامعة القاهرة.
 \end_layout
 
 \begin_layout Standard
 
 \lang arabic_arabi
-لقد انشأت نموذج الرسالة هذا لاساعد زملائى فى عمل رسالة احترافية باستخدام
- البرامج مفتوحة المصدر.
+لقد انشأت نموذج الرسالة هذا لاساعد زملائى فى عمل رسالة احترافية باستخدام البرامج مفتوحة المصدر.
 \end_layout
 
 \begin_layout Standard
 
 \lang arabic_arabi
-اذا واجهتك اى مشكلة، حاول بجد ان تبحث و تقرأ و تتعلم لتجد الحل بنفسك.
- و لكن فى حال وجود اى اقتراح او تصليح او تطوير، برجاء المساهمة به فى صفحة
- الـ
+اذا واجهتك اى مشكلة،
+ حاول بجد ان تبحث و تقرأ و تتعلم لتجد الحل بنفسك.
+ و لكن فى حال وجود اى اقتراح او تصليح او تطوير،
+ برجاء المساهمة به فى صفحة الـ
 \family roman
 \series medium
 \shape up
@@ -529,9 +539,8 @@ Git
 \begin_layout Standard
 
 \lang arabic_arabi
-انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث، و ان يداوم
- على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر
- المصدر.
+انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث،
+ و ان يداوم على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر المصدر.
 \end_layout
 
 \begin_layout Standard
@@ -1385,7 +1394,8 @@ noboundary
 \numeric on
 1
 \numeric off
-، المشرف الرئيسى
+،
+ المشرف الرئيسى
 \end_layout
 
 \begin_layout Plain Layout
@@ -1446,7 +1456,8 @@ noboundary
 \numeric on
 3
 \numeric off
-، الممتحن الداخلى
+،
+ الممتحن الداخلى
 \end_layout
 
 \begin_layout Plain Layout
@@ -1484,7 +1495,8 @@ noboundary
 \numeric on
 4
 \numeric off
- ، الممتحن الخارجى
+ ،
+ الممتحن الخارجى
 \end_layout
 
 \end_inset
@@ -1582,7 +1594,8 @@ noboundary
 \color inherit
 1
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1609,7 +1622,8 @@ noboundary
 \color inherit
 2
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1636,7 +1650,8 @@ noboundary
 \color inherit
 3
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1663,7 +1678,8 @@ noboundary
 \color inherit
 4
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1690,7 +1706,8 @@ noboundary
 \color inherit
 5
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1717,7 +1734,8 @@ noboundary
 \color inherit
 6
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1744,7 +1762,8 @@ noboundary
 \color inherit
 7
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1771,7 +1790,8 @@ noboundary
 \color inherit
 8
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1798,7 +1818,8 @@ noboundary
 \color inherit
 9
 \numeric off
-، كلمة دالة
+،
+ كلمة دالة
 \family roman
 \series medium
 \shape up
@@ -1872,23 +1893,23 @@ noboundary
 \begin_layout Standard
 
 \lang arabic_arabi
-اسمى هو أحمد محمد راشد دسوقى، و أعمل مدرساً بقسم هندسة الطيران و الفضاء
- بجامعة القاهرة.
+اسمى هو أحمد محمد راشد دسوقى،
+ و أعمل مدرساً بقسم هندسة الطيران و الفضاء بجامعة القاهرة.
 \end_layout
 
 \begin_layout Standard
 
 \lang arabic_arabi
-لقد انشأت نموذج الرسالة هذا لاساعد زملائى فى عمل رسالة احترافية باستخدام
- البرامج مفتوحة المصدر.
+لقد انشأت نموذج الرسالة هذا لاساعد زملائى فى عمل رسالة احترافية باستخدام البرامج مفتوحة المصدر.
 \end_layout
 
 \begin_layout Standard
 
 \lang arabic_arabi
-اذا واجهتك اى مشكلة، حاول بجد ان تبحث و تقرأ و تتعلم لتجد الحل بنفسك.
- و لكن فى حال وجود اى اقتراح او تصليح او تطوير، برجاء المساهمة به فى صفحة
- الـ
+اذا واجهتك اى مشكلة،
+ حاول بجد ان تبحث و تقرأ و تتعلم لتجد الحل بنفسك.
+ و لكن فى حال وجود اى اقتراح او تصليح او تطوير،
+ برجاء المساهمة به فى صفحة الـ
 \family roman
 \series medium
 \shape up
@@ -1944,9 +1965,8 @@ Git
 \begin_layout Standard
 
 \lang arabic_arabi
-انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث، و ان يداوم
- على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر
- المصدر.
+انصح بشدة الباحث المبتدئ ان يجهز هذا النموذج منذ بداية البحث،
+ و ان يداوم على تسجيل كل ما يكتشفه او يجده او يتعلمه فى هذا النموذج اولاً باول مع ذكر المصدر.
 \end_layout
 
 \begin_layout Standard
@@ -2103,7 +2123,7 @@ noboundary
 
 \size larger
 \lang arabic_arabi
-\begin_inset VSpace 0.5cm
+\begin_inset VSpace 1cm
 \end_inset
 
 
@@ -2281,7 +2301,8 @@ noboundary
 \numeric on
 1
 \numeric off
-، المشرف الرئيسى
+،
+ المشرف الرئيسى
 \end_layout
 
 \end_inset
@@ -2367,7 +2388,8 @@ noboundary
 \numeric on
 2
 \numeric off
-، الممتحن الداخلى
+،
+ الممتحن الداخلى
 \end_layout
 
 \end_inset
@@ -2430,7 +2452,9 @@ noboundary
 \numeric on
 3
 \numeric off
-، الممتحن الخارجى، المركز القومى للبحوث
+،
+ الممتحن الخارجى،
+ المركز القومى للبحوث
 \end_layout
 
 \end_inset
@@ -2607,7 +2631,7 @@ noboundary
 
 \size larger
 \lang arabic_arabi
-\begin_inset VSpace 0.5cm
+\begin_inset VSpace 1cm
 \end_inset
 
 
@@ -3237,7 +3261,7 @@ cleartoleftpage
 \noindent
 \begin_inset Graphics
 	filename FE-Logo.png
-	height 3cm
+	special height=3cm
 
 \end_inset
 
@@ -3248,7 +3272,7 @@ cleartoleftpage
 
 \begin_inset Graphics
 	filename CU-Pharonic Logo2.png
-	height 3cm
+	special height=3cm
 
 \end_inset
 
@@ -3318,7 +3342,7 @@ noboundary
 
 \size larger
 \lang arabic_arabi
-\begin_inset VSpace 0.5cm
+\begin_inset VSpace 1cm
 \end_inset
 
 

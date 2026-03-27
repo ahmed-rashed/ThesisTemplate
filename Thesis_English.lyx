@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -146,7 +146,7 @@ multicol
 logicalmkup
 enumitem
 \end_modules
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
@@ -158,7 +158,9 @@ enumitem
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -182,7 +184,7 @@ enumitem
 \pdf_backref false
 \pdf_pdfusetitle true
 \pdf_quoted_options "linkcolor=blue,anchorcolor=blue,filecolor=blue,menucolor=blue,runcolor=blue,urlcolor=blue,citecolor=blue,pdfpagelayout=TwoPageRight,pdfstartview=Fit"
-\papersize a4paper
+\papersize a4
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -203,16 +205,18 @@ enumitem
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \branch Arabic
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch No Arabic
 \selected 1
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \index Index
 \shortcut idx
@@ -233,12 +237,17 @@ enumitem
 \papercolumns 1
 \papersides 2
 \paperpagestyle empty
+\tablestyle default
 \listings_params "breaklines=true,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -262,7 +271,7 @@ begin{titlepage}
 \begin_layout Standard
 \begin_inset Graphics
 	filename FE-Logo.png
-	height 3cm
+	special height=3cm
 
 \end_inset
 
@@ -273,7 +282,7 @@ begin{titlepage}
 
 \begin_inset Graphics
 	filename CU-Pharonic Logo2.png
-	height 3cm
+	special height=3cm
 
 \end_inset
 
@@ -331,7 +340,7 @@ status open
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace 0.5cm
+\begin_inset VSpace 1cm
 \end_inset
 
 
@@ -419,18 +428,21 @@ Aerospace Engineering
 \noindent
 
 \size large
-FACULTY OF ENGINEERING, CAIRO UNIVERSITY
+FACULTY OF ENGINEERING,
+ CAIRO UNIVERSITY
 \begin_inset Newline newline
 \end_inset
 
-GIZA, EGYPT
+GIZA,
+ EGYPT
 \end_layout
 
 \begin_layout Standard
 \noindent
 
 \size large
-August, 2020
+August,
+ 2020
 \end_layout
 
 \begin_layout Standard
@@ -471,6 +483,7 @@ end{titlepage}
 \begin_inset CommandInset include
 LatexCommand input
 filename "CreatedBy.lyx"
+literal "true"
 
 \end_inset
 
@@ -527,7 +540,7 @@ status open
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace 0.5cm
+\begin_inset VSpace 1cm
 \end_inset
 
 
@@ -684,7 +697,8 @@ Aerospace Engineering Department
 \end_layout
 
 \begin_layout Plain Layout
-Faculty of Engineering, Cairo University
+Faculty of Engineering,
+ Cairo University
 \end_layout
 
 \end_inset
@@ -753,7 +767,8 @@ Aerospace Engineering Department
 \end_layout
 
 \begin_layout Plain Layout
-Faculty of Engineering, Cairo University
+Faculty of Engineering,
+ Cairo University
 \end_layout
 
 \end_inset
@@ -836,7 +851,8 @@ Aerospace Engineering Department
 \end_layout
 
 \begin_layout Plain Layout
-Faculty of Engineering, Cairo University
+Faculty of Engineering,
+ Cairo University
 \end_layout
 
 \end_inset
@@ -856,18 +872,21 @@ Faculty of Engineering, Cairo University
 \noindent
 
 \size large
-FACULTY OF ENGINEERING, CAIRO UNIVERSITY
+FACULTY OF ENGINEERING,
+ CAIRO UNIVERSITY
 \begin_inset Newline newline
 \end_inset
 
-GIZA, EGYPT
+GIZA,
+ EGYPT
 \end_layout
 
 \begin_layout Standard
 \noindent
 
 \size large
-August, 2020
+August,
+ 2020
 \end_layout
 
 \begin_layout Standard
@@ -903,7 +922,7 @@ status open
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace 0.5cm
+\begin_inset VSpace 1cm
 \end_inset
 
 
@@ -1042,7 +1061,8 @@ Approved by the Examining Committee
 
 \size large
 Prof.
- Name1 Name1 Name1, thesis main advisor
+ Name1 Name1 Name1,
+ thesis main advisor
 \end_layout
 
 \end_inset
@@ -1072,7 +1092,8 @@ Prof.
 
 \size large
 Associate Prof.
- Name3 Name3 Name3, internal examiner
+ Name3 Name3 Name3,
+ internal examiner
 \end_layout
 
 \end_inset
@@ -1102,7 +1123,9 @@ Associate Prof.
 
 \size large
 Prof.
- Name4 Name4 Name4, external examiner, National Research Center
+ Name4 Name4 Name4,
+ external examiner,
+ National Research Center
 \end_layout
 
 \end_inset
@@ -1143,18 +1166,21 @@ begin{centering}
 \noindent
 
 \size large
-FACULTY OF ENGINEERING, CAIRO UNIVERSITY
+FACULTY OF ENGINEERING,
+ CAIRO UNIVERSITY
 \begin_inset Newline newline
 \end_inset
 
-GIZA, EGYPT
+GIZA,
+ EGYPT
 \end_layout
 
 \begin_layout Standard
 \noindent
 
 \size large
-August, 2020
+August,
+ 2020
 \end_layout
 
 \begin_layout Standard
@@ -1739,7 +1765,8 @@ Examiners:
 
 \begin_layout Plain Layout
 Prof.
- Name1 Name1 Name1, thesis main advisor
+ Name1 Name1 Name1,
+ thesis main advisor
 \end_layout
 
 \end_inset
@@ -1760,7 +1787,8 @@ Prof.
 
 \begin_layout Plain Layout
 Associate Prof.
- Name3 Name3 Name3, internal examiner
+ Name3 Name3 Name3,
+ internal examiner
 \end_layout
 
 \end_inset
@@ -1781,7 +1809,8 @@ Associate Prof.
 
 \begin_layout Plain Layout
 Prof.
- Name4 Name4 Name4, external examiner
+ Name4 Name4 Name4,
+ external examiner
 \end_layout
 
 \end_inset
@@ -1827,8 +1856,17 @@ Key Words:
 
 \begin_layout Standard
 \align center
-Keyword1; Keyword2; Keyword3; Keyword4; Keyword5; Keyword6; Keyword7; Keyword8;
- Keyword9; Keyword9; Keyword10.
+Keyword1;
+ Keyword2;
+ Keyword3;
+ Keyword4;
+ Keyword5;
+ Keyword6;
+ Keyword7;
+ Keyword8;
+ Keyword9;
+ Keyword9;
+ Keyword10.
 \end_layout
 
 \begin_layout Standard
@@ -1844,6 +1882,7 @@ This abstract is incomplete.
 \begin_inset CommandInset ref
 LatexCommand vpageref
 reference "chap:Abstract"
+nolink "false"
 
 \end_inset
 
@@ -1851,19 +1890,11 @@ reference "chap:Abstract"
 \end_layout
 
 \begin_layout Standard
-Word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word word word
- word word word word word word word word word word word word.
+Word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word.
 \end_layout
 
 \begin_layout Standard
-Word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word word word
- word word word word word word word word word word word word word.
+Word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word.
 \end_layout
 
 \begin_layout Standard
@@ -1898,7 +1929,8 @@ status open
 \begin_layout Plain Layout
 
 %To remove all vertical spaces between different kinds of lists (enumerate,
- itemize, description)
+ itemize,
+ description)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1999,13 +2031,13 @@ pagestyle{plain}
 \end_layout
 
 \begin_layout Standard
-I'm Ahmed Mohamed Rashed Desoki, an assistant professor at Aerospace Engineering
- Department, Cairo University.
+I'm Ahmed Mohamed Rashed Desoki,
+ an assistant professor at Aerospace Engineering Department,
+ Cairo University.
 \end_layout
 
 \begin_layout Standard
-I created this thesis template to show you how you can create a professional
- thesis using Open Source Software (OSS
+I created this thesis template to show you how you can create a professional thesis using Open Source Software (OSS
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "OSS"
@@ -2015,25 +2047,25 @@ literal "true"
 \end_inset
 
 ).
- Chapters of this template themselves concisely explain the necessary background
- you need to know about \SpecialChar LaTeX
-, \SpecialChar LyX
-, floating figures and tables, equations, references
- management, vector graphics, Inkscape, including program codes and others.
+ Chapters of this template themselves concisely explain the necessary background you need to know about \SpecialChar LaTeX
+,
+ \SpecialChar LyX
+,
+ floating figures and tables,
+ equations,
+ references management,
+ vector graphics,
+ Inkscape,
+ including program codes and others.
 \end_layout
 
 \begin_layout Standard
-I strongly urge you to prepare your thesis file from the very beginning
- of your research.
- This is invaluable since it enables you to immediately document and cite
- every piece of new information you learn.
- I strongly urge you to stick to immediate documentation and citation as
- you learn.
+I strongly urge you to prepare your thesis file from the very beginning of your research.
+ This is invaluable since it enables you to immediately document and cite every piece of new information you learn.
+ I strongly urge you to stick to immediate documentation and citation as you learn.
  Citation itself expresses the value of your writing.
- You will find your citations invaluable especially after you read and learn
- a lot.
- At this time you will really fail to remember  from where you learned every
- information.
+ You will find your citations invaluable especially after you read and learn a lot.
+ At this time you will really fail to remember  from where you learned every information.
 \end_layout
 
 \begin_layout Standard
@@ -2074,8 +2106,8 @@ www.gnu.org/licenses/quick-guide-gplv3.en.html
 \end_inset
 
 .
- If you just want to use this template, simply download it as a zip file
- using 
+ If you just want to use this template,
+ simply download it as a zip file using 
 \begin_inset Flex URL
 status open
 
@@ -2087,10 +2119,12 @@ https://github.com/ahmed-rashed/ThesisTemplate/archive/master.zip
 \end_inset
 
  and proceed.
- While you are using this template, if you faced problems, try hard to read,
+ While you are using this template,
+ if you faced problems,
+ try hard to read,
  learn and dig for solutions by yourself.
- If you improved/corrected/debugged/extended this template, then please
- 
+ If you improved/corrected/debugged/extended this template,
+ then please 
 \begin_inset Flex Emph
 status open
 
@@ -2098,6 +2132,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "clone"
+nolink "false"
 
 \end_inset
 
@@ -2129,12 +2164,14 @@ $ git clone https://github.com/ahmed-rashed/ThesisTemplate.git
 
 \end_inset
 
-, and kindly
+,
+ and kindly
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-In fact, you have to share your improvements according to the GNU
+In fact,
+ you have to share your improvements according to the GNU
 \begin_inset space ~
 \end_inset
 
@@ -2151,6 +2188,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pullrequest"
+nolink "false"
 
 \end_inset
 
@@ -2165,8 +2203,10 @@ reference "pullrequest"
 status open
 
 \begin_layout Plain Layout
-Also if you have suggestions, corrections, bugs or improvement, please send
- them a 
+Also if you have suggestions,
+ corrections,
+ bugs or improvement,
+ please send them a 
 \begin_inset Flex Emph
 status open
 
@@ -2174,6 +2214,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pullrequest"
+nolink "false"
 
 \end_inset
 
@@ -2198,14 +2239,17 @@ Git
 
 \end_inset
 
-, you can find concise explanation in chapter 
+,
+ you can find concise explanation in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Version-Control-Using"
+nolink "false"
 
 \end_inset
 
-, or in 
+,
+ or in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
@@ -2217,24 +2261,25 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-Finally, foreign languages usually causes some problems to \SpecialChar LaTeX
+Finally,
+ foreign languages usually causes some problems to \SpecialChar LaTeX
  documents.
  Arabic is not an exception.
- So if you faced a strange problem that you cannot solve, try disabling
- the Arabic parts of this thesis to check if the problem is related to the
- Arabic language
+ So if you faced a strange problem that you cannot solve,
+ try disabling the Arabic parts of this thesis to check if the problem is related to the Arabic language
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Mostly the problem is not specific to Arabic, but to several other languages
- as well.
+Mostly the problem is not specific to Arabic,
+ but to several other languages as well.
 \end_layout
 
 \end_inset
 
 .
- To do so, just use the 
+ To do so,
+ just use the 
 \begin_inset Flex Strong
 status open
 
@@ -2245,12 +2290,11 @@ Thesis_English.lyx
 \end_inset
 
  file.
- If disabling Arabic solved your problem, please try hard to find a solution
- and reactivate the Arabic again.
+ If disabling Arabic solved your problem,
+ please try hard to find a solution and reactivate the Arabic again.
  
 \series bold
-Arabic scientists cannot help their nations using any language other than
- Arabic.
+Arabic scientists cannot help their nations using any language other than Arabic.
 \end_layout
 
 \begin_layout Standard
@@ -2461,8 +2505,8 @@ status open
 status open
 
 \begin_layout Plain Layout
-For unknown reason, the following conflicts with the enumitem package (and
- its 
+For unknown reason,
+ the following conflicts with the enumitem package (and its 
 \begin_inset ERT
 status open
 
@@ -2678,7 +2722,8 @@ renewcommand{
 \backslash
 lstlistlistingname}{
 \backslash
-newlstlistlistingname}} %For unknown reason, this does not work !!!
+newlstlistlistingname}} %For unknown reason,
+ this does not work !!!
 \end_layout
 
 \begin_layout Plain Layout
@@ -2693,8 +2738,8 @@ renewcommand{
 \backslash
 contentsname}{
 \backslash
-newlstlistlistingname}}  %For unknown reason, this work while the above
- does not work !!!
+newlstlistlistingname}}  %For unknown reason,
+ this work while the above does not work !!!
 \end_layout
 
 \begin_layout Plain Layout
@@ -2894,7 +2939,8 @@ name "chap:Technical-Writing,-Presentation"
 
 \end_inset
 
-Word Processors; \SpecialChar LaTeX
+Word Processors;
+ \SpecialChar LaTeX
  vs MS Word
 \end_layout
 
@@ -2907,11 +2953,12 @@ literal "true"
 
 \end_inset
 
-Usually there are two categories of word processing software packages; table
- 
+Usually there are two categories of word processing software packages;
+ table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:-vs-Microsoft"
+nolink "false"
 
 \end_inset
 
@@ -2927,7 +2974,8 @@ What You See Is What You Mean (WYSIWYM)
 \end_layout
 
 \begin_layout Standard
-Roughly, you can compare 
+Roughly,
+ you can compare 
 \bar under
 \SpecialChar LaTeX
   to Word
@@ -2941,6 +2989,7 @@ Matlab to Excel
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Effort-and-time"
+nolink "false"
 
 \end_inset
 
@@ -2948,10 +2997,12 @@ reference "fig:Effort-and-time"
 \end_layout
 
 \begin_layout Standard
-By the way, if you are annoyed by the existence of table 
+By the way,
+ if you are annoyed by the existence of table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:-vs-Microsoft"
+nolink "false"
 
 \end_inset
 
@@ -2959,17 +3010,18 @@ reference "tab:-vs-Microsoft"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Effort-and-time"
+nolink "false"
 
 \end_inset
 
- at the following page, this is explained in 
+ at the following page,
+ this is explained in 
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-http://tex.stackexchange.com/questions/66293/strange-behaviour-with-figure-on-chap
-ter-first-page
+http://tex.stackexchange.com/questions/66293/strange-behaviour-with-figure-on-chapter-first-page
 \end_layout
 
 \end_inset
@@ -2980,6 +3032,8 @@ ter-first-page
 \begin_layout Standard
 \align center
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -3095,6 +3149,8 @@ name "tab:-vs-Microsoft"
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -3136,8 +3192,11 @@ Effort and time consumption of MS Word as compared to \SpecialChar LaTeX
 
 \begin_layout Chapter
 \SpecialChar LaTeX
-; a Document Markup Language
+;
+ a Document Markup Language
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -3171,7 +3230,8 @@ status open
 
 \begin_layout Itemize
 In order to create a document in \SpecialChar LaTeX
-, a 
+,
+ a 
 \series bold
 .tex
 \series default
@@ -3214,7 +3274,8 @@ pdf
 \end_layout
 
 \begin_layout Description
-Although being free is an advantage, but it is a drawback at the same time!
+Although being free is an advantage,
+ but it is a drawback at the same time!
  Free implies:
 \end_layout
 
@@ -3236,9 +3297,9 @@ Several alternatives to do the same thing
 status open
 
 \begin_layout Itemize
-There are always package incompatibilities (and there always will be) between
- packages, all authors do their best, but as this is done as a hobby of
- all authors in their spare time ...
+There are always package incompatibilities (and there always will be) between packages,
+ all authors do their best,
+ but as this is done as a hobby of all authors in their spare time ...
 \end_layout
 
 \end_inset
@@ -3248,7 +3309,8 @@ There are always package incompatibilities (and there always will be) between
 
 \end_deeper
 \begin_layout Description
-However; \SpecialChar LaTeX
+However;
+ \SpecialChar LaTeX
  is very mature and widely used by professional/enterprise publishers
 \end_layout
 
@@ -3259,7 +3321,8 @@ Also it has a big user community
 
 \begin_deeper
 \begin_layout Itemize
-when you encounter a problem, google it.
+when you encounter a problem,
+ google it.
  Most likely you will find others had encountered it and found a solution
 \end_layout
 
@@ -3311,6 +3374,7 @@ begin{landscape}% Landscape page
 \begin_layout Standard
 \begin_inset Float figure
 placement tp
+alignment document
 wide false
 sideways false
 status open
@@ -3352,9 +3416,8 @@ linewidth}
 \begin_inset Graphics
 	filename LatexCheatSheet.pdf
 	width 100line%
-	height 90theight%
 	keepAspectRatio
-	special page=1
+	special height=0.9\textheight,page=1
 
 \end_inset
 
@@ -3431,6 +3494,7 @@ status open
 \begin_layout Standard
 \begin_inset Float figure
 placement tp
+alignment document
 wide false
 sideways false
 status open
@@ -3494,9 +3558,8 @@ linewidth}
 \begin_inset Graphics
 	filename LatexCheatSheet.pdf
 	width 100line%
-	height 90theight%
 	keepAspectRatio
-	special page=2
+	special height=0.9\textheight,page=2
 
 \end_inset
 
@@ -3597,6 +3660,8 @@ literal "true"
 
 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -3606,7 +3671,8 @@ IDE
 \end_inset
 
 To write a document using \SpecialChar LaTeX
-, any text editor can be used.
+,
+ any text editor can be used.
 \end_layout
 
 \begin_layout Itemize
@@ -3631,7 +3697,8 @@ has several \SpecialChar LaTeX
 \end_layout
 
 \begin_layout Itemize
-facilitates compiling, solving compile errors and debugging
+facilitates compiling,
+ solving compile errors and debugging
 \end_layout
 
 \begin_layout Itemize
@@ -3642,7 +3709,9 @@ facilitates compiling, solving compile errors and debugging
 \end_deeper
 \begin_layout Itemize
 Sample \SpecialChar LaTeX
- IDE's are Texstudio, Kile, \SpecialChar ldots
+ IDE's are Texstudio,
+ Kile,
+ \SpecialChar ldots
 
 \end_layout
 
@@ -3654,9 +3723,10 @@ Porting a \SpecialChar LaTeX
 \begin_layout Standard
 Usually \SpecialChar LaTeX
  source files reference images and other external files.
- Hence, if you want to move/copy your \SpecialChar LaTeX
- document to another computer, you
- have to move/copy all the referenced files as well.
+ Hence,
+ if you want to move/copy your \SpecialChar LaTeX
+ document to another computer,
+ you have to move/copy all the referenced files as well.
 \end_layout
 
 \begin_layout Section
@@ -3688,7 +3758,8 @@ Arabi
 \begin_inset Quotes erd
 \end_inset
 
- package, Arabic and Farsi languages are supported with the 
+ package,
+ Arabic and Farsi languages are supported with the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3700,7 +3771,9 @@ Babel
 \end_layout
 
 \begin_layout Standard
-However, since Arabic users are few, 
+However,
+ since Arabic users are few,
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3709,10 +3782,11 @@ Arabi
 \end_inset
 
  package is not mature enough and some minor bugs do exist.
- Googling about these bugs, usually you find the similar bugs do exist in
- other languages as well, and hence you can infer solutions/workarounds.
- During preparing this thesis, I have done my best to solve/work-around
- all the bugs I have faced.
+ Googling about these bugs,
+ usually you find the similar bugs do exist in other languages as well,
+ and hence you can infer solutions/workarounds.
+ During preparing this thesis,
+ I have done my best to solve/work-around all the bugs I have faced.
 \end_layout
 
 \begin_layout Section
@@ -3735,6 +3809,8 @@ MiK\SpecialChar TeX
 \series default
 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -3764,10 +3840,11 @@ Net Installer
 \end_inset
 
 .
- First, download the full MiK\SpecialChar TeX
+ First,
+ download the full MiK\SpecialChar TeX
 .
- After download completes, run the downloaded installer and install the
- full MiK\SpecialChar TeX
+ After download completes,
+ run the downloaded installer and install the full MiK\SpecialChar TeX
 .
 \end_layout
 
@@ -3788,6 +3865,8 @@ Live
 \series default
 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -3807,7 +3886,8 @@ name "fn:Available-for-MS-Windows,"
 
 \end_inset
 
-Available for MS-Windows, Mac OS and Linux
+Available for MS-Windows,
+ Mac OS and Linux
 \end_layout
 
 \end_inset
@@ -3820,7 +3900,9 @@ Available for MS-Windows, Mac OS and Linux
 Install \SpecialChar TeX
 /\SpecialChar LaTeX
  editor/IDE.
- Notable examples include Texstudio, Kile, \SpecialChar ldots
+ Notable examples include Texstudio,
+ Kile,
+ \SpecialChar ldots
 
 \end_layout
 
@@ -3829,7 +3911,8 @@ Keep Concentrating
 \end_layout
 
 \begin_layout Standard
-Due to its WYSIWYM nature, I feel 
+Due to its WYSIWYM nature,
+ I feel 
 \bar under
 more
 \bar default
@@ -3845,9 +3928,12 @@ Ms-Word
 
 \begin_layout Chapter
 \SpecialChar LyX
-; a Graphical Front-End to \SpecialChar LaTeX
+;
+ a Graphical Front-End to \SpecialChar LaTeX
 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -3890,7 +3976,8 @@ compiler
 
 \begin_layout Itemize
 Unlike \SpecialChar LaTeX
-, \SpecialChar LyX
+,
+ \SpecialChar LyX
  comes with 
 \bar under
 tidy and very good
@@ -3899,7 +3986,8 @@ tidy and very good
 \end_layout
 
 \begin_layout Itemize
-Also it has a big community, i.e.,
+Also it has a big community,
+ i.e.,
 \end_layout
 
 \begin_deeper
@@ -3908,7 +3996,8 @@ it is mature enough
 \end_layout
 
 \begin_layout Itemize
-when you encounter a problem, google it.
+when you encounter a problem,
+ google it.
  Most likely you will find others had encountered it and found a solution
 \end_layout
 
@@ -3918,7 +4007,8 @@ Keep your concentration
 \end_layout
 
 \begin_layout Standard
-Due to its WYSIWYM nature, I feel 
+Due to its WYSIWYM nature,
+ I feel 
 \bar under
 very
 \bar default
@@ -4017,7 +4107,8 @@ To receive the latest stable updates in
 \series bold
 Ubuntu
 \series default
-, add the following ppa by executing the following shell command
+,
+ add the following ppa by executing the following shell command
 \begin_inset listings
 lstparams "language=bash,showstringspaces=false,tabsize=4"
 inline false
@@ -4037,16 +4128,18 @@ status open
 \end_deeper
 \begin_layout Enumerate
 Modify \SpecialChar LyX
- configurations to use Inkscape as graphics translator, as explained
- in figure 
+ configurations to use Inkscape as graphics translator,
+ as explained in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Correcting-svg-converters"
+nolink "false"
 
 \end_inset
 
 .
- That is, Tools \SpecialChar menuseparator
+ That is,
+ Tools \SpecialChar menuseparator
  Preferences \SpecialChar menuseparator
  Converters
 \begin_inset Foot
@@ -4131,7 +4224,8 @@ GIF -> PNG > Converter > magick convert '$$i[0]' $$o
 status open
 
 \begin_layout Plain Layout
-For ImageMagick older than release 7.x, use 
+For ImageMagick older than release 7.x,
+ use 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4183,6 +4277,7 @@ continuously
 \begin_layout Standard
 \begin_inset Float figure
 placement tp
+alignment document
 wide false
 sideways false
 status open
@@ -4225,8 +4320,8 @@ linewidth}
 \begin_inset Graphics
 	filename LyxInkscape0.png
 	width 80line%
-	height 25theight%
 	keepAspectRatio
+	special height=0.25\textheight
 
 \end_inset
 
@@ -4286,8 +4381,8 @@ linewidth}
 \begin_inset Graphics
 	filename LyxInkscape.png
 	width 80line%
-	height 25theight%
 	keepAspectRatio
+	special height=0.25\textheight
 
 \end_inset
 
@@ -4347,8 +4442,8 @@ linewidth}
 \begin_inset Graphics
 	filename LyxInkscape1.png
 	width 80line%
-	height 25theight%
 	keepAspectRatio
+	special height=0.25\textheight
 
 \end_inset
 
@@ -4412,7 +4507,8 @@ Learning \SpecialChar LyX
 \end_layout
 
 \begin_layout Description
-Explore style-list, menus and toolbars
+Explore style-list,
+ menus and toolbars
 \end_layout
 
 \begin_layout Description
@@ -4451,7 +4547,8 @@ Tutorial
 
 \end_deeper
 \begin_layout Itemize
-Then if needed, read necessary sections of:
+Then if needed,
+ read necessary sections of:
 \end_layout
 
 \begin_deeper
@@ -4479,11 +4576,13 @@ Porting a \SpecialChar LyX
 
 \begin_layout Standard
 Similar to \SpecialChar LaTeX
- files, \SpecialChar LyX
+ files,
+ \SpecialChar LyX
  files usually reference images and other external files.
- Hence, if you want to move/copy your \SpecialChar LyX
- document to another computer, you
- have to move/copy all the referenced files as well.
+ Hence,
+ if you want to move/copy your \SpecialChar LyX
+ document to another computer,
+ you have to move/copy all the referenced files as well.
 \end_layout
 
 \begin_layout Standard
@@ -4493,7 +4592,6 @@ Similar to \SpecialChar LaTeX
 File\SpecialChar menuseparator
 Export\SpecialChar menuseparator
 \SpecialChar LyX
-
  Archive
 \end_layout
 
@@ -4503,11 +4601,14 @@ Arabic Support
 
 \begin_layout Standard
 Arabic is supported in \SpecialChar LyX
-, as shown in the following.
- For more details, refer to section 
+,
+ as shown in the following.
+ For more details,
+ refer to section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Arabic-Support"
+nolink "false"
 
 \end_inset
 
@@ -4640,24 +4741,31 @@ Thus is some English words in an Arabic line.
 \end_layout
 
 \begin_layout Chapter
-Floats, Figures, Tables and Equations
+Floats,
+ Figures,
+ Tables and Equations
 \end_layout
 
 \begin_layout Section
-Concept of Floating Graphics, Tables
+Concept of Floating Graphics,
+ Tables
 \end_layout
 
 \begin_layout Standard
-For those users familiar with MS World, they expect figures and tables are
- placed where you put them.
+For those users familiar with MS World,
+ they expect figures and tables are placed where you put them.
  This however does not look professional.
- Therefore, \SpecialChar LaTeX
-, and consequently \SpecialChar LyX
-, uses floats for placing figures and tables.
+ Therefore,
+ \SpecialChar LaTeX
+,
+ and consequently \SpecialChar LyX
+,
+ uses floats for placing figures and tables.
  Sample simple floating figures are figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Effort-and-time"
+nolink "false"
 
 \end_inset
 
@@ -4665,6 +4773,7 @@ reference "fig:Effort-and-time"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphic-imported"
+nolink "false"
 
 \end_inset
 
@@ -4672,7 +4781,8 @@ reference "fig:Vector-graphic-imported"
 \end_layout
 
 \begin_layout Standard
-For more information about this topic, refer to 
+For more information about this topic,
+ refer to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DetailedFolats"
@@ -4697,48 +4807,58 @@ Compound Figures
 \end_layout
 
 \begin_layout Standard
-Figures composed of sub-figures can be created in by using the subcaption
- \SpecialChar LaTeX
+Figures composed of sub-figures can be created in by using the subcaption \SpecialChar LaTeX
  package.
  Sample compound figures are figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:-cheat-sheet"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Correcting-svg-converters"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Figure-composed-of"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Sample-raster-graphics"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphics-version"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:FunctionPlotter"
+nolink "false"
 
 \end_inset
 
@@ -4746,6 +4866,7 @@ reference "fig:FunctionPlotter"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Figure-illustrating-the"
+nolink "false"
 
 \end_inset
 
@@ -4761,6 +4882,7 @@ Have a look at figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Figure-composed-of"
+nolink "false"
 
 \end_inset
 
@@ -4769,6 +4891,8 @@ reference "fig:Figure-composed-of"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -5263,6 +5387,7 @@ Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:-cheat-sheet"
+nolink "false"
 
 \end_inset
 
@@ -5284,6 +5409,7 @@ Have a look at figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:-cheat-sheet"
+nolink "false"
 
 \end_inset
 
@@ -5299,6 +5425,7 @@ Have a look at figures
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Sample-raster-graphics"
+nolink "false"
 
 \end_inset
 
@@ -5306,6 +5433,7 @@ reference "fig:Sample-raster-graphics"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphics-version"
+nolink "false"
 
 \end_inset
 
@@ -5321,6 +5449,7 @@ Have a look at graphics of chapter
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Version-Control-Using"
+nolink "false"
 
 \end_inset
 
@@ -5336,13 +5465,16 @@ Table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Table1_reference"
+nolink "false"
 
 \end_inset
 
- shows a sample simple table, while table 
+ shows a sample simple table,
+ while table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "AnotherTable"
+nolink "false"
 
 \end_inset
 
@@ -5371,6 +5503,8 @@ literal "true"
 \begin_layout Standard
 \align center
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -5727,6 +5861,8 @@ word word
 
 \begin_layout Standard
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -6033,7 +6169,8 @@ Equations
 \end_layout
 
 \begin_layout Standard
-For details about equations, refer to 
+For details about equations,
+ refer to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "LyX_MathManual"
@@ -6053,6 +6190,8 @@ SDOF Mass Spring System
 \noindent
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -6108,7 +6247,8 @@ m\ddot{x}(t)+c\dot{x}(t)+kx(t)=f(t)\label{MotherEquation}
 \end_layout
 
 \begin_layout Standard
-Taking Laplace transform, the 
+Taking Laplace transform,
+ the 
 \emph on
 ode
 \emph default
@@ -6213,10 +6353,12 @@ By solving the algebraic equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "SDOF_eqn"
+nolink "false"
 
 \end_inset
 
-), the response 
+),
+ the response 
 \begin_inset Formula $X(s)$
 \end_inset
 
@@ -6273,7 +6415,8 @@ Assuming the roots of
 \begin_inset Formula $H(s)$
 \end_inset
 
- are complex, the TF is written as
+ are complex,
+ the TF is written as
 \begin_inset Formula 
 \begin{equation}
 H(s)=\frac{1}{m\left(s-\left(-\zeta\omega_{\textrm{n}}+i\omega_{\textrm{n}}\sqrt{1-\zeta^{2}}\right)\right)\left(s-\left(-\zeta\omega_{\textrm{n}}-i\omega_{\textrm{n}}\sqrt{1-\zeta^{2}}\right)\right)}
@@ -6309,6 +6452,7 @@ Thus the response
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "SDOF_Response_s"
+nolink "false"
 
 \end_inset
 
@@ -6328,11 +6472,14 @@ where
 \end_layout
 
 \begin_layout Standard
-Assuming the TF roots are complex, i.e., 
+Assuming the TF roots are complex,
+ i.e.,
+ 
 \begin_inset Formula $\zeta<1$
 \end_inset
 
-, inverse Laplace transform tables yield
+,
+ inverse Laplace transform tables yield
 \begin_inset Formula 
 \begin{flalign}
 x(t)= & \mathcal{L}^{-1}\left[F(s)\,H(s)\right]\nonumber \\
@@ -6403,7 +6550,8 @@ literal "true"
 
 \end_inset
 
- (IRF), and
+ (IRF),
+ and
 \begin_inset Formula 
 \begin{flalign}
 \left(f*h\right)(t) & \equiv\int_{-\infty}^{\infty}f(\tau)h(t-\tau)\,d\tau\\
@@ -6420,7 +6568,10 @@ is the convolution of
 \begin_inset Formula $h(t)$
 \end_inset
 
-, assuming stable, linear, physically possible and time invariant system.
+,
+ assuming stable,
+ linear,
+ physically possible and time invariant system.
 \end_layout
 
 \begin_layout Subsection
@@ -6428,7 +6579,8 @@ Inverse Laplace Transform Derivation
 \end_layout
 
 \begin_layout Standard
-Using Laplace transform property, inverse Laplace can be obtained as
+Using Laplace transform property,
+ inverse Laplace can be obtained as
 \begin_inset Formula 
 \begin{equation}
 \frac{\Omega\,s}{\left(s^{2}+\Omega^{2}\right)\left(s^{2}+2\zeta\omega_{\textrm{n}}s+\omega_{\textrm{n}}^{2}\right)}\overset{\mathcal{L}}{\Longleftrightarrow}\dot{y}(t)+y(0)\label{ss3}
@@ -6499,6 +6651,7 @@ Substituting equations (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "ss1"
+nolink "false"
 
 \end_inset
 
@@ -6506,6 +6659,7 @@ reference "ss1"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "ss2"
+nolink "false"
 
 \end_inset
 
@@ -6513,6 +6667,7 @@ reference "ss2"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "ss3"
+nolink "false"
 
 \end_inset
 
@@ -6549,9 +6704,7 @@ literal "true"
 
 \end_inset
 
- is citation management software or personal bibliographic management software
- is software for scholars and authors to use for recording and utilising
- bibliographic citations (references) 
+ is citation management software or personal bibliographic management software is software for scholars and authors to use for recording and utilising bibliographic citations (references) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "UseRefMan"
@@ -6560,29 +6713,33 @@ literal "true"
 \end_inset
 
 .
- Once a citation has been recorded, it can be used time and again in generating
- bibliographies, such as lists of references in scholarly books, articles
- and essays.
- The development of reference management packages has been driven by the
- rapid expansion of scientific literature.
+ Once a citation has been recorded,
+ it can be used time and again in generating bibliographies,
+ such as lists of references in scholarly books,
+ articles and essays.
+ The development of reference management packages has been driven by the rapid expansion of scientific literature.
  Among poular refence management software are:
 \end_layout
 
 \begin_layout Description
-JabRef, a BibTeX management cross-platform software for use with \SpecialChar LaTeX
+JabRef,
+ a BibTeX management cross-platform software for use with \SpecialChar LaTeX
 /\SpecialChar LyX
 .
 \end_layout
 
 \begin_layout Description
-Endnote, a management software suitable for use with MS Word
+Endnote,
+ a management software suitable for use with MS Word
 \end_layout
 
 \begin_layout Description
-Zotero, a cross-platform web-based management software suitable for \SpecialChar LaTeX
+Zotero,
+ a cross-platform web-based management software suitable for \SpecialChar LaTeX
 /\SpecialChar LyX
-, MS
- Word, LibreOffice and others.
+,
+ MS Word,
+ LibreOffice and others.
 \end_layout
 
 \begin_layout Standard
@@ -6600,6 +6757,8 @@ literal "true"
 \begin_layout Chapter
 Vector Graphics
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -6614,6 +6773,8 @@ Vector graphics
 \begin_layout Section
 Raster
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -6628,6 +6789,7 @@ Raster graphics
 \begin_layout Standard
 \begin_inset Float figure
 placement tp
+alignment document
 wide false
 sideways false
 status open
@@ -6917,11 +7079,11 @@ name "fig:Sample-raster-graphics"
 \end_inset
 
 Sample raster graphics.
- This figure is forced to be on a left page for easier comparison with figure
- 
+ This figure is forced to be on a left page for easier comparison with figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphics-version"
+nolink "false"
 
 \end_inset
 
@@ -6957,6 +7119,7 @@ end{leftfullpage}
 \begin_layout Standard
 \begin_inset Float figure
 placement tp
+alignment document
 wide false
 sideways false
 status open
@@ -7206,6 +7369,7 @@ Vector graphics version of figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Sample-raster-graphics"
+nolink "false"
 
 \end_inset
 
@@ -7280,6 +7444,8 @@ Vector file formats
 \begin_layout Plain Layout
 .bmp
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7308,6 +7474,8 @@ Uncompressed
 \begin_layout Plain Layout
 .eps
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7338,6 +7506,8 @@ eps
 \begin_layout Plain Layout
 .png
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7366,6 +7536,8 @@ Loose-less compression
 \begin_layout Plain Layout
 .pdf
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7396,6 +7568,8 @@ Compressed
 \begin_layout Plain Layout
 .jpg
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7424,6 +7598,8 @@ Lossy compression
 \begin_layout Plain Layout
 .emf
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7472,6 +7648,8 @@ Compatible with MS office
 \begin_layout Plain Layout
 .svg
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7553,6 +7731,8 @@ Vector Graphics Editors
 \begin_layout Itemize
 Adobe Illustrator
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7567,11 +7747,14 @@ Adobe Illustrator
 \emph on
 de facto
 \emph default
- standard; bloated)
+ standard;
+ bloated)
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7588,6 +7771,8 @@ Corel Draw
 \begin_layout Itemize
 Inkscape
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7596,7 +7781,11 @@ Inkscape
 
 \end_inset
 
- (light, free, open source, cross-platform and popular; my favorite)
+ (light,
+ free,
+ open source,
+ cross-platform and popular;
+ my favorite)
 \end_layout
 
 \begin_layout Itemize
@@ -7609,8 +7798,11 @@ LibreOffice Draw
 \end_layout
 
 \begin_layout Chapter
-Inkscape; Free and Open Source Vector Graphics Editor
+Inkscape;
+ Free and Open Source Vector Graphics Editor
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7643,7 +7835,8 @@ Has several plugins that greatly expand its capabilities
 \end_layout
 
 \begin_layout Itemize
-Has a big community, i.e.,
+Has a big community,
+ i.e.,
 \end_layout
 
 \begin_deeper
@@ -7652,7 +7845,8 @@ it is mature enough
 \end_layout
 
 \begin_layout Itemize
-when you encounter a problem, google it.
+when you encounter a problem,
+ google it.
  Most likely you will find others had encountered it and found a solution
 \end_layout
 
@@ -7707,7 +7901,8 @@ A curve is defined using two end points (nodes) and two control points (handles)
 \end_layout
 
 \begin_layout Itemize
-Additionally, Inkscape can draw and edit:
+Additionally,
+ Inkscape can draw and edit:
 \end_layout
 
 \begin_deeper
@@ -7752,11 +7947,13 @@ Import Graphics from pdf
 \end_layout
 
 \begin_layout Standard
-You can import vector graphics from pdf files, and even edit them, as shown
- in figure 
+You can import vector graphics from pdf files,
+ and even edit them,
+ as shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vector-graphic-imported"
+nolink "false"
 
 \end_inset
 
@@ -7766,6 +7963,8 @@ reference "fig:Vector-graphic-imported"
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -7842,6 +8041,8 @@ Function Plotter
 
 \begin_layout Itemize
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -7854,7 +8055,8 @@ It is a built in plugins
 \end_layout
 
 \begin_layout Itemize
-It uses brazier curves, same as Inkscape
+It uses brazier curves,
+ same as Inkscape
 \end_layout
 
 \begin_layout Itemize
@@ -7876,14 +8078,17 @@ Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:FunctionPlotter"
+nolink "false"
 
 \end_inset
 
- shows the plugin user interface, and the resulting curve.
+ shows the plugin user interface,
+ and the resulting curve.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Figure-illustrating-the"
+nolink "false"
 
 \end_inset
 
@@ -7892,6 +8097,8 @@ reference "fig:Figure-illustrating-the"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -8062,6 +8269,8 @@ The Function Plotter plugin
 
 \begin_layout Subsection
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -8075,11 +8284,12 @@ TexText
 
 \begin_layout Standard
 It allows you to write/edit \SpecialChar LaTeX
- formulas inside Inkscape, as shown in figure
- 
+ formulas inside Inkscape,
+ as shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Figure-illustrating-the"
+nolink "false"
 
 \end_inset
 
@@ -8090,6 +8300,8 @@ reference "fig:Figure-illustrating-the"
 \noindent
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -8216,7 +8428,9 @@ Help
 
 menu
 \series default
- includes tutorials, FAQ, \SpecialChar ldots
+ includes tutorials,
+ FAQ,
+ \SpecialChar ldots
 
 \end_layout
 
@@ -8251,10 +8465,12 @@ literal "true"
 \end_inset
 
 .
- For example, codes 
+ For example,
+ codes 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "SDOF_Free_Response_Visc_main"
+nolink "false"
 
 \end_inset
 
@@ -8262,6 +8478,7 @@ reference "SDOF_Free_Response_Visc_main"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "SDOF_Free_Response_Visc"
+nolink "false"
 
 \end_inset
 
@@ -8269,6 +8486,7 @@ reference "SDOF_Free_Response_Visc"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Free-vibration-of"
+nolink "false"
 
 \end_inset
 
@@ -8280,11 +8498,11 @@ Code
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "export_figure"
+nolink "false"
 
 \end_inset
 
- on the other hand exports a Matlab figure a pdf file and crops it by removing
- white margins.
+ on the other hand exports a Matlab figure a pdf file and crops it by removing white margins.
  Cropping is accomplished by calling a Perl program called 
 \begin_inset Quotes eld
 \end_inset
@@ -8310,7 +8528,8 @@ pdfcrop
 \end_inset
 
 .
- This program, ships with both MiK\SpecialChar TeX
+ This program,
+ ships with both MiK\SpecialChar TeX
  and \SpecialChar TeX
 
 \begin_inset space ~
@@ -8318,7 +8537,8 @@ pdfcrop
 
 Live \SpecialChar LaTeX
  implementations.
- To use this program, Perl is needed to be installed
+ To use this program,
+ Perl is needed to be installed
 \begin_inset Foot
 status open
 
@@ -8343,8 +8563,8 @@ About the Nomenclature
 \end_layout
 
 \begin_layout Standard
-If you defined a nomenclature entry twice, it results in an error (Lonely
- 
+If you defined a nomenclature entry twice,
+ it results in an error (Lonely 
 \backslash
 item–perhaps a missing list environment.).
 \end_layout
@@ -8354,8 +8574,7 @@ Problems with Arabic
 \end_layout
 
 \begin_layout Standard
-Nomenclature (and may be index too) sometimes causes problems in Arabic
- documents.
+Nomenclature (and may be index too) sometimes causes problems in Arabic documents.
  As a workaround (assuming your thesis file name is 
 \begin_inset Quotes eld
 \end_inset
@@ -8489,7 +8708,8 @@ literal "true"
 \begin_inset Quotes erd
 \end_inset
 
-, or Source Code Management (SCM
+,
+ or Source Code Management (SCM
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "SCM"
@@ -8530,8 +8750,7 @@ literal "true"
 
 .
  It lets you save a snapshot of your complete project at any time you want.
- When you later take a look at an older snapshot (let's start calling it
- 
+ When you later take a look at an older snapshot (let's start calling it 
 \begin_inset Quotes eld
 \end_inset
 
@@ -8539,11 +8758,13 @@ version
 \begin_inset Quotes erd
 \end_inset
 
-), your VCS shows you exactly how it differed from the previous one, as
- illustrated in figure 
+),
+ your VCS shows you exactly how it differed from the previous one,
+ as illustrated in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:VCS"
+nolink "false"
 
 \end_inset
 
@@ -8557,13 +8778,17 @@ Concurrent Versions System
 status open
 
 \begin_layout Plain Layout
-Very old, widespread, but not so good
+Very old,
+ widespread,
+ but not so good
 \end_layout
 
 \end_inset
 
  (CVS
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -8588,6 +8813,8 @@ A modern version of CVS.
 
  (SVN
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -8602,6 +8829,8 @@ SVN
 \begin_layout Itemize
 Git
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -8615,6 +8844,8 @@ Git
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -8679,6 +8910,7 @@ Check table
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Typical-centralized-and"
+nolink "false"
 
 \end_inset
 
@@ -8686,13 +8918,16 @@ reference "tab:Typical-centralized-and"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Centralized-versus-decentralized"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Git-commands-versus"
+nolink "false"
 
 \end_inset
 
@@ -8700,6 +8935,7 @@ reference "fig:Git-commands-versus"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Result-of-a"
+nolink "false"
 
 \end_inset
 
@@ -8709,6 +8945,8 @@ reference "fig:Result-of-a"
 \begin_layout Standard
 \align center
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -8839,6 +9077,8 @@ Typical centralized and decentralized VCS's.
 \begin_layout Standard
 \noindent
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -8886,6 +9126,7 @@ Centralized versus decentralized VCS
 
 \begin_inset Float figure
 placement tp
+alignment document
 wide false
 sideways false
 status open
@@ -8936,6 +9177,8 @@ literal "true"
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -8946,8 +9189,8 @@ status open
 	filename VersionControlSystems.svg
 	lyxscale 50
 	width 80line%
-	height 80line%
 	keepAspectRatio
+	special height=0.8\linewidth
 
 \end_inset
 
@@ -8983,7 +9226,8 @@ Introducing Git
 
 \begin_layout Standard
 Git is an open source program for tracking changes in text files.
- It was written by Torvald Linus; the author of the Linux operating system.
+ It was written by Torvald Linus;
+ the author of the Linux operating system.
 \end_layout
 
 \begin_layout Subsection
@@ -8991,8 +9235,7 @@ Git is Very Different
 \end_layout
 
 \begin_layout Standard
-The first important thing to understand about Git is that it thinks about
- version control very differently than 
+The first important thing to understand about Git is that it thinks about version control very differently than 
 \begin_inset Flex Emph
 status open
 
@@ -9019,8 +9262,7 @@ The Forget theorem
 \series bold
 forget
 \series default
- your assumptions about how version control works and try to think about
- it in the Git way.
+ your assumptions about how version control works and try to think about it in the Git way.
 \end_layout
 
 \begin_layout Subsection
@@ -9038,8 +9280,7 @@ Command Line Interface
 \begin_deeper
 \begin_layout Itemize
 It is recommended to learn the basics of Git on the command line first.
- It helps you form a deeper understanding of the underlying concepts and
- makes you independent from any specific GUI application.
+ It helps you form a deeper understanding of the underlying concepts and makes you independent from any specific GUI application.
 \end_layout
 
 \end_deeper
@@ -9049,8 +9290,7 @@ GUI
 
 \begin_deeper
 \begin_layout Itemize
-This will make you more efficient and let you access more advanced features
- that would be too complex on the command line.
+This will make you more efficient and let you access more advanced features that would be too complex on the command line.
 \end_layout
 
 \begin_layout Itemize
@@ -9066,7 +9306,8 @@ https://git-scm.com/downloads/guis
 \end_inset
 
  for the complete list.
- Anyway, don't expect any GUI
+ Anyway,
+ don't expect any GUI
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "GUI"
@@ -9096,7 +9337,8 @@ www.git-tower.com
 \end_inset
 
 ) seems to be the best GUI.
- Its documentation, notably 
+ Its documentation,
+ notably 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Git_Tower_Ebook"
@@ -9104,7 +9346,9 @@ literal "true"
 
 \end_inset
 
-, are concise, clear and very well written.
+,
+ are concise,
+ clear and very well written.
  Tower can be installed only on Mac and Windows.
  It is however expensive and not open source.
 \end_layout
@@ -9136,7 +9380,10 @@ Tower
 \end_inset
 
 .
- It is free, cross platform but, however, not open source!
+ It is free,
+ cross platform but,
+ however,
+ not open source!
 \end_layout
 
 \begin_layout Paragraph
@@ -9144,7 +9391,8 @@ GitKraken Cheat Sheets
 \end_layout
 
 \begin_layout Itemize
-GitKraken Cheat Sheet; 
+GitKraken Cheat Sheet;
+ 
 \begin_inset Flex URL
 status open
 
@@ -9159,7 +9407,8 @@ www.gitkraken.com/resources/gitkraken-cheat-sheet
 \end_layout
 
 \begin_layout Itemize
-GitKraken for GitHub Users Cheat Sheet; 
+GitKraken for GitHub Users Cheat Sheet;
+ 
 \begin_inset Flex URL
 status open
 
@@ -9186,6 +9435,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -9216,7 +9466,8 @@ BitBucket.org
 
 \end_inset
 
-, make sure to authenticate as explained in 
+,
+ make sure to authenticate as explained in 
 \begin_inset Flex URL
 status open
 
@@ -9282,13 +9533,16 @@ Check figures
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Git-Basics"
+nolink "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Git-branching-and"
+nolink "false"
 
 \end_inset
 
@@ -9296,6 +9550,7 @@ reference "fig:Git-branching-and"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Git-sharing-work"
+nolink "false"
 
 \end_inset
 
@@ -9305,6 +9560,7 @@ reference "fig:Git-sharing-work"
 \begin_layout Standard
 \begin_inset Float figure
 placement p
+alignment document
 wide false
 sideways false
 status open
@@ -9315,8 +9571,8 @@ status open
 	filename GitWorkFlow_1.svg
 	lyxscale 50
 	width 100line%
-	height 90theight%
 	keepAspectRatio
+	special height=0.9\textheight
 
 \end_inset
 
@@ -9360,6 +9616,7 @@ https://www.git-tower.com/learn/cheat-sheets/vcs-workflow
 \begin_layout Standard
 \begin_inset Float figure
 placement p
+alignment document
 wide false
 sideways false
 status open
@@ -9370,8 +9627,8 @@ status open
 	filename GitWorkFlow_2.svg
 	lyxscale 50
 	width 100line%
-	height 90theight%
 	keepAspectRatio
+	special height=0.9\textheight
 
 \end_inset
 
@@ -9415,6 +9672,7 @@ https://www.git-tower.com/learn/cheat-sheets/vcs-workflow
 \begin_layout Standard
 \begin_inset Float figure
 placement ph
+alignment document
 wide false
 sideways false
 status open
@@ -9425,8 +9683,8 @@ status open
 	filename GitWorkFlow_3.svg
 	lyxscale 50
 	width 100line%
-	height 90theight%
 	keepAspectRatio
+	special height=0.9\textheight
 
 \end_inset
 
@@ -9451,6 +9709,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -9492,6 +9751,7 @@ Check figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Git-Cheat-Sheet"
+nolink "false"
 
 \end_inset
 
@@ -9502,6 +9762,7 @@ reference "fig:Git-Cheat-Sheet"
 \align center
 \begin_inset Float figure
 placement p
+alignment document
 wide false
 sideways false
 status open
@@ -9512,8 +9773,8 @@ status open
 	filename git-cheatsheet.svg
 	lyxscale 25
 	width 100line%
-	height 90theight%
 	keepAspectRatio
+	special height=0.9\textheight
 
 \end_inset
 
@@ -9563,6 +9824,7 @@ Check figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Git-Best-practices"
+nolink "false"
 
 \end_inset
 
@@ -9573,6 +9835,7 @@ reference "fig:Git-Best-practices"
 \align center
 \begin_inset Float figure
 placement p
+alignment document
 wide false
 sideways false
 status open
@@ -9583,8 +9846,8 @@ status open
 	filename git-BestPractices.svg
 	lyxscale 25
 	width 100line%
-	height 90theight%
 	keepAspectRatio
+	special height=0.9\textheight
 
 \end_inset
 
@@ -9630,8 +9893,7 @@ https://www.git-tower.com/learn/cheat-sheets/git
 status open
 
 \begin_layout Plain Layout
-Many of the above commands that changes the master do change the files on
- the HDD 
+Many of the above commands that changes the master do change the files on the HDD 
 \end_layout
 
 \end_inset
@@ -9672,6 +9934,8 @@ name "Repository"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -9703,11 +9967,9 @@ name ".git_directory"
 
 \end_inset
 
- is where Git stores the metadata and object database of the repository
- in a compressed format.
+ is where Git stores the metadata and object database of the repository in a compressed format.
  It is what is copied when a repository is cloned.
- This directory is hidden and hence you must enable viewing hidden directories
- in order to see it.
+ This directory is hidden and hence you must enable viewing hidden directories in order to see it.
 \end_layout
 
 \begin_layout Description
@@ -9724,6 +9986,8 @@ name "working_Directory"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -9740,6 +10004,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -9748,7 +10013,8 @@ reference "HEAD"
 
 \end_inset
 
- commit, plus any local changes made.
+ commit,
+ plus any local changes made.
 \end_layout
 
 \begin_deeper
@@ -9761,6 +10027,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -9777,6 +10044,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -9796,6 +10064,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "checkout"
+nolink "false"
 
 \end_inset
 
@@ -9812,6 +10081,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -9828,6 +10098,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -9844,6 +10115,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -9860,6 +10132,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -9877,7 +10150,8 @@ reference "commit"
 status open
 
 \begin_layout Plain Layout
-Git has three main states that your files can reside in: 
+Git has three main states that your files can reside in:
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -9891,8 +10165,7 @@ committed
 \end_inset
 
  files means that the data is safely stored in your local database.
- Staged means that you have marked a modified file in its current version
- to go into your next commit snapshot.
+ Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
 \end_layout
 
 \begin_layout Enumerate
@@ -9905,8 +10178,7 @@ modified
 
 \end_inset
 
- files means that you have changed the file but have not committed it to
- your database yet.
+ files means that you have changed the file but have not committed it to your database yet.
 \end_layout
 
 \begin_layout Enumerate
@@ -9919,8 +10191,7 @@ staged
 
 \end_inset
 
- files means that you have marked a modified file in its current version
- to go into your next commit snapshot.
+ files means that you have marked a modified file in its current version to go into your next commit snapshot.
 \end_layout
 
 \begin_layout Plain Layout
@@ -9945,6 +10216,8 @@ working
 
 copy 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -9961,6 +10234,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -9979,6 +10253,8 @@ working
 
 tree 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -9995,6 +10271,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -10026,6 +10303,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference ".git_directory"
+nolink "false"
 
 \end_inset
 
@@ -10042,6 +10320,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -10059,6 +10338,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "index"
+nolink "false"
 
 \end_inset
 
@@ -10080,6 +10360,8 @@ name "index"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10096,6 +10378,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "staging_area"
+nolink "false"
 
 \end_inset
 
@@ -10117,6 +10400,8 @@ name "stage"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10133,6 +10418,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "staging_area"
+nolink "false"
 
 \end_inset
 
@@ -10141,7 +10427,8 @@ reference "staging_area"
 
 \end_inset
 
-, so that they are included in the next 
+,
+ so that they are included in the next 
 \begin_inset Flex Emph
 status open
 
@@ -10149,6 +10436,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -10162,8 +10450,7 @@ reference "commit"
 
 \begin_deeper
 \begin_layout Itemize
-Be warned that non-staged files may be removed (deleted) when checkingout
- a 
+Be warned that non-staged files may be removed (deleted) when checkingout a 
 \begin_inset Flex Emph
 status open
 
@@ -10171,6 +10458,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -10187,6 +10475,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -10209,6 +10498,8 @@ name "add"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -10225,6 +10516,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stage"
+nolink "false"
 
 \end_inset
 
@@ -10249,7 +10541,8 @@ name "commit"
 status collapsed
 
 \begin_layout Plain Layout
-In other other VCS's, the same thing is referred to as 
+In other other VCS's,
+ the same thing is referred to as 
 \begin_inset Flex Emph
 status open
 
@@ -10276,6 +10569,8 @@ version
 
 
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -10292,6 +10587,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "staging_area"
+nolink "false"
 
 \end_inset
 
@@ -10300,8 +10596,10 @@ reference "staging_area"
 
 \end_inset
 
-, marking a new version of your repository.
- Later on, you can revert the repository to any commit.
+,
+ marking a new version of your repository.
+ Later on,
+ you can revert the repository to any commit.
 \end_layout
 
 \begin_deeper
@@ -10327,6 +10625,8 @@ name "tag"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10343,6 +10643,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -10364,6 +10665,8 @@ name "head"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10380,6 +10683,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -10396,6 +10700,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -10417,6 +10722,8 @@ name "HEAD"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10433,6 +10740,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "head"
+nolink "false"
 
 \end_inset
 
@@ -10459,6 +10767,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -10480,6 +10789,8 @@ name "clone"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10511,6 +10822,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -10527,6 +10839,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Repository"
+nolink "false"
 
 \end_inset
 
@@ -10535,7 +10848,8 @@ reference "Repository"
 
 \end_inset
 
-, including all of its 
+,
+ including all of its 
 \begin_inset Flex Emph
 status open
 
@@ -10543,6 +10857,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -10586,8 +10901,7 @@ $ git pull
 
 \end_inset
 
- commands without specifying further arguments identifying targeted local
- and 
+ commands without specifying further arguments identifying targeted local and 
 \begin_inset Flex Emph
 status open
 
@@ -10595,6 +10909,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -10611,6 +10926,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -10642,6 +10958,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -10654,6 +10971,7 @@ reference "remote"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -10665,6 +10983,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -10680,6 +10999,7 @@ reference "branch"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "checkout"
+nolink "false"
 
 \end_inset
 
@@ -10701,6 +11021,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -10743,6 +11064,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -10759,6 +11081,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Repository"
+nolink "false"
 
 \end_inset
 
@@ -10775,6 +11098,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "origin"
+nolink "false"
 
 \end_inset
 
@@ -10795,6 +11119,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -10811,6 +11136,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Repository"
+nolink "false"
 
 \end_inset
 
@@ -10819,7 +11145,8 @@ reference "Repository"
 
 \end_inset
 
-, clone using 
+,
+ clone using 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -10846,6 +11173,8 @@ name "remote"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -10875,9 +11204,8 @@ remote
 
 \end_inset
 
- repositories to share & exchange data: they serve as a common base where
- everybody can publish their own changes and receive changes from their
- teammates.
+ repositories to share & exchange data:
+ they serve as a common base where everybody can publish their own changes and receive changes from their teammates.
 \end_layout
 
 \begin_deeper
@@ -10890,6 +11218,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "bare"
+nolink "false"
 
 \end_inset
 
@@ -10942,6 +11271,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fetch"
+nolink "false"
 
 \end_inset
 
@@ -10950,7 +11280,8 @@ reference "fetch"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -10958,6 +11289,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pull"
+nolink "false"
 
 \end_inset
 
@@ -10974,6 +11306,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "push"
+nolink "false"
 
 \end_inset
 
@@ -10982,10 +11315,12 @@ reference "push"
 
 \end_inset
 
-, as illustrated in figure 
+,
+ as illustrated in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Basic--workflow"
+nolink "false"
 
 \end_inset
 
@@ -10996,6 +11331,8 @@ reference "fig:Basic--workflow"
 \begin_layout Standard
 \noindent
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -11030,6 +11367,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -11125,6 +11463,8 @@ name "upstream"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -11141,6 +11481,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -11159,6 +11500,8 @@ local
 \begin_layout Description
 downstream 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -11171,7 +11514,8 @@ downstream
 \emph on
 local
 \emph default
-, as compared to 
+,
+ as compared to 
 \begin_inset Flex Emph
 status open
 
@@ -11179,6 +11523,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11200,6 +11545,8 @@ name "origin"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -11216,6 +11563,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -11238,7 +11586,8 @@ $ git clone
 \end_inset
 
 .
- If you dislike this name, you can rename using 
+ If you dislike this name,
+ you can rename using 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -11264,6 +11613,8 @@ name "pull"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -11300,6 +11651,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11308,7 +11660,8 @@ reference "branch"
 
 \end_inset
 
-, and hence the 
+,
+ and hence the 
 \begin_inset Flex Emph
 status open
 
@@ -11316,6 +11669,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -11324,7 +11678,8 @@ reference "working_Directory"
 
 \end_inset
 
-, with the 
+,
+ with the 
 \begin_inset Flex Emph
 status open
 
@@ -11332,6 +11687,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11348,6 +11704,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11372,6 +11729,7 @@ pull
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge_vs_rebase"
+nolink "false"
 
 \end_inset
 
@@ -11392,7 +11750,8 @@ $ git pull
 
 \end_inset
 
- performs two operations: (1) 
+ performs two operations:
+ (1) 
 \begin_inset Flex Emph
 status open
 
@@ -11400,6 +11759,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fetch"
+nolink "false"
 
 \end_inset
 
@@ -11416,6 +11776,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11432,6 +11793,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11448,6 +11810,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -11492,7 +11855,8 @@ $ git pull --rebase
 
 \end_inset
 
- performs two operations: (1) 
+ performs two operations:
+ (1) 
 \begin_inset Flex Emph
 status open
 
@@ -11500,6 +11864,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fetch"
+nolink "false"
 
 \end_inset
 
@@ -11516,6 +11881,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11532,6 +11898,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11548,6 +11915,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "rebase"
+nolink "false"
 
 \end_inset
 
@@ -11574,6 +11942,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -11590,6 +11959,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11606,6 +11976,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11629,6 +12000,8 @@ name "push"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -11645,6 +12018,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -11681,6 +12055,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11697,6 +12072,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11714,6 +12090,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11730,6 +12107,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11760,6 +12138,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11768,7 +12147,8 @@ reference "branch"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -11779,8 +12159,10 @@ push
 \end_inset
 
  completes.
- Otherwise, the push is rejected.
- In this case, you have to 
+ Otherwise,
+ the push is rejected.
+ In this case,
+ you have to 
 \begin_inset Flex Emph
 status open
 
@@ -11788,6 +12170,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pull"
+nolink "false"
 
 \end_inset
 
@@ -11804,6 +12187,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "upstream"
+nolink "false"
 
 \end_inset
 
@@ -11820,6 +12204,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -11851,6 +12236,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "push"
+nolink "false"
 
 \end_inset
 
@@ -11867,6 +12253,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -11875,7 +12262,8 @@ reference "remote"
 
 \end_inset
 
-, then 
+,
+ then 
 \begin_inset Flex Emph
 status open
 
@@ -11883,6 +12271,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "push"
+nolink "false"
 
 \end_inset
 
@@ -11909,6 +12298,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -11918,7 +12308,8 @@ reference "remote"
 \end_inset
 
  is not possible.
- In this case instead, the owner of the 
+ In this case instead,
+ the owner of the 
 \emph on
 local
 \emph default
@@ -11930,6 +12321,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pullrequest"
+nolink "false"
 
 \end_inset
 
@@ -11946,6 +12338,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -11972,6 +12365,8 @@ name "pullrequest"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12005,6 +12400,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -12022,6 +12418,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -12038,6 +12435,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "diff"
+nolink "false"
 
 \end_inset
 
@@ -12063,6 +12461,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "push"
+nolink "false"
 
 \end_inset
 
@@ -12079,6 +12478,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -12087,7 +12487,8 @@ reference "remote"
 
 \end_inset
 
-, he can instead directly 
+,
+ he can instead directly 
 \begin_inset Flex Emph
 status open
 
@@ -12095,6 +12496,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "push"
+nolink "false"
 
 \end_inset
 
@@ -12115,6 +12517,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -12134,6 +12537,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pullrequest"
+nolink "false"
 
 \end_inset
 
@@ -12142,7 +12546,8 @@ reference "pullrequest"
 
 \end_inset
 
-is an announcing method, and are not a feature of Git.
+is an announcing method,
+ and are not a feature of Git.
  So it depends on the hosting website
 \begin_inset Foot
 status open
@@ -12195,6 +12600,8 @@ name "fetch"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12211,6 +12618,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12224,7 +12632,8 @@ es
 status open
 
 \begin_layout Plain Layout
- and/or tags (collectively, "refs")
+ and/or tags (collectively,
+ "refs")
 \end_layout
 
 \end_inset
@@ -12237,6 +12646,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -12253,6 +12663,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Repository"
+nolink "false"
 
 \end_inset
 
@@ -12261,7 +12672,8 @@ reference "Repository"
 
 \end_inset
 
-, along with the objects necessary to complete their histories.
+,
+ along with the objects necessary to complete their histories.
 \end_layout
 
 \begin_deeper
@@ -12284,6 +12696,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12300,6 +12713,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -12317,6 +12731,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -12325,8 +12740,7 @@ reference "remote"
 
 \end_inset
 
- and makes them visible so that you can decide if you want to integrate
- new changes into your 
+ and makes them visible so that you can decide if you want to integrate new changes into your 
 \begin_inset Flex Emph
 status open
 
@@ -12344,6 +12758,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Repository"
+nolink "false"
 
 \end_inset
 
@@ -12366,6 +12781,8 @@ name "diff"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12374,9 +12791,9 @@ diff
 
 \end_inset
 
- is a utility software that calculates and displays the differences between
- two files.
- Typically in Git, 
+ is a utility software that calculates and displays the differences between two files.
+ Typically in Git,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -12386,9 +12803,9 @@ diff
 
 \end_inset
 
- is used to determine the differences between two committed versions of
- a file.
- In fact, the word 
+ is used to determine the differences between two committed versions of a file.
+ In fact,
+ the word 
 \begin_inset Flex Emph
 status open
 
@@ -12398,8 +12815,7 @@ diff
 
 \end_inset
 
- became a generic term for the utility software and its output result as
- well.
+ became a generic term for the utility software and its output result as well.
 \end_layout
 
 \begin_layout Description
@@ -12412,6 +12828,8 @@ name "branch"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12428,6 +12846,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -12436,7 +12855,8 @@ reference "working_Directory"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -12444,6 +12864,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "staging_area"
+nolink "false"
 
 \end_inset
 
@@ -12460,6 +12881,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -12468,27 +12890,31 @@ reference "commit"
 
 \end_inset
 
- history, so that you test new experimental features without disturbing
- the main branch
+ history,
+ so that you test new experimental features without disturbing the main branch
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-In many VCS tools, 
+In many VCS tools,
+ 
 \emph on
 branching
 \emph default
- a somewhat expensive process, often requiring creating a new copy of the
- source code directory, which can take a long time for large projects.
- Therefore, Git’s branching model is referred to as a “
+ a somewhat expensive process,
+ often requiring creating a new copy of the source code directory,
+ which can take a long time for large projects.
+ Therefore,
+ Git’s branching model is referred to as a “
 \emph on
 killer feature
 \emph default
 ” that sets superior in the VCS community.
- This is because Git branches in incredibly lightweight way, making branching
- nearly instantaneous, and switching back and forth between branches generally
- just as fast.
- Unlike many other VCSs, Git encourages workflows that 
+ This is because Git branches in incredibly lightweight way,
+ making branching nearly instantaneous,
+ and switching back and forth between branches generally just as fast.
+ Unlike many other VCSs,
+ Git encourages workflows that 
 \begin_inset Flex Emph
 status open
 
@@ -12496,6 +12922,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12512,6 +12939,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -12520,14 +12948,14 @@ reference "merge"
 
 \end_inset
 
- often, even multiple times in a day.
+ often,
+ even multiple times in a day.
 \end_layout
 
 \end_inset
 
 .
- A local branch that you create on your machine is kept private to you until
- you explicitly decide to publish it using 
+ A local branch that you create on your machine is kept private to you until you explicitly decide to publish it using 
 \begin_inset Flex Emph
 status open
 
@@ -12535,6 +12963,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "push"
+nolink "false"
 
 \end_inset
 
@@ -12544,8 +12973,7 @@ reference "push"
 \end_inset
 
 .
- This means that it's perfectly possible to keep some of your work private
- while sharing only certain other branches with the world.
+ This means that it's perfectly possible to keep some of your work private while sharing only certain other branches with the world.
 \end_layout
 
 \begin_layout Description
@@ -12558,6 +12986,8 @@ name "checkout"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12574,6 +13004,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12582,7 +13013,8 @@ reference "branch"
 
 \end_inset
 
- means to switch to this branch, 
+ means to switch to this branch,
+ 
 \series bold
 \emph on
 replace
@@ -12601,6 +13033,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -12609,7 +13042,8 @@ reference "commit"
 
 \end_inset
 
-ted, 
+ted,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -12617,6 +13051,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stage"
+nolink "false"
 
 \end_inset
 
@@ -12633,6 +13068,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stash"
+nolink "false"
 
 \end_inset
 
@@ -12642,7 +13078,8 @@ reference "stash"
 \end_inset
 
 ed files may be removed (deleted).
- Therefore, it is advisable to 
+ Therefore,
+ it is advisable to 
 \begin_inset Flex Emph
 status open
 
@@ -12650,6 +13087,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -12666,6 +13104,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stage"
+nolink "false"
 
 \end_inset
 
@@ -12682,6 +13121,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stash"
+nolink "false"
 
 \end_inset
 
@@ -12703,6 +13143,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -12719,6 +13160,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "head"
+nolink "false"
 
 \end_inset
 
@@ -12735,6 +13177,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "staging_area"
+nolink "false"
 
 \end_inset
 
@@ -12751,6 +13194,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -12773,8 +13217,7 @@ status open
 
 \begin_layout Plain Layout
 
-http://stackoverflow.com/questions/1304626/git-switch-branch-and-ignore-any-chang
-es-without-committing
+http://stackoverflow.com/questions/1304626/git-switch-branch-and-ignore-any-changes-without-committing
 \end_layout
 
 \end_inset
@@ -12784,8 +13227,7 @@ es-without-committing
 
 \begin_layout Plain Layout
 You need a clean state to change branches.
- The branch checkout will only be allowed if it does not affect the 'dirty
- files'.
+ The branch checkout will only be allowed if it does not affect the 'dirty files'.
 \end_layout
 
 \end_inset
@@ -12804,6 +13246,8 @@ name "master"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12826,7 +13270,8 @@ $ git init
 \end_inset
 
 .
- If you dislike this name, you can rename using 
+ If you dislike this name,
+ you can rename using 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -12852,6 +13297,8 @@ name "merge"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -12868,6 +13315,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12904,6 +13352,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12913,7 +13362,8 @@ reference "branch"
 \end_inset
 
 .
- As a result, it creates a merge 
+ As a result,
+ it creates a merge 
 \begin_inset Flex Emph
 status open
 
@@ -12921,6 +13371,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -12937,6 +13388,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -12977,6 +13429,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -12986,7 +13439,8 @@ reference "working_Directory"
 \end_inset
 
 .
- Therefore, 
+ Therefore,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -12994,6 +13448,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stash"
+nolink "false"
 
 \end_inset
 
@@ -13033,6 +13488,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -13041,7 +13497,8 @@ reference "branch"
 
 \end_inset
 
-; not individual 
+;
+ not individual 
 \begin_inset Flex Emph
 status open
 
@@ -13049,6 +13506,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -13069,6 +13527,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -13085,6 +13544,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -13093,7 +13553,8 @@ reference "HEAD"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -13101,6 +13562,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13117,6 +13579,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fast-forward"
+nolink "false"
 
 \end_inset
 
@@ -13133,6 +13596,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13141,10 +13605,12 @@ reference "merge"
 
 \end_inset
 
-, as depicted in figure 
+,
+ as depicted in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fast_forward_merge"
+nolink "false"
 
 \end_inset
 
@@ -13160,6 +13626,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -13168,8 +13635,9 @@ es
 
 \end_inset
 
- changed the same lines in that same file, or if one deleted it while the
- other modified it, Git simply cannot know what is correct.
+ changed the same lines in that same file,
+ or if one deleted it while the other modified it,
+ Git simply cannot know what is correct.
  Git will then mark the file as having a 
 \series bold
 
@@ -13252,6 +13720,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -13268,6 +13737,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -13277,7 +13747,8 @@ reference "remote"
 \end_inset
 
 .
- That is, Merge 
+ That is,
+ Merge 
 \begin_inset Flex Emph
 status open
 
@@ -13299,11 +13770,12 @@ name "rebase"
 
 \end_inset
 
- reapply a series of changes from a branch to a different base, as depicted
- in figure 
+ reapply a series of changes from a branch to a different base,
+ as depicted in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge_vs_rebase"
+nolink "false"
 
 \end_inset
 
@@ -13314,6 +13786,8 @@ reference "merge_vs_rebase"
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -13348,6 +13822,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13364,6 +13839,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "rebase"
+nolink "false"
 
 \end_inset
 
@@ -13386,7 +13862,8 @@ reference "rebase"
 \end_layout
 
 \begin_layout Description
-Caution: 
+Caution:
+ 
 \begin_inset Flex Emph
 status open
 
@@ -13397,7 +13874,8 @@ rebase
 \end_inset
 
  rewrites history.
- Therefore, 
+ Therefore,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -13430,6 +13908,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -13456,6 +13935,8 @@ name "fast-forward"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -13476,6 +13957,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13492,6 +13974,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "branch"
+nolink "false"
 
 \end_inset
 
@@ -13508,6 +13991,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -13517,7 +14001,8 @@ reference "HEAD"
 \end_inset
 
 .
- In this case, 
+ In this case,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -13525,6 +14010,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13542,6 +14028,7 @@ merge
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -13551,7 +14038,8 @@ reference "commit"
 \end_inset
 
 .
- Instead, 
+ Instead,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -13559,6 +14047,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13575,6 +14064,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "rebase"
+nolink "false"
 
 \end_inset
 
@@ -13591,6 +14081,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -13599,10 +14090,12 @@ reference "HEAD"
 
 \end_inset
 
-, as depicted in figure 
+,
+ as depicted in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fast_forward_merge"
+nolink "false"
 
 \end_inset
 
@@ -13615,6 +14108,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -13631,6 +14125,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "head"
+nolink "false"
 
 \end_inset
 
@@ -13640,7 +14135,8 @@ reference "head"
 \end_inset
 
  of the merged branch.
- For more information, refer to 
+ For more information,
+ refer to 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Part 4; Rebase as an Alternative to Merge"
@@ -13656,6 +14152,8 @@ literal "true"
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -13690,6 +14188,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fast-forward"
+nolink "false"
 
 \end_inset
 
@@ -13706,6 +14205,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13738,6 +14238,8 @@ name "stash"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -13754,6 +14256,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -13770,6 +14273,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -13786,6 +14290,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "HEAD"
+nolink "false"
 
 \end_inset
 
@@ -13802,6 +14307,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -13819,6 +14325,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "commit"
+nolink "false"
 
 \end_inset
 
@@ -13827,7 +14334,8 @@ reference "commit"
 
 \end_inset
 
-, while you are interrupted with another job that will overwrite the 
+,
+ while you are interrupted with another job that will overwrite the 
 \begin_inset Flex Emph
 status open
 
@@ -13835,6 +14343,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -13859,6 +14368,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "checkout"
+nolink "false"
 
 \end_inset
 
@@ -13878,6 +14388,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -13897,6 +14408,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "rebase"
+nolink "false"
 
 \end_inset
 
@@ -13916,6 +14428,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pull"
+nolink "false"
 
 \end_inset
 
@@ -13933,7 +14446,8 @@ reference "pull"
 \end_layout
 
 \begin_layout Standard
-In this case, 
+In this case,
+ 
 \begin_inset Flex Emph
 status open
 
@@ -13951,6 +14465,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -13960,7 +14475,8 @@ reference "working_Directory"
 \end_inset
 
  so that you can safely start a new side job.
- After finishing the side job, you can restore (
+ After finishing the side job,
+ you can restore (
 \begin_inset Flex Emph
 status open
 
@@ -13968,6 +14484,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "pop"
+nolink "false"
 
 \end_inset
 
@@ -13990,6 +14507,8 @@ name "pop"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14006,6 +14525,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -14014,7 +14534,9 @@ reference "working_Directory"
 
 \end_inset
 
-, i.e., do the inverse 
+,
+ i.e.,
+ do the inverse 
 \begin_inset Flex Emph
 status open
 
@@ -14022,6 +14544,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stash"
+nolink "false"
 
 \end_inset
 
@@ -14047,6 +14570,8 @@ name "cherrypick"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14059,8 +14584,8 @@ pick
 
 \end_inset
 
-means to extract changes introduced by a commit in some branch, and apply/repeat
- them on the tip of the current branch as a new commit.
+means to extract changes introduced by a commit in some branch,
+ and apply/repeat them on the tip of the current branch as a new commit.
  
 \end_layout
 
@@ -14105,6 +14630,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "merge"
+nolink "false"
 
 \end_inset
 
@@ -14120,6 +14646,8 @@ reference "merge"
 \begin_layout Description
 blame 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14128,15 +14656,20 @@ blame
 
 \end_inset
 
- describes the last modification to each line of a file, which generally
- displays the version, author and time.
- This is helpful, for example, in tracking down when a feature was added,
+ describes the last modification to each line of a file,
+ which generally displays the version,
+ author and time.
+ This is helpful,
+ for example,
+ in tracking down when a feature was added,
  or which commit led to a particular bug.
 \end_layout
 
 \begin_layout Description
 Fork 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14146,16 +14679,17 @@ Fork
 \end_inset
 
  fork is a copy of another repository that lives on your account.
- Forks allow you to freely make changes to a project without affecting the
- original.
- Forks remain attached to the original, allowing you to submit a pull request
- to the original's author to update with your changes.
+ Forks allow you to freely make changes to a project without affecting the original.
+ Forks remain attached to the original,
+ allowing you to submit a pull request to the original's author to update with your changes.
  You can also keep your fork up to date by pulling in updates from the original.
 \end_layout
 
 \begin_layout Description
 SHA-1 
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14173,8 +14707,7 @@ literal "true"
 
 \end_inset
 
-(Secure Hash Algorithm 1) a cryptographic hash function used as a synonym
- for object name.
+(Secure Hash Algorithm 1) a cryptographic hash function used as a synonym for object name.
 \end_layout
 
 \begin_layout Description
@@ -14185,8 +14718,7 @@ name "submodule"
 
 \end_inset
 
- is a repository inside another repository (the latter of which is called
- 
+ is a repository inside another repository (the latter of which is called 
 \begin_inset Flex Emph
 status open
 
@@ -14194,6 +14726,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "superproject"
+nolink "false"
 
 \end_inset
 
@@ -14213,8 +14746,7 @@ name "superproject"
 
 \end_inset
 
- is a repository that references repositories of other projects in its working
- tree as 
+ is a repository that references repositories of other projects in its working tree as 
 \begin_inset Flex Emph
 status open
 
@@ -14222,6 +14754,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "submodule"
+nolink "false"
 
 \end_inset
 
@@ -14231,8 +14764,7 @@ reference "submodule"
 \end_inset
 
 .
- The superproject knows about the names of (but does not hold copies of)
- commit objects of the contained submodules.
+ The superproject knows about the names of (but does not hold copies of) commit objects of the contained submodules.
 \end_layout
 
 \begin_layout Description
@@ -14245,6 +14777,8 @@ name "Hook"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14253,10 +14787,8 @@ hook
 
 \end_inset
 
-is a script that runs automatically every time a particular event occurs
- in a Git repository.
- Hooks let you customize Git’s internal behavior and trigger customizable
- actions at key points in the development life cycle.
+is a script that runs automatically every time a particular event occurs in a Git repository.
+ Hooks let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle.
 \end_layout
 
 \begin_layout Description
@@ -14269,6 +14801,8 @@ name "prune"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14290,6 +14824,8 @@ name "bare"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14306,6 +14842,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "remote"
+nolink "false"
 
 \end_inset
 
@@ -14315,9 +14852,11 @@ reference "remote"
 \end_inset
 
  repository.
- That is, it is not used for working on files, but rather for sharing and
- exchanging code between developers.
- Hence, a bare repository contains no 
+ That is,
+ it is not used for working on files,
+ but rather for sharing and exchanging code between developers.
+ Hence,
+ a bare repository contains no 
 \begin_inset Flex Emph
 status open
 
@@ -14325,6 +14864,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "working_Directory"
+nolink "false"
 
 \end_inset
 
@@ -14333,8 +14873,7 @@ reference "working_Directory"
 
 \end_inset
 
- and stores git version history in the root folder of the repository instead
- of in a 
+ and stores git version history in the root folder of the repository instead of in a 
 \begin_inset Flex Emph
 status open
 
@@ -14342,6 +14881,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference ".git_directory"
+nolink "false"
 
 \end_inset
 
@@ -14351,7 +14891,8 @@ reference ".git_directory"
 \end_inset
 
 .
- Customarily, bare repositories are given a 
+ Customarily,
+ bare repositories are given a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -14374,7 +14915,8 @@ $ git init --bare
 \end_inset
 
 .
- Alternatively, it can be cloned from a local repository with 
+ Alternatively,
+ it can be cloned from a local repository with 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
 inline true
@@ -14397,8 +14939,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://www.git-tower.com/learn/git/ebook/en/command-line/remote-repositories/intr
-oduction#start
+https://www.git-tower.com/learn/git/ebook/en/command-line/remote-repositories/introduction#start
 \end_layout
 
 \end_inset
@@ -14432,6 +14973,8 @@ name "squash"
 
  
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -14440,8 +14983,7 @@ squash
 
 \end_inset
 
-Squashing a commit is to take the changes from one commit and add them to
- its parent commit.
+Squashing a commit is to take the changes from one commit and add them to its parent commit.
 \begin_inset Note Note
 status open
 
@@ -14481,8 +15023,7 @@ https://graphite.dev/guides/git-orphan-branches
 \end_inset
 
 is a branch that starts from an empty state with no prior parent commits.
- This is particularly useful for starting new projects within the same repositor
-y without inheriting the commit history of the main project.
+ This is particularly useful for starting new projects within the same repository without inheriting the commit history of the main project.
  Orphan branch can be created using 
 \begin_inset listings
 lstparams "language=bash,tabsize=4"
@@ -14525,11 +15066,12 @@ Revert vs reset
 \end_layout
 
 \begin_layout Description
-Whereas reverting is designed to safely undo a public commit, git reset
- is designed to undo local changes.
- Because of their distinct goals, the two commands are implemented differently:
- resetting completely removes a changeset, whereas reverting maintains the
- original changeset and uses a new commit to apply the undo.
+Whereas reverting is designed to safely undo a public commit,
+ git reset is designed to undo local changes.
+ Because of their distinct goals,
+ the two commands are implemented differently:
+ resetting completely removes a changeset,
+ whereas reverting maintains the original changeset and uses a new commit to apply the undo.
 \end_layout
 
 \begin_layout Section
@@ -14541,17 +15083,21 @@ Merge Conflicts
 status open
 
 \begin_layout Plain Layout
-When faced with a merge conflict, the first step is to understand what happened.
- E.g.: Did one of your colleagues edit the same file on the same lines as
- you? Did he delete a file that you modified? Did you both add a file with
- the same name?
+When faced with a merge conflict,
+ the first step is to understand what happened.
+ E.g.:
+ Did one of your colleagues edit the same file on the same lines as you?
+ Did he delete a file that you modified?
+ Did you both add a file with the same name?
 \end_layout
 
 \begin_layout Plain Layout
-When faced with a merge conflict, the first step is to understand what happened.
- E.g.: Did one of your colleagues edit the same file on the same lines as
- you? Did he delete a file that you modified? Did you both add a file with
- the same name?
+When faced with a merge conflict,
+ the first step is to understand what happened.
+ E.g.:
+ Did one of your colleagues edit the same file on the same lines as you?
+ Did he delete a file that you modified?
+ Did you both add a file with the same name?
 \end_layout
 
 \begin_layout Plain Layout
@@ -14602,7 +15148,8 @@ $ git status
 
 \begin_layout Plain Layout
 
-#       both modified:   contact.html
+#       both modified:
+   contact.html
 \end_layout
 
 \begin_layout Plain Layout
@@ -14630,13 +15177,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
 \end_layout
 
 \begin_layout Standard
-Git was nice enough to mark the problematic area in the file by enclosing
- it in “<<<<<<< HEAD” and “>>>>>>> [other/branch/name]”.
+Git was nice enough to mark the problematic area in the file by enclosing it in “<<<<<<< HEAD” and “>>>>>>> [other/branch/name]”.
 \end_layout
 
 \begin_layout Itemize
-Consequently, don't use external tool to merge non-text-designed documents
- such as \SpecialChar LyX
+Consequently,
+ don't use external tool to merge non-text-designed documents such as \SpecialChar LyX
  or others.
 \end_layout
 
@@ -14649,99 +15195,106 @@ Git Golden Rules
 \end_layout
 
 \begin_layout Subsection
-#1: Commit Only Related Changes
+#1:
+ Commit Only Related Changes
 \end_layout
 
 \begin_layout Plain Layout
-When crafting a commit, it's very important to only include changes that
- belong together.
- You should never mix up changes from multiple, different topics in a single
- commit.
- For example, imagine wrapping both some work for your new login functionality
- and a fix for bug #122 in the same commit:
+When crafting a commit,
+ it's very important to only include changes that belong together.
+ You should never mix up changes from multiple,
+ different topics in a single commit.
+ For example,
+ imagine wrapping both some work for your new login functionality and a fix for bug #122 in the same commit:
 \end_layout
 
 \begin_layout Itemize
-Understanding what all those changes really mean and do gets hard for your
- teammates (and, after some time, also for yourself).
- Someone who's trying to understand the progress of that new login functionality
- will have to untangle it from the bugfix code first.
+Understanding what all those changes really mean and do gets hard for your teammates (and,
+ after some time,
+ also for yourself).
+ Someone who's trying to understand the progress of that new login functionality will have to untangle it from the bugfix code first.
 \end_layout
 
 \begin_layout Itemize
 Undoing one of the topics gets impossible.
  Maybe your login functionality introduced a new bug.
- You can't undo just this one without undoing your work for fix #122, also!
+ You can't undo just this one without undoing your work for fix #122,
+ also!
 \end_layout
 
 \begin_layout Plain Layout
-Instead, a commit should only wrap related changes: fixing two different
- bugs should produce (at the very least) two separate commits; or, when
- developing a larger feature, every small aspect of it might be worth its
- own commit.
+Instead,
+ a commit should only wrap related changes:
+ fixing two different bugs should produce (at the very least) two separate commits;
+ or,
+ when developing a larger feature,
+ every small aspect of it might be worth its own commit.
 \end_layout
 
 \begin_layout Plain Layout
-Small commits that only contain one topic make it easier for other members
- of your team to understand the changes - and to possibly undo them if something
- went wrong.
+Small commits that only contain one topic make it easier for other members of your team to understand the changes - and to possibly undo them if something went wrong.
 \end_layout
 
 \begin_layout Subsection
-#2: Write Good Commit Messages
+#2:
+ Write Good Commit Messages
 \end_layout
 
 \begin_layout Plain Layout
-Time spent on crafting a good commit message is time spent well: it will
- make it easier to understand what happened for your teammates (and after
- some time also for yourself).
+Time spent on crafting a good commit message is time spent well:
+ it will make it easier to understand what happened for your teammates (and after some time also for yourself).
 \end_layout
 
 \begin_layout Plain Layout
-Begin your message with a short summary of your changes (up to 50 characters
- as a guideline).
+Begin your message with a short summary of your changes (up to 50 characters as a guideline).
  Separate it from the following body by including a blank line.
- The body of your message should provide detailed answers to the following
- questions: What was the motivation for the change? How does it differ from
- the previous version?
+ The body of your message should provide detailed answers to the following questions:
+ What was the motivation for the change?
+ How does it differ from the previous version?
 \end_layout
 
 \begin_layout Subsection
-#3: Use Branches Extensively
+#3:
+ Use Branches Extensively
 \end_layout
 
 \begin_layout Plain Layout
 Branching is one of Git’s most powerful features – and this is not by accident:
  quick and easy branching was a central requirement from day one.
- Branches are the perfect tool to help you avoid mixing up different lines
- of development.
- You should use branches extensively in your development workflows: for
- new features, bug fixes, experiments, ideas… 
+ Branches are the perfect tool to help you avoid mixing up different lines of development.
+ You should use branches extensively in your development workflows:
+ for new features,
+ bug fixes,
+ experiments,
+ ideas… 
 \end_layout
 
 \begin_layout Subsection
-#4: Never Commit Half-Done Work
+#4:
+ Never Commit Half-Done Work
 \end_layout
 
 \begin_layout Plain Layout
 You should only commit code when it’s completed.
- This doesn’t mean you have to complete a whole, large feature before committing.
- Quite the contrary: split the feature’s implementation into logical chunks
- and remember to commit early and often.
- But don’t commit just to get half-done work out of your way when you need
- a "clean working copy".
- For these cases, consider using Git’s “Stash” feature instead.
+ This doesn’t mean you have to complete a whole,
+ large feature before committing.
+ Quite the contrary:
+ split the feature’s implementation into logical chunks and remember to commit early and often.
+ But don’t commit just to get half-done work out of your way when you need a "clean working copy".
+ For these cases,
+ consider using Git’s “Stash” feature instead.
  
 \end_layout
 
 \begin_layout Subsection
-#5: Never Amend Published Commits
+#5:
+ Never Amend Published Commits
 \end_layout
 
 \begin_layout Plain Layout
-Using the "amend" option is a great little helper that you'll come to appreciate
- yourself very quickly.
- However, you'll need to keep the following things in mind when using it:
+Using the "amend" option is a great little helper that you'll come to appreciate yourself very quickly.
+ However,
+ you'll need to keep the following things in mind when using it:
 \end_layout
 
 \begin_layout Enumerate
@@ -14750,12 +15303,13 @@ It can only be used to fix the very last commit.
 \end_layout
 
 \begin_layout Enumerate
-You should never "amend" a commit that has already been published / pushed
- to a remote repository! This is because "amend" effectively produces a
- completely new commit object in the background that replaces the old one.
- If you're the only person who had this commit, doing this is safe.
- However, after publishing the original commit on a remote, other people
- might already have based new work on this commit.
+You should never "amend" a commit that has already been published / pushed to a remote repository!
+ This is because "amend" effectively produces a completely new commit object in the background that replaces the old one.
+ If you're the only person who had this commit,
+ doing this is safe.
+ However,
+ after publishing the original commit on a remote,
+ other people might already have based new work on this commit.
  Replacing it with an amended version will cause problems.
 \end_layout
 
@@ -14769,8 +15323,7 @@ Diff of Complex Text Files of non-text files
 \end_layout
 
 \begin_layout Standard
-One essential operation of version control is to identify the differences
- between different versions of a file.
+One essential operation of version control is to identify the differences between different versions of a file.
  By default this is performed by the 
 \begin_inset Flex Emph
 status open
@@ -14779,6 +15332,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "diff"
+nolink "false"
 
 \end_inset
 
@@ -14799,6 +15353,7 @@ status open
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "diff"
+nolink "false"
 
 \end_inset
 
@@ -14807,9 +15362,10 @@ reference "diff"
 
 \end_inset
 
- is pretty good for plain text files, it is much less useful in the case
- of \SpecialChar LyX
- files, which have more a complicated structure.
+ is pretty good for plain text files,
+ it is much less useful in the case of \SpecialChar LyX
+ files,
+ which have more a complicated structure.
 \end_layout
 
 \begin_layout Section
@@ -14950,6 +15506,8 @@ $ git reset <filename>
 
  instead to unstage
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -15072,6 +15630,7 @@ begin{appendices}
 \begin_inset CommandInset include
 LatexCommand input
 filename "MatlabFunctions.lyx"
+literal "true"
 
 \end_inset
 
